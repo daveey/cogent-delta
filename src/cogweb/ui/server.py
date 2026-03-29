@@ -1,9 +1,9 @@
-"""CogWeb UI server — FastAPI + WebSocket bridge to CogWebRegistry.
+"""CogWeb UI server — Starlette + WebSocket bridge to CogWebRegistry.
 
-Serves the React Flow frontend and provides:
-  GET  /           — single-page app (graph editor)
+Serves the graph editor frontend and provides:
+  GET  /           — single-page app (Canvas-based graph editor)
   GET  /api/graph  — JSON snapshot of the current graph
-  WS   /ws         — live graph updates pushed to the browser
+  WS   /ws         — live graph updates + control commands from browser
 """
 from __future__ import annotations
 
@@ -13,6 +13,7 @@ import logging
 from pathlib import Path
 from typing import Any
 
+from coglet.handle import Command
 from coglet.weblet import CogWebRegistry
 
 logger = logging.getLogger("cogweb.ui")
@@ -113,8 +114,45 @@ class CogWebUI:
         if msg_type == "refresh":
             snap = self.registry.snapshot()
             await websocket.send_json({"type": "snapshot", "data": snap.to_dict()})
+
         elif msg_type == "ping":
             await websocket.send_json({"type": "pong"})
+
+        elif msg_type == "guide":
+            # Send a Command to a coglet: {type: "guide", node_id, command, data}
+            node_id = msg.get("node_id")
+            command_type = msg.get("command")
+            command_data = msg.get("data")
+            result = await self._dispatch_guide(node_id, command_type, command_data)
+            await websocket.send_json({"type": "guide_result", "node_id": node_id, **result})
+
+        elif msg_type == "set_status":
+            # Set node status: {type: "set_status", node_id, status}
+            node_id = msg.get("node_id")
+            status = msg.get("status", "running")
+            if node_id and node_id in self.registry._statuses:
+                self.registry.set_status(node_id, status)
+                await websocket.send_json({"type": "status_updated", "node_id": node_id, "status": status})
+            else:
+                await websocket.send_json({"type": "error", "data": f"unknown node: {node_id}"})
+
+    async def _dispatch_guide(self, node_id: str | None, command_type: str | None,
+                              command_data: Any) -> dict[str, Any]:
+        """Send a guide command to a coglet via its handle."""
+        if not node_id or not command_type:
+            return {"ok": False, "error": "node_id and command required"}
+
+        coglet = self.registry._coglets.get(node_id)
+        if coglet is None:
+            return {"ok": False, "error": f"unknown node: {node_id}"}
+
+        try:
+            cmd = Command(type=command_type, data=command_data)
+            await coglet._dispatch_enact(cmd)
+            return {"ok": True}
+        except Exception as e:
+            logger.warning("guide command failed for %s: %s", node_id, e)
+            return {"ok": False, "error": str(e)}
 
     async def _broadcast_loop(self) -> None:
         """Periodically push graph snapshots to all connected WebSocket clients."""
