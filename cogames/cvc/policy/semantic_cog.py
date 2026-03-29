@@ -1138,19 +1138,29 @@ class SemanticCogAgentPolicy(AgentPolicy):
         can_hearts = _h.team_can_refill_hearts(state)
         if step < 30:
             pressure_budget = 2
-        elif step < 3000:
+        elif step < 500:
             pressure_budget = 5
             if min_res < 1 and not can_hearts:
                 pressure_budget = 2
             elif min_res < 3:
                 pressure_budget = 4
-        else:
+        elif step < 2000:
             pressure_budget = 6
             if min_res < 1 and not can_hearts:
                 pressure_budget = 3
+            elif min_res < 3:
+                pressure_budget = 5
+        else:
+            pressure_budget = 7
+            if min_res < 1 and not can_hearts:
+                pressure_budget = 3
+            elif min_res < 3:
+                pressure_budget = 5
 
         scrambler_budget = 0
-        if step >= 3000:
+        if step >= 2000:
+            scrambler_budget = 2
+        elif step >= 500:
             scrambler_budget = 2
         elif step >= 100:
             scrambler_budget = 1
