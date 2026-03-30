@@ -2,22 +2,24 @@
 
 Commands:
     coglet runtime start [--port PORT] [--trace PATH]
-    coglet runtime stop [--port PORT]
-    coglet runtime status [--port PORT]
+    coglet runtime stop
+    coglet runtime status
 
-    coglet create PATH.cog [--port PORT]                  -> name-xxxx
-    coglet stop ID [--port PORT]
-    coglet guide ID COMMAND [DATA] [--port PORT]
-    coglet observe ID CHANNEL [--follow] [--port PORT]
-    coglet link SRC_ID:CHANNEL DEST_ID:CHANNEL [--port]   wire channels
-    coglet unlink SRC_ID:CHANNEL DEST_ID:CHANNEL [--port]
-    coglet links [--port PORT]
+    coglet create PATH.cog                    -> counter-a3f1
+    coglet stop ID
+    coglet transmit ID:CHANNEL DATA           push data onto a channel
+    coglet observe ID:CHANNEL [--follow]      subscribe to channel output
+    coglet enact ID COMMAND [DATA]            send @enact command
 
-    coglet run PATH.cog [--trace PATH]                    (one-shot, no daemon)
+    coglet link ID                            list channels for a coglet
+    coglet link SRC:CH DEST:CH                wire channels
+    coglet unlink SRC:CH DEST:CH
+    coglet links
+
+    coglet run PATH.cog [--trace PATH]        one-shot (no daemon)
 
 IDs are "classname-xxxx" (e.g. counter-a3f1).
 Channel refs use "id:channel" syntax (e.g. counter-a3f1:count).
-
 MCP endpoint at /mcp.
 """
 
@@ -68,6 +70,16 @@ def _parse_channel_ref(ref: str) -> tuple[str, str]:
         sys.exit(f"error: expected 'id:channel', got '{ref}'")
     parts = ref.split(":", 1)
     return parts[0], parts[1]
+
+
+def _parse_data(raw: str | None) -> Any:
+    """Parse CLI data argument as JSON, fall back to string."""
+    if raw is None:
+        return None
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        return raw
 
 
 # ---------------------------------------------------------------------------
@@ -196,12 +208,25 @@ def create_app(trace_path: str | None = None):
         del registry[coglet_id]
         return {"msg": f"stopped {class_name} (id={coglet_id})"}
 
-    @app.post("/guide/{coglet_id}", operation_id="guide_coglet")
-    async def guide_coglet(coglet_id: str, command: str, data: Any = None):
+    @app.post("/enact/{coglet_id}", operation_id="enact_coglet")
+    async def enact_coglet(coglet_id: str, command: str, data: Any = None):
         """Send a command to a coglet's @enact handlers."""
         handle = _lookup(coglet_id)[0]
         await handle.guide(Command(type=command, data=data))
         return {"msg": f"sent '{command}' to {coglet_id}"}
+
+    @app.post("/transmit/{coglet_id}/{channel}", operation_id="transmit_coglet")
+    async def transmit_coglet(coglet_id: str, channel: str, data: Any = None):
+        """Push data into a coglet's channel.
+
+        Dispatches to the coglet's @listen handler for the channel
+        (as if it received data from an external source), and also
+        pushes to the channel bus (so links and observers see it).
+        """
+        handle = _lookup(coglet_id)[0]
+        await handle.coglet._dispatch_listen(channel, data)
+        await handle.coglet.transmit(channel, data)
+        return {"msg": f"transmitted on {coglet_id}:{channel}"}
 
     @app.get("/channels/{coglet_id}", operation_id="list_channels")
     async def list_channels(coglet_id: str):
@@ -458,17 +483,24 @@ def main() -> None:
     st = sub.add_parser("stop", parents=[port_args])
     st.add_argument("id", type=str)
 
-    # observe
-    ob = sub.add_parser("observe", parents=[port_args])
-    ob.add_argument("id", type=str)
-    ob.add_argument("channel", type=str)
+    # transmit cog:channel DATA
+    tr = sub.add_parser("transmit", parents=[port_args],
+                        help="push data onto a coglet's channel")
+    tr.add_argument("target", type=str, help="id:channel")
+    tr.add_argument("data", nargs="?", default=None, help="data (JSON or string)")
+
+    # observe cog:channel
+    ob = sub.add_parser("observe", parents=[port_args],
+                        help="subscribe to a coglet's channel output")
+    ob.add_argument("target", type=str, help="id:channel")
     ob.add_argument("--follow", action="store_true")
 
-    # guide
-    gu = sub.add_parser("guide", parents=[port_args])
-    gu.add_argument("id", type=str)
-    gu.add_argument("cmd_type", metavar="command", type=str)
-    gu.add_argument("data", nargs="?", default=None)
+    # enact cog command [DATA]
+    en = sub.add_parser("enact", parents=[port_args],
+                        help="send a command to a coglet's @enact handlers")
+    en.add_argument("id", type=str, help="coglet id")
+    en.add_argument("cmd_type", metavar="command", type=str)
+    en.add_argument("data", nargs="?", default=None, help="data (JSON or string)")
 
     # link src_id:channel dest_id:channel
     ln = sub.add_parser("link", parents=[port_args],
@@ -522,20 +554,24 @@ def main() -> None:
     elif args.command == "stop":
         print(_post(port, f"/stop/{args.id}").get("msg"))
 
-    elif args.command == "observe":
-        _observe_sse(port, args.id, args.channel, args.follow)
+    elif args.command == "transmit":
+        cid, ch = _parse_channel_ref(args.target)
+        data_val = _parse_data(args.data)
+        params = {}
+        if data_val is not None:
+            params["data"] = json.dumps(data_val) if not isinstance(data_val, str) else data_val
+        print(_post(port, f"/transmit/{cid}/{ch}", **params).get("msg"))
 
-    elif args.command == "guide":
-        data_val = None
-        if args.data:
-            try:
-                data_val = json.loads(args.data)
-            except json.JSONDecodeError:
-                data_val = args.data
+    elif args.command == "observe":
+        cid, ch = _parse_channel_ref(args.target)
+        _observe_sse(port, cid, ch, args.follow)
+
+    elif args.command == "enact":
+        data_val = _parse_data(args.data)
         params = {"command": args.cmd_type}
         if data_val is not None:
             params["data"] = json.dumps(data_val) if not isinstance(data_val, str) else data_val
-        print(_post(port, f"/guide/{args.id}", **params).get("msg"))
+        print(_post(port, f"/enact/{args.id}", **params).get("msg"))
 
     elif args.command == "link":
         if args.dest is None:

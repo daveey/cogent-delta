@@ -170,17 +170,17 @@ Order in the class definition matters (MRO). Mixins that override Coglet methods
 - Records parent→child control edges when both parent and child have WebLet
 
 ```python
-from coglet import Coglet, CogletConfig, CogletRuntime, LifeLet
+from coglet import Coglet, CogBase, CogletRuntime, LifeLet
 from coglet.weblet import CogWebRegistry, WebLet
 
 class MyNode(Coglet, WebLet, LifeLet):
     async def on_start(self):
         await super().on_start()
-        await self.create(CogletConfig(cls=Worker, kwargs={"cogweb": self._cogweb}))
+        await self.create(CogBase(cls=Worker, kwargs={"cogweb": self._cogweb}))
 
 registry = CogWebRegistry()
 rt = CogletRuntime()
-await rt.spawn(CogletConfig(cls=MyNode, kwargs={"cogweb": registry}))
+await rt.spawn(CogBase(cls=MyNode, kwargs={"cogweb": registry}))
 snap = registry.snapshot()
 snap.to_dict()  # {"nodes": {...}, "edges": [...]}
 ```
@@ -225,13 +225,98 @@ await ui.stop()
 
 Each line: `{"t": <seconds_since_start>, "coglet": "ClassName", "op": "transmit"|"enact", "target": "<channel_or_command>", "data": ...}`
 
+## CLI, API, and MCP
+
+### CLI (`coglet`)
+
+The `coglet` command manages a persistent runtime daemon:
+
+```bash
+# Runtime lifecycle
+coglet runtime start [--port 4510] [--trace events.jsonl]
+coglet runtime stop
+coglet runtime status
+
+# Create/destroy coglets
+coglet create path/to/app.cog          # prints id: counter-a3f1
+coglet stop counter-a3f1
+
+# Data plane
+coglet transmit counter-a3f1:count 42  # push data into channel
+coglet observe counter-a3f1:count --follow  # subscribe to channel (SSE)
+
+# Control plane
+coglet enact counter-a3f1 reload '{"key": "val"}'
+
+# Channel wiring
+coglet link counter-a3f1               # list channels
+coglet link counter-a3f1:count doubler-b2c4:count   # wire
+coglet unlink counter-a3f1:count doubler-b2c4:count
+coglet links                           # list all wires
+
+# One-shot (no daemon)
+coglet run path/to/app.cog
+```
+
+IDs are `classname-xxxx` (e.g. `counter-a3f1`). Channel refs use `id:channel` syntax.
+
+### REST API (FastAPI)
+
+Default port 4510. All endpoints:
+
+| Method | Path | Purpose |
+|--------|------|---------|
+| POST | `/create?cog_dir=PATH` | Spawn coglet, returns `{id, class}` |
+| POST | `/stop/{id}` | Stop coglet |
+| POST | `/transmit/{id}/{channel}?data=...` | Push data into channel |
+| POST | `/enact/{id}?command=...&data=...` | Send @enact command |
+| GET | `/observe/{id}/{channel}` | SSE stream of channel events |
+| POST | `/link?src_id=...&src_channel=...&dest_id=...&dest_channel=...` | Wire channels |
+| DELETE | `/link` (same params) | Remove wire |
+| GET | `/links` | List all wires |
+| GET | `/channels/{id}` | List coglet's channels |
+| GET | `/status` | Tree + coglets + links |
+| GET | `/tree` | ASCII tree |
+| POST | `/shutdown` | Stop everything |
+
+### MCP
+
+The runtime serves an MCP endpoint at `/mcp` (via `fastapi-mcp`). Connect any MCP
+client to `http://localhost:4510/mcp` to use all API endpoints as tools. All operations
+(`create_coglet`, `stop_coglet`, `transmit_coglet`, `enact_coglet`, `observe_coglet`,
+`link_channels`, `unlink_channels`, `list_links`, `list_channels`, `runtime_status`,
+`runtime_tree`, `shutdown_runtime`) are available as MCP tools.
+
+### .cog Directory Format
+
+A `.cog` directory is a CogBase bundle:
+
+```
+app.cog/
+├── manifest.toml      # Required: declares class + kwargs + restart policy
+└── *.py               # Python modules (added to sys.path at spawn)
+```
+
+```toml
+[coglet]
+class = "my_module.MyCoglet"
+
+[coglet.kwargs]
+name = "hello"
+
+[config]
+restart = "on_error"
+max_restarts = 3
+backoff_s = 1.0
+```
+
 ## Testing
 
 ```bash
 PYTHONPATH=src python -m pytest tests/ -v
 ```
 
-200 tests, organized by component:
+Tests organized by component:
 - `test_channel.py` — Channel, ChannelSubscription, ChannelBus
 - `test_coglet.py` — Coglet base, decorators, dispatch, COG interface
 - `test_handle.py` — Command, CogBase, CogletHandle

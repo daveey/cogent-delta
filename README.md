@@ -54,12 +54,82 @@ docs/                # Architecture design docs
 
 ## Quick Start
 
-### Framework
+### CLI — Runtime Daemon
+
+```bash
+# Start the runtime
+coglet runtime start
+
+# Create coglets from .cog directories
+coglet create examples/counter.cog     # -> counter-a3f1
+coglet create examples/doubler.cog     # -> doubler-b2c4
+coglet create examples/printer.cog     # -> printer-d5e6
+
+# List a coglet's channels
+coglet link counter-a3f1               # shows transmit + listen channels
+
+# Wire channels together (id:channel syntax)
+coglet link counter-a3f1:count doubler-b2c4:count
+coglet link doubler-b2c4:doubled printer-d5e6:doubled
+
+# Push data directly into a channel
+coglet transmit doubler-b2c4:count 42
+
+# Subscribe to channel output
+coglet observe printer-d5e6:log --follow
+
+# Send @enact command
+coglet enact printer-d5e6 reset
+
+# Inspect
+coglet links                           # list all wires
+coglet runtime status                  # tree + coglets + channels + links
+
+# Tear down
+coglet unlink counter-a3f1:count doubler-b2c4:count
+coglet stop counter-a3f1
+coglet runtime stop
+```
+
+### REST API
+
+The runtime exposes a FastAPI server (default port 4510):
+
+```
+POST /create?cog_dir=PATH              spawn coglet, returns id
+POST /stop/{id}                        stop a coglet
+POST /transmit/{id}/{channel}?data=... push data into a channel
+POST /enact/{id}?command=...&data=...  send @enact command
+GET  /observe/{id}/{channel}           SSE stream of channel events
+POST /link?src_id=...&src_channel=...  wire channels
+     &dest_id=...&dest_channel=...
+DELETE /link (same params)             remove wire
+GET  /links                            list all wires
+GET  /channels/{id}                    list coglet's channels
+GET  /status                           tree + coglets + links
+GET  /tree                             ASCII tree
+POST /shutdown                         stop everything
+```
+
+### MCP
+
+The runtime serves an MCP endpoint at `/mcp`. Connect any MCP client
+(Claude Code, etc.) to `http://localhost:4510/mcp` to use all API
+endpoints as tools.
+
+### One-Shot Mode
+
+Run a .cog directory directly without the daemon:
+
+```bash
+coglet run examples/multi.cog --trace events.jsonl
+```
+
+### Framework — Python API
 
 ```python
-from coglet.coglet import Coglet, listen, enact
-from coglet.lifelet import LifeLet
-from coglet.ticklet import TickLet, every
+from coglet import Coglet, LifeLet, TickLet, CogBase, every, listen, enact
+from coglet.runtime import CogletRuntime
 
 class MyCoglet(Coglet, LifeLet, TickLet):
     async def on_start(self):
@@ -76,6 +146,10 @@ class MyCoglet(Coglet, LifeLet, TickLet):
     @every(10, "s")
     async def heartbeat(self):
         await self.transmit("status", "alive")
+
+# Boot
+runtime = CogletRuntime()
+handle = await runtime.run(CogBase(cls=MyCoglet))
 ```
 
 ### Play a CvC Game
@@ -153,14 +227,14 @@ CogWeb provides a browser-based UI for visualizing live coglet supervision trees
 Add `WebLet` to any coglet and pass a shared `CogWebRegistry`:
 
 ```python
-from coglet import Coglet, CogletConfig, CogletRuntime, LifeLet
+from coglet import Coglet, CogBase, CogletRuntime, LifeLet
 from coglet.weblet import CogWebRegistry, WebLet
 from cogweb.ui import CogWebUI
 
 class Supervisor(Coglet, WebLet, LifeLet):
     async def on_start(self):
         await super().on_start()
-        await self.create(CogletConfig(cls=Worker, kwargs={"cogweb": self._cogweb}))
+        await self.create(CogBase(cls=Worker, kwargs={"cogweb": self._cogweb}))
 
 class Worker(Coglet, WebLet, LifeLet):
     pass
@@ -171,7 +245,7 @@ ui = CogWebUI(registry, port=8787)
 rt = CogletRuntime()
 
 await ui.start()
-await rt.spawn(CogletConfig(cls=Supervisor, kwargs={"cogweb": registry}))
+await rt.spawn(CogBase(cls=Supervisor, kwargs={"cogweb": registry}))
 # Open http://localhost:8787
 ```
 
