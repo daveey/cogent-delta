@@ -334,6 +334,26 @@ def create_app(trace_path: str | None = None):
             ],
         }
 
+    @app.get("/stats/{coglet_id}", operation_id="channel_stats")
+    async def channel_stats(coglet_id: str, channel: str | None = None):
+        """Get message count stats (1s/5s/60s/1h/24h) and recent history."""
+        handle = _lookup(coglet_id)[0]
+        bus = handle.coglet._bus
+        if channel:
+            return {
+                "channel": channel,
+                "counts": bus.stats.counts(channel),
+                "history": [_serialize(m) for m in bus.stats.history(channel, 10)],
+            }
+        return {"channels": bus.stats.all_counts()}
+
+    @app.get("/history/{coglet_id}/{channel}", operation_id="channel_history")
+    async def channel_history(coglet_id: str, channel: str, n: int = 10):
+        """Get last N messages from a channel."""
+        handle = _lookup(coglet_id)[0]
+        msgs = handle.coglet._bus.stats.history(channel, n)
+        return {"channel": channel, "messages": [_serialize(m) for m in msgs]}
+
     @app.get("/tree", operation_id="runtime_tree")
     async def tree():
         return {"tree": runtime.tree()}
@@ -517,6 +537,10 @@ def main() -> None:
     # links
     sub.add_parser("links", parents=[port_args], help="list active links")
 
+    # shell
+    sub.add_parser("shell", parents=[port_args],
+                   help="interactive shell with tab-completion")
+
     # run (one-shot)
     rn = sub.add_parser("run")
     rn.add_argument("cog_dir", type=Path)
@@ -607,6 +631,10 @@ def main() -> None:
             print(f"  {lk['src']}:{lk['src_channel']} -> {lk['dest']}:{lk['dest_channel']}")
         if not resp["links"]:
             print("no links.")
+
+    elif args.command == "shell":
+        from coglet.shell import run_shell
+        run_shell(port)
 
     elif args.command == "run":
         if not args.cog_dir.is_dir():
