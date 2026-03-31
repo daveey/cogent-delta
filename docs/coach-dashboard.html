@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coach Dashboard — beta</title>
+<title>Coach Dashboard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -22,6 +22,8 @@
     --mauve: #cba6f7; --mauve-dim: rgba(203,166,247,0.12);
     --teal: #94e2d5; --teal-dim: rgba(148,226,213,0.12);
     --peach: #fab387; --peach-dim: rgba(250,179,135,0.12);
+    --pink: #f5c2e7; --pink-dim: rgba(245,194,231,0.12);
+    --sky: #89dceb; --sky-dim: rgba(137,220,235,0.12);
   }
   @media (prefers-color-scheme: light) {
     :root {
@@ -35,6 +37,8 @@
       --mauve: #8839ef; --mauve-dim: rgba(136,57,239,0.08);
       --teal: #179299; --teal-dim: rgba(23,146,153,0.08);
       --peach: #fe640b; --peach-dim: rgba(254,100,11,0.08);
+      --pink: #ea76cb; --pink-dim: rgba(234,118,203,0.08);
+      --sky: #04a5e5; --sky-dim: rgba(4,165,229,0.08);
     }
   }
   * { margin:0; padding:0; box-sizing:border-box; }
@@ -47,232 +51,269 @@
   .page { max-width: 1100px; margin: 0 auto; }
   @keyframes fadeUp { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
   @keyframes fadeScale { from { opacity:0; transform:scale(0.95); } to { opacity:1; transform:scale(1); } }
-  @keyframes countUp { from { opacity:0; } to { opacity:1; } }
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   .animate { animation: fadeUp 0.4s ease-out both; animation-delay: calc(var(--i,0) * 0.06s); }
 
   h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 4px; }
   .subtitle { font-family: var(--font-mono); font-size: 12px; color: var(--text-dim); margin-bottom: 28px; }
 
-  /* KPI row */
-  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 12px; margin-bottom: 28px; }
-  .kpi { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 16px; animation: fadeScale 0.4s ease-out both; }
-  .kpi-label { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--subtext); margin-bottom: 6px; }
-  .kpi-value { font-size: 28px; font-weight: 700; }
-  .kpi-sub { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 12px; margin-bottom: 28px; }
+  .kpi { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 14px; animation: fadeScale 0.4s ease-out both; }
+  .kpi-label { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--subtext); margin-bottom: 4px; }
+  .kpi-value { font-size: 26px; font-weight: 700; }
+  .kpi-sub { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
 
-  /* Card */
   .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
-  .card h2 { font-size: 18px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .card h2 { font-size: 17px; font-weight: 600; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
   .card h2 .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
-  /* Chart */
-  .chart-wrap { height: 260px; position: relative; }
+  .chart-wrap { height: 240px; position: relative; }
 
-  /* Table */
+  /* Tabs for seasons */
+  .tabs { display: flex; gap: 4px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { font-family: var(--font-mono); font-size: 11px; padding: 5px 12px; border-radius: 6px; border: 1px solid var(--border); background: transparent; color: var(--text-dim); cursor: pointer; }
+  .tab.active { background: var(--blue-dim); color: var(--blue); border-color: var(--blue); }
+  .tab:hover { border-color: var(--text-dim); }
+
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
   th { text-align: left; font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--subtext); padding: 8px 10px; border-bottom: 1px solid var(--border-bright); }
-  td { padding: 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  td { padding: 9px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
   tr:hover { background: var(--border); }
-  .badge { font-family: var(--font-mono); font-size: 10px; padding: 2px 8px; border-radius: 10px; font-weight: 500; }
+  .badge { font-family: var(--font-mono); font-size: 10px; padding: 2px 8px; border-radius: 10px; font-weight: 500; white-space: nowrap; }
   .badge-green { background: var(--green-dim); color: var(--green); }
   .badge-red { background: var(--red-dim); color: var(--red); }
   .badge-yellow { background: var(--yellow-dim); color: var(--yellow); }
   .badge-blue { background: var(--blue-dim); color: var(--blue); }
+  .badge-pink { background: var(--pink-dim); color: var(--pink); }
   .mono { font-family: var(--font-mono); font-size: 12px; }
 
-  /* Lists */
   .belief-list, .todo-list, .dead-list { list-style: none; }
-  .belief-list li, .todo-list li, .dead-list li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 14px; line-height: 1.5; }
+  .belief-list li, .todo-list li, .dead-list li { padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; line-height: 1.5; }
   .belief-list li:last-child, .todo-list li:last-child, .dead-list li:last-child { border-bottom: none; }
-  .dead-list li { color: var(--subtext); text-decoration: line-through; }
+  .dead-list li { color: var(--subtext); text-decoration: line-through; font-size: 12px; }
   .todo-list .priority { color: var(--peach); font-weight: 600; }
 
-  /* Two-col layout */
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
 
   details summary { cursor: pointer; font-weight: 500; color: var(--text-dim); font-size: 13px; }
   details summary:hover { color: var(--text); }
+
+  .season-tag { font-family: var(--font-mono); font-size: 10px; padding: 1px 6px; border-radius: 4px; margin-left: 4px; }
+  .season-cvc { background: var(--mauve-dim); color: var(--mauve); }
+  .season-teams { background: var(--teal-dim); color: var(--teal); }
+  .season-free { background: var(--sky-dim); color: var(--sky); }
 </style>
 </head>
 <body>
 <div class="page">
 
 <h1 class="animate" style="--i:0">Coach Dashboard</h1>
-<p class="subtitle animate" style="--i:1">beta &middot; beta-teams-tiny-fixed &middot; 35 sessions</p>
+<p class="subtitle animate" style="--i:1">beta &middot; 35 sessions &middot; 2 seasons &middot; 26 versions submitted</p>
 
 <div class="kpis">
   <div class="kpi animate" style="--i:2">
-    <div class="kpi-label">Tournament Rank</div>
+    <div class="kpi-label">Best Rank</div>
     <div class="kpi-value" style="color:var(--green)">#1</div>
-    <div class="kpi-sub">of 21 entrants</div>
+    <div class="kpi-sub">beta-teams-tiny-fixed</div>
   </div>
   <div class="kpi animate" style="--i:3">
-    <div class="kpi-label">Best Score</div>
-    <div class="kpi-value" style="color:var(--blue)">10.63</div>
-    <div class="kpi-sub">beta:v7, team-round-2</div>
+    <div class="kpi-label">Team Score</div>
+    <div class="kpi-value" style="color:var(--teal)">10.00</div>
+    <div class="kpi-sub">beta:v7 (lower=better)</div>
   </div>
   <div class="kpi animate" style="--i:4">
-    <div class="kpi-label">Sessions</div>
-    <div class="kpi-value">35</div>
-    <div class="kpi-sub">22 with code changes</div>
+    <div class="kpi-label">FreePlay Best</div>
+    <div class="kpi-value" style="color:var(--blue)">6.23</div>
+    <div class="kpi-sub">coglet-v0:v14 (beta-cvc)</div>
   </div>
   <div class="kpi animate" style="--i:5">
-    <div class="kpi-label">Gap to #2</div>
-    <div class="kpi-value" style="color:var(--teal)">+0.09</div>
-    <div class="kpi-sub">alpha.0:v891 = 10.54</div>
+    <div class="kpi-label">Sessions</div>
+    <div class="kpi-value">35</div>
+    <div class="kpi-sub">PCO: 4 &middot; Design: 10</div>
   </div>
   <div class="kpi animate" style="--i:6">
-    <div class="kpi-label">PCO Epochs</div>
-    <div class="kpi-value">4</div>
-    <div class="kpi-sub">1 accepted improvement</div>
+    <div class="kpi-label">Versions</div>
+    <div class="kpi-value">26</div>
+    <div class="kpi-sub">18 beta-cvc + 8 teams</div>
   </div>
   <div class="kpi animate" style="--i:7">
-    <div class="kpi-label">Status</div>
-    <div class="kpi-value" style="color:var(--green); font-size:20px">Complete</div>
-    <div class="kpi-sub">Tournament finished</div>
+    <div class="kpi-label">Dead Ends</div>
+    <div class="kpi-value" style="color:var(--red)">13</div>
+    <div class="kpi-sub">don't retry</div>
   </div>
 </div>
 
 <div class="card animate" style="--i:8">
-  <h2><span class="dot" style="background:var(--blue)"></span> Score Progression</h2>
+  <h2><span class="dot" style="background:var(--blue)"></span> Score Progression — All Seasons</h2>
   <div class="chart-wrap"><canvas id="scoreChart"></canvas></div>
 </div>
 
 <div class="card animate" style="--i:9">
-  <h2><span class="dot" style="background:var(--mauve)"></span> Experiment Log</h2>
+  <h2><span class="dot" style="background:var(--mauve)"></span> Tournament Versions</h2>
+  <div class="tabs">
+    <button class="tab active" onclick="showSeason('all')">All</button>
+    <button class="tab" onclick="showSeason('cvc')">beta-cvc (free play)</button>
+    <button class="tab" onclick="showSeason('teams')">beta-teams-tiny-fixed</button>
+  </div>
+  <div style="overflow-x:auto">
+  <table id="versionTable">
+    <thead><tr><th>Version</th><th>Season</th><th>Score</th><th>Matches</th><th>Rank</th><th>Key Change</th></tr></thead>
+    <tbody>
+      <tr data-season="cvc"><td class="mono">coglet-v0:v3</td><td><span class="season-tag season-cvc">beta-cvc</span></td><td>2.34</td><td>111</td><td>711</td><td>Initial submission</td></tr>
+      <tr data-season="cvc"><td class="mono">coglet-v0:v6-v8</td><td><span class="season-tag season-cvc">beta-cvc</span></td><td>2.30-2.32</td><td>105</td><td>~715</td><td>Early iterations</td></tr>
+      <tr data-season="cvc"><td class="mono">coglet-v0:v11-v12</td><td><span class="season-tag season-cvc">beta-cvc</span></td><td>1.68-1.74</td><td>105</td><td>~835</td><td>Regressions</td></tr>
+      <tr data-season="cvc"><td class="mono">coglet-v0:v14</td><td><span class="season-tag season-cvc">beta-cvc</span></td><td style="color:var(--green);font-weight:600">6.23</td><td>1964</td><td>505</td><td>Matchmaking artifact (inflated)</td></tr>
+      <tr data-season="cvc"><td class="mono">coglet-v0:v15</td><td><span class="season-tag season-cvc">beta-cvc</span></td><td>1.82</td><td>33</td><td>831</td><td>Emergency mining regression</td></tr>
+      <tr data-season="cvc"><td class="mono">coglet-v0:v16</td><td><span class="season-tag season-cvc">beta-cvc</span></td><td>1.92</td><td>33</td><td>823</td><td>Shared junction memory</td></tr>
+      <tr data-season="cvc"><td class="mono">coglet-v0:v17</td><td><span class="season-tag season-cvc">beta-cvc</span></td><td>2.70</td><td>33</td><td>614</td><td>Role misassignment fix</td></tr>
+      <tr data-season="cvc"><td class="mono">coglet-v0:v18</td><td><span class="season-tag season-cvc">beta-cvc</span></td><td>2.90</td><td>33</td><td>594</td><td>Chain-aware scoring</td></tr>
+      <tr data-season="cvc"><td class="mono">coglet-v0:v19</td><td><span class="season-tag season-cvc">beta-cvc</span></td><td>2.93</td><td>33</td><td>591</td><td>agent_id normalization</td></tr>
+      <tr data-season="cvc"><td class="mono">coglet-v0:v22</td><td><span class="season-tag season-cvc">beta-cvc</span></td><td>2.41</td><td>250</td><td>680</td><td>Control (v14 clone)</td></tr>
+      <tr data-season="cvc"><td class="mono">coglet-v0:v23</td><td><span class="season-tag season-cvc">beta-cvc</span></td><td>4.04</td><td>216</td><td>551</td><td>Enemy count AoE penalty</td></tr>
+      <tr data-season="teams"><td class="mono">beta:v1</td><td><span class="season-tag season-teams">teams</span></td><td>4.88</td><td>240</td><td>—</td><td>Old CogletPolicy (stage-3)</td></tr>
+      <tr data-season="teams"><td class="mono">beta:v3</td><td><span class="season-tag season-teams">teams</span></td><td>3.66</td><td>240</td><td>—</td><td>CvCPolicy (program table)</td></tr>
+      <tr data-season="teams"><td class="mono">beta:v5</td><td><span class="season-tag season-teams">teams</span></td><td>3.97</td><td>330</td><td>—</td><td>Critic fix + retreat</td></tr>
+      <tr data-season="teams"><td class="mono">beta:v7</td><td><span class="season-tag season-teams">teams</span></td><td style="color:var(--green);font-weight:600">10.00</td><td>8</td><td style="color:var(--green);font-weight:600">#1</td><td>Final scoring (lower=better)</td></tr>
+      <tr data-season="teams"><td class="mono">beta:v8</td><td><span class="season-tag season-teams">teams</span></td><td>29.00</td><td>6</td><td>#8</td><td>Same code, worse team luck</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<div class="card animate" style="--i:10">
+  <h2><span class="dot" style="background:var(--peach)"></span> Experiment Log</h2>
   <div style="overflow-x:auto">
   <table>
-    <thead><tr><th>Session</th><th>Change</th><th>Result</th><th>Score</th><th>Signals</th></tr></thead>
+    <thead><tr><th>Session</th><th>Change</th><th>Result</th><th>PCO Signals</th></tr></thead>
     <tbody>
-      <tr><td class="mono">S1-4</td><td>Baseline + LLM resource herding removal</td><td><span class="badge badge-green">+0.41</span></td><td>1.72</td><td>—</td></tr>
-      <tr><td class="mono">S5</td><td>Retreat/budget/heart tuning</td><td><span class="badge badge-yellow">neutral</span></td><td>1.72</td><td>—</td></tr>
-      <tr><td class="mono">S6</td><td>Fixed 4-agent role allocation</td><td><span class="badge badge-green">+0.95</span></td><td>0.95</td><td>—</td></tr>
-      <tr><td class="mono">S8</td><td>Shared junction memory + wider exploration</td><td><span class="badge badge-green">+0.70</span></td><td>1.65</td><td>—</td></tr>
-      <tr><td class="mono">S9</td><td>Fixed role misassignment bug</td><td><span class="badge badge-green">+4.53</span></td><td>6.18</td><td>—</td></tr>
-      <tr><td class="mono">S10</td><td>Chain-aware junction scoring</td><td><span class="badge badge-green">+2.56</span></td><td>8.74</td><td>—</td></tr>
-      <tr><td class="mono">S13</td><td>CRITICAL: agent_id normalization (%8)</td><td><span class="badge badge-green">+9.64</span></td><td>18.38</td><td>—</td></tr>
-      <tr><td class="mono">S15</td><td>Revert chain-aware scoring (tournament regression)</td><td><span class="badge badge-red">revert</span></td><td>—</td><td>—</td></tr>
-      <tr><td class="mono">S20</td><td>Alpha.0-aligned pressure budgets</td><td><span class="badge badge-yellow">testing</span></td><td>—</td><td>—</td></tr>
-      <tr><td class="mono">S21</td><td>Renamed CvCPolicyCoglet → CvCPolicy</td><td><span class="badge badge-blue">refactor</span></td><td>—</td><td>—</td></tr>
-      <tr><td class="mono">S22</td><td>First PCO epoch — learner prompt too vague</td><td><span class="badge badge-yellow">neutral</span></td><td>—</td><td>R:100 J:0 S:2</td></tr>
-      <tr><td class="mono">S23</td><td>Fix critic (team_resources + junctions)</td><td><span class="badge badge-green">+0.31</span></td><td>3.97→4.88</td><td>R:0 J:0 S:0</td></tr>
-      <tr><td class="mono">S24</td><td>Miner→aligner switch (PCO proposed)</td><td><span class="badge badge-red">reverted</span></td><td>collapsed</td><td>R:0 J:1272 S:0</td></tr>
-      <tr><td class="mono">S26</td><td>Remove hub penalty (match alpha.0)</td><td><span class="badge badge-red">reverted</span></td><td>3.60→1.70</td><td>—</td></tr>
-      <tr><td class="mono">S27</td><td>Earlier 2nd scrambler (step 1000)</td><td><span class="badge badge-red">reverted</span></td><td>3.60→1.74</td><td>—</td></tr>
-      <tr><td class="mono">S29</td><td>Learner API docs in prompt</td><td><span class="badge badge-green">infra</span></td><td>—</td><td>R:0 J:0 S:160</td></tr>
-      <tr><td class="mono">S33</td><td>Tournament: beta:v8 = 6.13 (#5)</td><td><span class="badge badge-green">+1.25</span></td><td>6.13</td><td>—</td></tr>
-      <tr><td class="mono">S35</td><td>Tournament: beta:v7 = 10.63 (#1!)</td><td><span class="badge badge-green">+4.50</span></td><td>10.63</td><td>—</td></tr>
+      <tr><td class="mono">S1-4</td><td>Baseline + LLM resource herding removal</td><td><span class="badge badge-green">+0.41</span></td><td>—</td></tr>
+      <tr><td class="mono">S6</td><td>Fixed 4-agent role allocation</td><td><span class="badge badge-green">fixed</span></td><td>—</td></tr>
+      <tr><td class="mono">S8</td><td>Shared junction memory + wider exploration</td><td><span class="badge badge-green">+0.70</span></td><td>—</td></tr>
+      <tr><td class="mono">S9</td><td>Fixed role misassignment bug</td><td><span class="badge badge-green">+4.53</span></td><td>—</td></tr>
+      <tr><td class="mono">S10</td><td>Chain-aware junction scoring</td><td><span class="badge badge-green">+2.56</span> <span class="badge badge-red">tourn ↓</span></td><td>—</td></tr>
+      <tr><td class="mono">S13</td><td>agent_id normalization (%8)</td><td><span class="badge badge-green">+9.64</span></td><td>—</td></tr>
+      <tr><td class="mono">S21</td><td>Renamed to CvCPolicy (program table)</td><td><span class="badge badge-blue">refactor</span></td><td>—</td></tr>
+      <tr><td class="mono">S22</td><td>First PCO epoch — learner too vague</td><td><span class="badge badge-yellow">neutral</span></td><td>R:100 J:0 S:2</td></tr>
+      <tr><td class="mono">S23</td><td>Critic fix (team_resources + junctions)</td><td><span class="badge badge-green">+0.31</span></td><td>R:0 J:0 S:0</td></tr>
+      <tr><td class="mono">S24</td><td>Miner→aligner switch (PCO)</td><td><span class="badge badge-red">reverted</span></td><td>R:0 J:1272 S:0</td></tr>
+      <tr><td class="mono">S26</td><td>Remove hub penalty</td><td><span class="badge badge-red">reverted</span></td><td>—</td></tr>
+      <tr><td class="mono">S27</td><td>Earlier 2nd scrambler</td><td><span class="badge badge-red">reverted</span></td><td>—</td></tr>
+      <tr><td class="mono">S29</td><td>Learner API docs in prompt</td><td><span class="badge badge-green">infra</span></td><td>R:0 J:0 S:160</td></tr>
+      <tr><td class="mono">S34</td><td>PCO: junction-aware retreat</td><td><span class="badge badge-yellow">skipped</span></td><td>R:0 J:1522 S:2</td></tr>
     </tbody>
   </table>
   </div>
 </div>
 
 <div class="two-col">
-  <div class="card animate" style="--i:10">
+  <div class="card animate" style="--i:11">
     <h2><span class="dot" style="background:var(--teal)"></span> Beliefs &amp; Learnings</h2>
     <ul class="belief-list">
-      <li><strong>Bug fixes &gt; parameter tuning.</strong> The biggest wins came from fixing bugs (role misassignment, agent_id normalization, critic field mismatch) — not from tweaking thresholds.</li>
-      <li><strong>Hub penalty helps.</strong> Despite alpha.0 not having it, removing hub penalty caused 2x regression. Agents without it wander to distant junctions and waste time.</li>
-      <li><strong>Local scores don't predict tournament.</strong> v19 scored 18.38 local but only 2.76 in tournament. Cooperative team scoring amplifies strong play differently than self-play.</li>
-      <li><strong>Seed variance is extreme.</strong> Scores range 0.00–12.29 across seeds. Single-seed optimization is noise. Need 5+ seeds minimum.</li>
-      <li><strong>Agents capture junctions early but lose them.</strong> At step 1000: 8 friendly junctions. By step 3000: 0-2. Defense, not offense, is the bottleneck.</li>
-      <li><strong>PCO produces correct signals after critic fix.</strong> Junction loss magnitude (925-1522) correctly identifies the main weakness. Resource and survival are fine.</li>
-      <li><strong>PCO patches need API docs.</strong> Without GameState API reference, the learner invents non-existent methods. With docs, patches are clean and valid.</li>
-      <li><strong>No shared state between agents.</strong> Agents are independent, may run in separate processes. Junction memory is per-agent only.</li>
+      <li><strong>Bug fixes > parameter tuning.</strong> Biggest wins: role misassignment fix (+4.53), agent_id normalization (+9.64), critic field mismatch.</li>
+      <li><strong>Hub penalty helps independent agents.</strong> Keeps agents near hub where they can observe each other's captures. Removing it = 2x regression.</li>
+      <li><strong>Local scores ≠ tournament scores.</strong> 18.38 local → 2.93 tournament. Cooperative team scoring is a different game.</li>
+      <li><strong>Seed variance is extreme.</strong> 0.00–12.29 across seeds. Need 5+ seeds to evaluate.</li>
+      <li><strong>Agents capture then lose.</strong> 8 friendly junctions at step 1000 → 0 by step 3000. Defense is the bottleneck.</li>
+      <li><strong>PCO works when critic is correct.</strong> Bad signals (resource always 100) → bad patches. Fixed critic → meaningful proposals.</li>
+      <li><strong>v14 score was matchmaking artifact.</strong> v22 (identical code) scored 2.41 vs v14's 6.23. Rating feedback loop inflated it.</li>
+      <li><strong>No shared state.</strong> Agents are independent. Per-agent junction memory only.</li>
     </ul>
   </div>
 
   <div>
-    <div class="card animate" style="--i:11">
+    <div class="card animate" style="--i:12">
       <h2><span class="dot" style="background:var(--peach)"></span> TODOs</h2>
       <ul class="todo-list">
-        <li class="priority">Test removing scramblers for cooperative scoring (1v1 mode)</li>
-        <li>Map topology analysis — understand wall patterns</li>
+        <li class="priority">Test removing scramblers for cooperative scoring (1v1)</li>
+        <li>Map topology analysis — wall patterns</li>
         <li>Dynamic role switching based on game state</li>
         <li>Better junction discovery behind walls</li>
-        <li>Run PCO on low-scoring seeds to fix worst cases</li>
+        <li>PCO on low-scoring seeds to fix worst cases</li>
       </ul>
     </div>
 
-    <div class="card animate" style="--i:12">
+    <div class="card animate" style="--i:13">
       <h2><span class="dot" style="background:var(--red)"></span> Dead Ends</h2>
       <details open>
-        <summary>13 dead ends — don't retry</summary>
+        <summary>13 items</summary>
         <ul class="dead-list">
-          <li>Retreat threshold tuning — trades deaths for score regression</li>
-          <li>Heart batch target changes — 3 for aligners is sweet spot</li>
-          <li>Outer explore ring (manhattan 35) — agents die</li>
-          <li>Remove alignment network filter — required by mechanics</li>
-          <li>Expand alignment range +5 — targets unreachable junctions</li>
-          <li>Remove scramblers (self-play only) — scramblers help</li>
-          <li>Resource-aware pressure budgets — too aggressive</li>
-          <li>Wider A* margin (12→20) — slower, wastes ticks</li>
-          <li>Emergency mining threshold 50 or 10 — hurts good seeds</li>
-          <li>Remove hub penalty — 2x regression (agents scatter)</li>
-          <li>Earlier 2nd scrambler — takes aligner slot</li>
-          <li>Miner→aligner role switch in step — economy collapse</li>
-          <li>More aggressive retreat (HP&lt;80) — agents retreat too much</li>
+          <li>Retreat threshold tuning</li>
+          <li>Heart batch target changes</li>
+          <li>Outer explore ring (manhattan 35)</li>
+          <li>Remove alignment network filter</li>
+          <li>Expand alignment range +5</li>
+          <li>Remove scramblers (self-play only)</li>
+          <li>Resource-aware pressure budgets</li>
+          <li>Wider A* margin (12→20)</li>
+          <li>Emergency mining threshold 50/10</li>
+          <li>Remove hub penalty</li>
+          <li>Earlier 2nd scrambler (step 1000)</li>
+          <li>Miner→aligner role switch</li>
+          <li>Aggressive retreat (HP&lt;80)</li>
         </ul>
       </details>
     </div>
   </div>
 </div>
 
-<div class="card animate" style="--i:13">
-  <h2><span class="dot" style="background:var(--green)"></span> PCO Signal History</h2>
-  <table>
-    <thead><tr><th>Session</th><th>Seed</th><th>Resource</th><th>Junction</th><th>Survival</th><th>Patch</th><th>Applied</th></tr></thead>
-    <tbody>
-      <tr><td class="mono">S22</td><td>42</td><td><span class="badge badge-red">100</span></td><td>0</td><td>2</td><td>step, should_retreat</td><td><span class="badge badge-red">no (truncated)</span></td></tr>
-      <tr><td class="mono">S23</td><td>43</td><td>0</td><td>0</td><td>0</td><td>should_retreat</td><td><span class="badge badge-green">yes</span></td></tr>
-      <tr><td class="mono">S24</td><td>42</td><td>0</td><td><span class="badge badge-red">1272</span></td><td>0</td><td>step (miner→aligner)</td><td><span class="badge badge-red">reverted</span></td></tr>
-      <tr><td class="mono">S25</td><td>44</td><td>0</td><td><span class="badge badge-red">925</span></td><td>0</td><td>align (invalid API)</td><td><span class="badge badge-red">no</span></td></tr>
-      <tr><td class="mono">S29</td><td>44</td><td>0</td><td>0</td><td><span class="badge badge-red">160</span></td><td>should_retreat (HP&lt;80)</td><td><span class="badge badge-red">reverted</span></td></tr>
-      <tr><td class="mono">S34</td><td>45</td><td>0</td><td><span class="badge badge-red">1522</span></td><td>2</td><td>should_retreat (junction-aware)</td><td><span class="badge badge-yellow">skipped</span></td></tr>
-    </tbody>
-  </table>
-</div>
-
-<p style="text-align:center; color:var(--subtext); font-size:12px; margin-top:24px; font-family:var(--font-mono);">
-  Generated from .coach/ state &middot; beta:v7 #1 &middot; 10.63 score
+<p style="text-align:center; color:var(--subtext); font-size:11px; margin-top:20px; font-family:var(--font-mono);">
+  Generated from .coach/ &middot; beta:v7 #1 (teams) &middot; coglet-v0:v14 best (free play)
 </p>
 
 </div>
 
 <script>
-const ctx = document.getElementById('scoreChart').getContext('2d');
 const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-new Chart(ctx, {
+const c = (d,l) => isDark ? d : l;
+
+new Chart(document.getElementById('scoreChart').getContext('2d'), {
   type: 'line',
   data: {
-    labels: ['S1','S2','S4','S6','S8','S9','S10','S11','S13','S15','S20','S22','S23','S33','S35'],
+    labels: ['v3','v6','v9','v11','v14','v15','v16','v17','v18','v19','v22','v23','β1','β3','β5','β7'],
     datasets: [{
-      label: 'Local Best Score',
-      data: [1.31, 1.72, 1.76, 0.95, 1.65, 6.18, 8.74, 8.74, 18.38, null, null, null, null, null, null],
-      borderColor: isDark ? '#89b4fa' : '#1e66f5',
-      backgroundColor: isDark ? 'rgba(137,180,250,0.1)' : 'rgba(30,102,245,0.1)',
+      label: 'beta-cvc (free play)',
+      data: [2.34, 2.32, 2.22, 1.68, 6.23, 1.82, 1.92, 2.70, 2.90, 2.93, 2.41, 4.04, null,null,null,null],
+      borderColor: c('#cba6f7','#8839ef'),
+      backgroundColor: c('rgba(203,166,247,0.08)','rgba(136,57,239,0.06)'),
       tension: 0.3, fill: true, pointRadius: 4,
     },{
-      label: 'Tournament Score',
-      data: [null, null, null, null, null, null, null, null, null, null, null, null, 3.97, 6.13, 10.63],
-      borderColor: isDark ? '#a6e3a1' : '#40a02b',
-      backgroundColor: isDark ? 'rgba(166,227,161,0.1)' : 'rgba(64,160,43,0.1)',
+      label: 'beta-teams (stage-3)',
+      data: [null,null,null,null,null,null,null,null,null,null,null,null, 4.88, 3.66, 3.97, null],
+      borderColor: c('#94e2d5','#179299'),
+      backgroundColor: c('rgba(148,226,213,0.08)','rgba(23,146,153,0.06)'),
       tension: 0.3, fill: true, pointRadius: 5, pointStyle: 'triangle',
+    },{
+      label: 'beta-teams (final)',
+      data: [null,null,null,null,null,null,null,null,null,null,null,null, null,null,null, 10.0],
+      borderColor: c('#a6e3a1','#40a02b'),
+      backgroundColor: c('rgba(166,227,161,0.08)','rgba(64,160,43,0.06)'),
+      tension: 0.3, fill: true, pointRadius: 7, pointStyle: 'star',
     }]
   },
   options: {
     responsive: true, maintainAspectRatio: false,
     plugins: {
-      legend: { labels: { color: isDark ? '#cdd6f4' : '#4c4f69', font: { family: "'Outfit'" } } }
+      legend: { labels: { color: c('#cdd6f4','#4c4f69'), font: { family: "'Outfit'", size: 11 } } },
+      tooltip: { callbacks: { label: ctx => {
+        if (ctx.dataset.label.includes('final')) return `Final placement: ${ctx.parsed.y} (lower=better, #1)`;
+        return `${ctx.dataset.label}: ${ctx.parsed.y}`;
+      }}}
     },
     scales: {
-      x: { ticks: { color: isDark ? '#6c7086' : '#9ca0b0', font: { family: "'JetBrains Mono'", size: 10 } }, grid: { color: isDark ? 'rgba(205,214,244,0.04)' : 'rgba(76,79,105,0.06)' } },
-      y: { ticks: { color: isDark ? '#6c7086' : '#9ca0b0', font: { family: "'JetBrains Mono'", size: 10 } }, grid: { color: isDark ? 'rgba(205,214,244,0.04)' : 'rgba(76,79,105,0.06)' }, beginAtZero: true }
+      x: { ticks: { color: c('#6c7086','#9ca0b0'), font: { family: "'JetBrains Mono'", size: 10 } }, grid: { color: c('rgba(205,214,244,0.04)','rgba(76,79,105,0.06)') } },
+      y: { ticks: { color: c('#6c7086','#9ca0b0'), font: { family: "'JetBrains Mono'", size: 10 } }, grid: { color: c('rgba(205,214,244,0.04)','rgba(76,79,105,0.06)') }, beginAtZero: true }
     }
   }
 });
+
+function showSeason(s) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('#versionTable tbody tr').forEach(r => {
+    r.style.display = (s === 'all' || r.dataset.season === s) ? '' : 'none';
+  });
+}
 </script>
 </body>
 </html>
