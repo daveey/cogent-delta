@@ -21,6 +21,7 @@ _JUNCTION_MEMORY_STEPS = 400
 class JunctionMixin:
     _world_model: WorldModel
     _junctions: dict[tuple[int, int], tuple[str | None, int]]
+    _hotspots: dict[tuple[int, int], int]
     _agent_id: int
     _step_index: int
 
@@ -74,6 +75,7 @@ class JunctionMixin:
         hub = self._nearest_hub(state)
         if hub is None:
             return
+        team = _h.team_id(state)
         for entity in state.visible_entities:
             if entity.entity_type != "junction":
                 continue
@@ -82,10 +84,15 @@ class JunctionMixin:
                 int(entity.attributes["global_y"]) - hub.global_y,
             )
             owner = entity.attributes.get("owner")
-            self._junctions[rel_position] = (
-                None if owner in {None, "neutral"} else str(owner),
-                state.step or self._step_index,
-            )
+            new_owner = None if owner in {None, "neutral"} else str(owner)
+            # Hotspot tracking: detect when a friendly junction gets scrambled
+            prev = self._junctions.get(rel_position)
+            if prev is not None:
+                prev_owner = prev[0]
+                if prev_owner == team and new_owner != team:
+                    abs_pos = (hub.global_x + rel_position[0], hub.global_y + rel_position[1])
+                    self._hotspots[abs_pos] = self._hotspots.get(abs_pos, 0) + 1
+            self._junctions[rel_position] = (new_owner, state.step or self._step_index)
 
     def _junction_entities(
         self,

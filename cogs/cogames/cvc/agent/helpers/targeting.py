@@ -35,6 +35,7 @@ def aligner_target_score(
     claimed_by_other: bool,
     hub_position: tuple[int, int] | None = None,
     friendly_sources: list[KnownEntity] | None = None,
+    hotspot_count: int = 0,
 ) -> tuple[float, float]:
     distance = float(manhattan(current_position, candidate.position))
     expansion = sum(
@@ -66,12 +67,14 @@ def aligner_target_score(
             hub_penalty = (network_dist - 10) * 1.5 + 2.0
         else:
             hub_penalty = network_dist * 0.3
+    hotspot_penalty = min(hotspot_count, 5) * 8.0
     return (
         distance
         - min(expansion * 5.0, 30.0)
         + enemy_aoe * 8.0
         + (_CLAIMED_TARGET_PENALTY if claimed_by_other else 0.0)
-        + hub_penalty,
+        + hub_penalty
+        + hotspot_penalty,
         -float(expansion),
     )
 

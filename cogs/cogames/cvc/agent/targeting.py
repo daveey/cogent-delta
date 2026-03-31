@@ -18,6 +18,7 @@ _TARGET_SWITCH_THRESHOLD = 3.0
 class TargetingMixin:
     _world_model: WorldModel
     _claims: dict[tuple[int, int], tuple[int, int]]
+    _hotspots: dict[tuple[int, int], int]
     _agent_id: int
     _step_index: int
     _claimed_target: tuple[int, int] | None
@@ -128,6 +129,7 @@ class TargetingMixin:
                     ),
                     hub_position=hub_pos,
                     friendly_sources=network_sources,
+                    hotspot_count=self._hotspots.get(entity.position, 0),
                 ),
                 entity.position,
             ),
@@ -164,6 +166,7 @@ class TargetingMixin:
             claimed_by_other=False,
             hub_position=hub_pos,
             friendly_sources=network_sources,
+            hotspot_count=self._hotspots.get(sticky.position, 0),
         )[0]
         candidate_score = _h.aligner_target_score(
             current_position=current_pos,
@@ -178,6 +181,7 @@ class TargetingMixin:
             ),
             hub_position=hub_pos,
             friendly_sources=network_sources,
+            hotspot_count=self._hotspots.get(candidate.position, 0),
         )[0]
         if candidate.position != sticky.position and candidate_score + _TARGET_SWITCH_THRESHOLD < sticky_score:
             return candidate
