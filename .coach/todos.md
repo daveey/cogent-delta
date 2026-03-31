@@ -1,9 +1,9 @@
 # Coach TODO
 
 ## Current Priorities
-- [ ] Monitor beta:v60 freeplay and beta:v61 tournament results (no teammate penalty)
-- [ ] If teammate penalty removal helps freeplay, also try increasing expansion bonus weight
+- [ ] Monitor beta:v64 freeplay and beta:v65 tournament results (1-scrambler change)
 - [ ] Update IMPROVE.md constants: JUNCTION_ALIGN_DISTANCE=15 (not 3), JUNCTION_AOE_RANGE=10 (not 4)
+- [ ] If 1-scrambler helps freeplay, try combining with network-dist scoring (conservative version)
 - [ ] Investigate programs.py dead code (_should_retreat extra logic never invoked)
 
 ## Improvement Ideas
@@ -12,10 +12,10 @@
 - [ ] PCO evolution — run more epochs to evolve program table
 - [ ] Better junction discovery — agents may miss junctions behind walls
 - [ ] Adaptive role allocation based on game phase (not just step count)
-- [ ] Late-game optimization — shift more to aligners after step 5000
-- [ ] Reduce late-game scramblers from 2 to 1 (give extra aligner)
 - [ ] Study opponent replays via `cogames match-artifacts <id>` for new strategies
 - [ ] Clean up dead code in programs.py (unused _should_retreat extra logic)
+- [ ] Network-dist scoring with conservative blend (50/50 hub+network dist)
+- [ ] Scrambler heart priority — ensure scrambler gets hearts before aligners
 
 ## Dead Ends (Don't Retry)
 - [x] Retreat threshold tuning — always trades deaths for score regression
@@ -37,12 +37,15 @@
 - [x] Hotspot decay (every 1000 steps) — -9% regression, not enough improvement to justify
 - [x] Reading teammate vibes — vibes are NOT visible in game API (not possible)
 - [x] Aggressive adaptive role allocation — killed 1v1 scores (excess_aligners math counts ALL teammates)
+- [x] Pure network-dist scoring — agents venture too far and die (-31% avg)
+- [x] Removing teammate penalty (v60) — hurt freeplay (1.12 vs 1.81)
 
 ## Testing Notes
 - **ALWAYS test 1v1 with `cogames run -c 16 -p A -p B`** not just scrimmage
 - Scrimmage (`-c 8`) is self-play where one policy controls all agents — inflated scores
 - Self-play has ENORMOUS variance (0.00-12.03 on same seed across runs) — not deterministic
 - Self-play improvements DON'T predict freeplay improvements — the two are weakly correlated
+- Need 7+ seeds minimum for any signal in self-play
 
 ## Done
 - [x] Establish baseline: 1.31 on machina_1 (seed 42)
@@ -62,3 +65,4 @@
 - [x] Session 37 (ID): Fix double role-adjustment + wider enemy retreat + junction memory 400→600 (+11% self-play, v30/v31)
 - [x] Session 39 (ID): Reduced heart retreat margin (hearts*5→hearts*3), tested hotspot changes (reverted). Submitted v56/v57
 - [x] Session 40 (ID): Removed teammate penalty from aligner scoring (10.0→0). Self-play neutral (-3.6%). Submitted v60/v61
+- [x] Session 41 (ID): Reduced late-game scramblers 2→1 (extra aligner). Self-play +216% (avg 0.87→2.75). Submitted v64/v65

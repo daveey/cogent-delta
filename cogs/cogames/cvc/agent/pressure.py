@@ -150,9 +150,7 @@ class PressureMixin:
                 pressure_budget = 3
 
         scrambler_budget = 0
-        if step >= 3000:
-            scrambler_budget = 2
-        elif step >= 100:
+        if step >= 100:
             scrambler_budget = 1
         aligner_budget = max(pressure_budget - scrambler_budget, 0)
         if objective == "resource_coverage":
