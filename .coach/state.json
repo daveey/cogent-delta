@@ -1,7 +1,7 @@
 {
-  "last_session": "20260401-031500",
+  "last_session": "20260401-040000",
   "best_score": 8.84,
-  "total_sessions": 52,
+  "total_sessions": 53,
   "policy_name": "beta",
   "season": "beta-teams-tiny-fixed",
   "tournament_best": 8.84,
@@ -11,10 +11,10 @@
   "freeplay_season": "beta-cvc",
   "latest_submission": "beta:v85",
   "freeplay_submission": "beta:v84",
-  "key_fix": "Scramble weight 4.0→6.0 (neutral). Tournament play-ins: v67-v73 scoring 8.84 (best).",
+  "key_fix": "No change (known_junctions fix reverted - extreme variance). Tournament stage 2 running.",
   "approach_stats": {
     "pco": {"attempts": 4, "improvements": 1, "last_used": "20260329-000000"},
-    "design": {"attempts": 24, "improvements": 15, "last_used": "20260401-031500"}
+    "design": {"attempts": 25, "improvements": 15, "last_used": "20260401-040000"}
   },
   "freeplay_experiments": {
     "v80_extractor_mem_800": {"score": "pending", "result": "pending"},
