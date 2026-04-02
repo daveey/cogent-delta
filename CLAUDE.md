@@ -59,8 +59,6 @@ Improve (Claude Code) → PlayerCoglet (GitLet) → PolicyCoglet (ProgLet + LLM 
 PYTHONPATH=src/cogamer python -m pytest tests/ -v
 ```
 
-See [IMPROVE.md](IMPROVE.md) for CvC agent coaching guide index.
-
 ### Docs
 
 - [AGENTS.md](AGENTS.md) — Component reference for AI agents working with this codebase
