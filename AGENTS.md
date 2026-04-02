@@ -60,7 +60,7 @@ LifeLet (lifecycle hooks), GitLet (repo-as-policy), LogLet (log stream), TickLet
 
 ### CvC Player Stack
 
-Improve (Claude Code) → PlayerCoglet (GitLet) → PolicyCoglet (ProgLet + LLM brain)
+Improve (LLM) → PlayerCoglet (GitLet) → PolicyCoglet (ProgLet + LLM brain)
 
 ### Key Commands
 

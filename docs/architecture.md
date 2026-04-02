@@ -8,7 +8,7 @@ CvCPolicy (MultiAgentPolicy)
        └── GameState (wraps CvcEngine)
        └── Program table (programs.py):
             ├── 31 code programs — fast Python functions (decision tree, pathfinding, roles)
-            └── 1 LLM program ("analyze") — slow Claude call for strategic analysis
+            └── 1 LLM program ("analyze") — slow LLM call for strategic analysis
 ```
 
 **Two speeds, one table.** The fast path (code programs) runs every tick: `desired_role()` → `step()` → role actions. The slow path (LLM program) runs every ~500 steps: `analyze` reviews game state and adjusts `resource_bias`. Both are entries in the same program dict, both are evolvable.
@@ -31,7 +31,7 @@ CvCPolicy (MultiAgentPolicy)
 | **Query** | `hp`, `step_num`, `position`, `inventory`, `resource_bias`, `team_resources`, `resource_priority`, `nearest_hub`, `nearest_extractor`, `known_junctions`, `safe_distance`, `has_role_gear`, `team_can_afford_gear`, `needs_emergency_mining`, `is_stalled`, `is_oscillating` | Read-only state from GameState |
 | **Action** | `action`, `move_to`, `hold`, `explore`, `unstick` | Movement via A* pathfinding |
 | **Decision** | `desired_role`, `should_retreat`, `retreat`, `mine`, `align`, `scramble`, `step`, `summarize` | Compose queries + actions |
-| **LLM** | `analyze` | Claude Sonnet reviews game state every ~500 steps, returns `resource_bias` + `analysis` |
+| **LLM** | `analyze` | LLM Sonnet reviews game state every ~500 steps, returns `resource_bias` + `analysis` |
 
 ## Decision Flow (per tick, per agent)
 
