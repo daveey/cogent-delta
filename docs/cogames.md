@@ -2,13 +2,7 @@
 
 ## Setup
 
-```bash
-uv venv --python 3.12 .venv
-source .venv/bin/activate
-uv pip install -e . && uv pip install cogames
-```
-
-Verify: `source .venv/bin/activate && cogames --version`
+See `cogent/skills/cogames.md` for install, auth, and validation steps.
 
 ## Running Locally
 
@@ -45,12 +39,7 @@ ANTHROPIC_API_KEY= PYTHONPATH=src/cogamer cogames play -m four_score \
 
 ### Prerequisites
 
-```bash
-uv sync                          # install project + dependencies
-cogames auth status              # verify auth (should show email)
-# If not authenticated:
-cogames auth set-token <token>   # set token from secrets
-```
+Run `cogent/skills/cogames.md` if not already done.
 
 ### Upload to Season
 
