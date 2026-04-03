@@ -49,9 +49,10 @@ Test PID 1173 running seeds sequentially. Expected completion: 50-75 minutes (10
 
 **Seed 42**: 6.03 per cog (baseline: 9.37) → **-35.6% regression**
 **Seed 43**: 7.48 per cog (baseline: 11.44) → **-34.6% regression**
-**Seed 44**: Running...
-**Seeds 45-46**: Pending
+**Seed 44**: 5.98 per cog (baseline: 19.86) → **-69.9% regression**
+**Seed 45**: Running...
+**Seed 46**: Pending
 
-**Avg so far**: 6.76 (seeds 42-43) vs baseline avg 10.41 → **-35.1% regression**
+**Avg so far**: 6.50 (seeds 42-44) vs baseline avg 13.56 → **-52.1% regression**
 
-**Conclusion forming**: Consistent significant regression across seeds. Will complete full test then revert.
+**Conclusion**: Severe regression confirmed. Softer LLM prompt is performing worse than prescriptive approach. Will revert immediately after final seed completes.
