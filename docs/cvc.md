@@ -111,15 +111,23 @@ cvc/
 ├── cogamer_policy.py          # CvCPolicy + CvCPolicyImpl + CvCAgentState + LLM brain
 ├── programs.py                # Flat program table (all 32 programs for PCO)
 ├── game_state.py              # GameState adapter wrapping CogletAgentPolicy
+├── learner.py                 # CvCLearner (LLM proposes program patches between episodes)
 └── agent/
-    ├── __init__.py            # Barrel file re-exporting all helpers
-    ├── main.py                # CvcEngine (heuristic decision tree, pathfinding, targeting)
-    ├── coglet_policy.py       # CogletAgentPolicy (heuristic overrides: resource bias, budgets, retreat)
+    ├── __init__.py            # Barrel file re-exporting all submodules
+    ├── main.py                # CvcEngine (heuristic decision tree)
+    ├── coglet_policy.py       # CogletAgentPolicy (LLM overrides: resource bias, budgets, retreat)
+    ├── roles.py               # Role-specific action logic (miner/aligner/scrambler)
+    ├── navigation.py          # Movement, explore patterns, unstick
+    ├── targeting.py           # Target selection, claims, sticky targets
+    ├── pressure.py            # Role budgets, retreat (delegates to budgets.py)
+    ├── junctions.py           # Junction memory, depot lookup
+    ├── budgets.py             # Pure functions: assign_role, pressure budgets, retreat margin
+    ├── pathfinding.py         # Pure functions: A* search, oscillation detection
     ├── world_model.py         # WorldModel (per-agent entity memory)
-    ├── types.py               # Constants, KnownEntity
-    ├── scoring.py             # Junction/extractor scoring
+    ├── scoring.py             # Junction/extractor scoring functions
     ├── resources.py           # Deposit/heart/resource logic
-    └── geometry.py            # Manhattan distance, position helpers
+    ├── geometry.py            # Manhattan distance, position helpers
+    └── types.py               # Constants, KnownEntity
 ```
 
 ### Per-Agent Decision Loop
@@ -129,12 +137,25 @@ Each step, CvCPolicyImpl.step_with_state():
 3. If LLM interval reached → call Claude for new `resource_bias`
 4. If log interval reached → capture snapshot
 
-### LLM Brain
+### LLM Brain (Strategic Advisor)
+The LLM never picks individual actions — Python handles all real-time decisions. The LLM steers Python heuristics via three soft overrides every ~500 steps:
+
+| Knob | Effect |
+|------|--------|
+| `resource_bias` | Which element miners prioritize |
+| `role` | Override role assignment (null = keep current) |
+| `objective` | Macro strategy: `expand`/`defend`/`economy_bootstrap` — adjusts pressure budgets |
+
+**Call cycle:** `summarize` collects context → `_build_analysis_prompt()` builds structured prompt → Claude Sonnet returns JSON → `_parse_analysis()` validates → effects applied to GameState.
+
 - Each agent independently calls Claude Sonnet at adaptive intervals (200-1000 steps)
-- Sends: step, HP, hearts, gear, hub resources, team roles, visible junctions
-- Receives: `{"resource_bias": "carbon"|..., "analysis": "..."}`
+- Sends: step, HP, hearts, gear, hub resources, team roles, junction counts, stall/oscillation status
+- Receives: `{"resource_bias": "...", "role": null|"...", "objective": null|"...", "analysis": "..."}`
 - Latency ~2s per call, interval adapts: shrinks if <2s, grows if >5s
 - 8 agents × ~20 calls = ~160 API calls per game (consider cost)
+
+### PCO Learning (Between Episodes)
+`CvCLearner` uses an LLM to propose patches to the program table based on loss signals from evaluation. It can modify any program's Python source or the `analyze` prompt itself. Patches are compiled via `exec()`, validated by constraints, and swapped in for the next episode.
 
 ### Heuristic Engine Decision Tree
 ```
