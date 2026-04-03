@@ -1,17 +1,18 @@
 {
   "approach_stats": {
     "pco": {"attempts": 0, "improvements": 0, "last_used": null},
-    "design": {"attempts": 14, "improvements": 6, "last_used": "20260403-015-validated"}
+    "design": {"attempts": 14, "improvements": 6, "last_used": "20260403-016-testing"}
   },
   "testing_in_progress": {
     "date": "20260403",
     "version": "016",
-    "focus": "Expansion bonus increase for aggressive territory control",
-    "description": "Increased expansion bonus from 5.0 to 6.0 per unreachable junction (+20%), max from 30 to 36",
-    "rationale": "Synergizes with 014's enemy avoidance. Encourages more aggressive capture of expansion-unlocking junctions in unclaimed territory.",
-    "upload": "gamma_v4:v1",
+    "focus": "Expansion bonus increase (014+015+016 combined)",
+    "description": "Testing expansion 5.0→6.0 on top of validated 014+015 baseline. Full stack: enemy_aoe 10.0, blocked_neutrals 8.0, expansion 6.0.",
+    "rationale": "Expansion bonus synergizes with enemy avoidance and scrambler improvements. Encourages aggressive expansion into safe unclaimed territory.",
+    "upload": "gamma_v5:v1",
     "season": "beta-cvc",
-    "uploaded_at": "20260403 22:57 UTC"
+    "uploaded_at": "20260403 23:18 UTC",
+    "note": "gamma_v4:v1 tests expansion alone without blocked_neutrals correction. gamma_v5:v1 includes all validated improvements."
   },
   "last_improvement": {
     "date": "20260403",
