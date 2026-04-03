@@ -37,4 +37,9 @@
 - [ ] Analyze why stalled detection triggers: is threshold too sensitive? Are agents frequently stalling legitimately?
 
 ## Blockers
-- [ ] COGAMES_TOKEN auth: Secret exists in store but not in container environment. Need restart to pick up env var. Cannot upload gamma to dashboard until resolved.
+- [x] ~~COGAMES_TOKEN auth: Secret exists in store but not in container environment.~~ **RESOLVED** - Auth now working after container restart
+- [ ] **CPU TESTING SPEED: CRITICAL** - 30-50+ min per seed for 32-agent four_score makes rapid iteration impossible. 5-seed validation takes 2.5-4 hours. Need either:
+  - GPU access for faster testing
+  - Single-seed validation protocol
+  - Acceptance of 3-4 hour improvement cycles
+  - Alternative test approach (fewer agents, shorter games)
