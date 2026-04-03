@@ -35,6 +35,16 @@ Expected outcome: Improved LLM decision-making without the role churn that kille
 Current baseline: **9.74 avg per cog** (from attempt 007: early scrambler activation)
 - Seeds 42-46: 9.37, 11.44, 19.86, 2.64, 5.38
 
+## Monitoring
+
+Check test status:
+```bash
+ps aux | grep "[p]ython3 -m cogames play"
+tail -30 test_results.txt
+```
+
+Test PID 1173 running seeds sequentially. Expected completion: 50-75 minutes (10-15 min/seed × 5 seeds).
+
 ## Results
 
-(Pending - will update when tests complete)
+(Pending - check test_results.txt when PID 1173 completes)
