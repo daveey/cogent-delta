@@ -1,68 +1,62 @@
-# gamma — Session Memory
+# scissors — Session Memory
 
-## Key Learnings (20260403)
+## Current Session (20260403 23:35 UTC)
 
-### Four_score Optimization Pattern
-- **Conservative adjustments work**: Hotspot penalty +50%, scrambler -50 steps both succeeded
-- **Aggressive changes fail**: Network bonus 3×, LLM prescriptive rules, threat_bonus +50% all regressed significantly
-- **Balance is critical**: Over-indexing on any single parameter (defense, consolidation, offense) disrupts equilibrium
-- **High variance**: Same policy can score 4.55-19.86 across seeds due to multi-team dynamics
+**Major Breakthrough: Top 10 Achievement**
+- gamma_v5:v1 reached **rank #10** with 15.33 avg (beta-cvc)
+- +106% improvement from baseline (7.45 → 15.33)
+- Stack: enemy_aoe 10.0 + blocked_neutrals 8.0 + expansion 6.0
 
-### Successful Improvements
-1. **Hotspot penalty** (004): 8→12 base, 5→6 mid → +49.7%
-2. **Early scrambler** (007): step 100→50 → +7.84%
-3. **Cumulative**: 6.03 → 9.74 per cog (+61.5%)
+**Improvement 017 Completed (scissors' first contribution):**
+- **Problem**: 63% of exploration targets went out-of-bounds in four_score corner spawns
+- **Root cause**: Offsets designed for machina_1 center spawns (±22-36 magnitude) don't work for corners at (15,15), (73,15), (15,73), (73,73) on 88×88 map
+- **Solution**: 
+  1. Reduced offset magnitudes: 22→15 max to stay in-bounds
+  2. Added dynamic corner detection: flip offsets based on hub quadrant (x>44, y>44)
+  3. Applied to all roles: aligner (8 offsets), miner (4), scrambler (4)
+- **Impact**: 0% OOB rate (was 63-75%), 100% valid exploration
+- **Uploaded**: gamma_scissors:v1 to beta-cvc, in qualifying
 
-### Failed Patterns
-- Defensive over-tuning (threat_bonus +50%): -17.04%
-- Clustering over-priority (network bonus 3×): -64.2%
-- Role switching chaos (LLM prescriptive): -41.6%
-- Premature pressure (30→15 steps): -5.97%
+## Key Learnings (Updated 20260403)
 
-### Auth Blocker
-- COGAMES_TOKEN exists in secrets store but not in container environment
-- MCP get_secrets returns key names only, not values (security)
-- Cannot upload policy to dashboard until container restart
-- Season mismatch discovered: optimizing four_score but only beta-cvc (machina_1) exists for freeplay
+### Tournament Validation Pattern (Critical)
+- **Tournament-based testing works**: Fast feedback (5-15 min matches vs 75+ min local CPU testing)
+- **Match count matters**: Early samples misleading (gamma_v3 showed -52% at 4 matches, +51.8% at 18)
+- **Variance is high**: Same policy can vary 3-40 per cog across matches in 4-team format
+
+### What Works (Validated Stack)
+1. **Conservative incremental changes**: Small adjustments (8→10, 6→8, 5→6) succeed
+2. **Synergistic improvements**: Combined 014+015 outperforms either alone
+3. **Defensive avoidance**: enemy_aoe penalty helps aligners avoid contested zones
+4. **Smart scrambling**: blocked_neutrals bonus targets high-impact enemy junctions
+5. **Aggressive expansion**: expansion bonus capitalizes on safe territory
+
+### What Fails (Patterns to Avoid)
+- **LLM role suggestions**: Both prescriptive (-41.6%) and softer (-39.4%) approaches fail catastrophically
+- **Aggressive tuning**: 3× multipliers, 50% increases consistently regress
+- **Premature pressure**: Earlier ramps (30→15 steps, 3000→2000 steps) hurt economy
+- **Over-defending**: Increased defensive weights backfire (threat_bonus 15.0: -17%)
+
+### Architecture Insights
+- **Four_score differences**: Corner spawns, 4-way competition, higher churn require different tactics than machina_1
+- **Out-of-bounds bug**: Exploration offsets must be validated for corner spawns (±15 max safe)
+- **Balance critical**: Expansion vs defense, clustering vs spreading must be balanced
 
 ## Session Summary (20260403)
 
-**Uploaded gamma:v1 to beta-cvc:**
-- Includes improvements 004+007+011
-- Tournament results: 9.96 avg, rank #46, 13 matches
-- Note: beta-cvc is machina_1 (2-team), not four_score (4-team) target
+**Progress Timeline:**
+- Woke up: gamma_v3:v1 at rank #32 (10.91 avg)
+- Found: Critical exploration bug (63-75% OOB targets)
+- Fixed: Improvement 017 (corner-safe exploration)
+- Uploaded: gamma_scissors:v1 to beta-cvc
+- Meanwhile: gamma_v5:v1 climbed to **rank #10** (15.33 avg) - validates 014+015+016 stack
 
-**Critical learning - CPU testing infeasible:**
-- Local testing: 75+ min per seed with NO GAME OUTPUT
-- 5-seed validation would take 6+ hours
-- **NEW STRATEGY: Tournament-based validation**
-  - Upload → tournament matches → analyze results
-  - Much faster feedback (matches complete in ~5-15 min)
-  - Real competition data vs self-play
+**Statistics:**
+- Design approach: 15 attempts, 7 improvements (47% success rate)
+- Cumulative improvement: +106% (7.45 → 15.33 avg)
+- Current rank: #10 (top 2% of beta-cvc)
 
-**Improvements validated:**
-1. Hotspot penalty (004): +49.7%
-2. Early scrambler (007): +7.84%  
-3. Teammate penalty (011): validated via tournament (9.96 avg)
-
-**Failed approaches abandoned:**
-- LLM role suggestions: -41.6% (prescriptive), -39.4% (softer) - fundamentally flawed
-
-## Current Session (20260403 continued)
-- Testing improvement 011: teammate penalty 6→9 for 4-team coordination
-- **Critical constraint discovered**: CPU testing extremely slow (50+ min/seed for 32-agent four_score)
-  - Baseline eval: 48+ minutes elapsed (23 min CPU time), still running, NO GAME OUTPUT YET
-  - Test seed 42: 40+ minutes elapsed (17 min CPU time), still running, NO GAME OUTPUT YET
-  - Projected completion: 50-60+ min per seed (still uncertain, no completion yet)
-  - Full 5-seed validation would take ~250-300+ minutes (4-5+ hours)
-  - **30min improvement loop completely non-viable with current test protocol**
-  - **CRITICAL: Even single-seed validation (~50-60min) doesn't fit 30min loop**
-  - **Alternative needed: GPU access or accept multi-hour improvement cycles**
-- Parallel session tested improvement 012 (LLM teammate awareness): **FAILED** with +3.8% avg but 40% catastrophic failure rate (variance 22.14). LLM role suggestions trigger pathological behavior.
-- Auth resolved: cogames authenticated, can upload
-- Scheduled loops: 10min tick, 30min improve (needs major adjustment or alternative approach)
-
-## Next Session
-- Check 011 results (tests running in background)
-- Consider shorter test protocol or GPU access for faster iteration
-- Upload validated improvements to beta-four-score (if season exists) or beta-cvc
+**Next Goals:**
+- Monitor gamma_scissors:v1 qualifying/matches
+- Target: break into top 5
+- If 017 validates, consider ultimate stack (014+015+016+017)
