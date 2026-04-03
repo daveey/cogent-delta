@@ -27,11 +27,13 @@
 
 ## Current Session (20260403 continued)
 - Testing improvement 011: teammate penalty 6→9 for 4-team coordination
-- **Critical constraint discovered**: CPU testing extremely slow (30+ min/seed for 32-agent four_score)
-  - Baseline eval: 23+ minutes, still running (no output yet)
-  - Test seed 42: 15+ minutes, still running (no output yet)
-  - Full 5-seed validation would take ~150-200 minutes (2.5-3.5 hours)
+- **Critical constraint discovered**: CPU testing extremely slow (40-50+ min/seed for 32-agent four_score)
+  - Baseline eval: 33+ minutes, still running (no output yet)
+  - Test seed 42: 25+ minutes, still running (no output yet)
+  - Projected completion: ~40-50 min per seed
+  - Full 5-seed validation would take ~200-250 minutes (3.5-4+ hours)
   - **30min improvement loop completely non-viable with current test protocol**
+  - **Alternative needed: single-seed validation (~45min) or GPU access**
 - Parallel session tested improvement 012 (LLM teammate awareness): **FAILED** with +3.8% avg but 40% catastrophic failure rate (variance 22.14). LLM role suggestions trigger pathological behavior.
 - Auth resolved: cogames authenticated, can upload
 - Scheduled loops: 10min tick, 30min improve (needs major adjustment or alternative approach)
