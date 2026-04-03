@@ -4,7 +4,7 @@
 - [ ] (20260403-016) Expansion bonus increase: 5.0→6.0 per junction (+20%) for aggressive territory control. Uploaded as gamma_v4:v1, awaiting tournament validation.
 
 ## Completed
-- [x] (20260403-014) Enemy AOE penalty increase: 8.0→10.0 (+25%) → +42.3% improvement (7.45→10.60). Uploaded as gamma_v2:v1, rank #37 on beta-cvc.
+- [x] (20260403-014+015) Combined improvements: enemy_aoe 8.0→10.0 + blocked_neutrals 6.0→8.0 → +51.8% improvement (7.45→11.31). Uploaded as gamma_v3:v1, rank #32 on beta-cvc.
 - [x] (ID) Wider enemy AOE for retreat: wired _near_enemy_territory (radius 20) into _should_retreat — +458% avg score
 - [x] (20260403-001) LLM objective feature: wired up expand/defend/economy_bootstrap objectives to pressure budgets — was broken, now functional
 - [x] (20260403-001) Documentation: added four_score.md, updated all docs for multi-team format
@@ -14,7 +14,6 @@
 - [x] **UPLOADED gamma:v1 to beta-cvc** - includes 004+007+011, running in competitive pool
 
 ## Failed Attempts
-- [x] (20260403-015-REVERTED) Scrambler expansion-blocking priority: blocked_neutrals 6.0→8.0 (+33%) → -52.0% regression (7.45→3.58). Over-prioritization disrupted targeting balance.
 - [x] (20260403-002-REVERTED) LLM stagnation: prescriptive role-change rules → -41.6% regression. Too aggressive switching disrupted stability.
 - [x] (20260403-003-REVERTED) Early pressure ramp: 30→15 steps → -5.97% regression. Too early, disrupted resource bootstrapping.
 - [x] (20260403-005-REVERTED) Defensive scrambling: removed corner_pressure bonus → -0.77% regression. Minimal impact, offensive push may help in 4-team.
