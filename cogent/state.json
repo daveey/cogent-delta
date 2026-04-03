@@ -1,37 +1,34 @@
 {
   "approach_stats": {
     "pco": {"attempts": 0, "improvements": 0, "last_used": null},
-    "design": {"attempts": 12, "improvements": 4, "last_used": "20260403-014-testing"}
+    "design": {"attempts": 13, "improvements": 5, "last_used": "20260403-014-validated"}
   },
   "last_improvement": {
     "date": "20260403",
-    "version": "011",
-    "focus": "Teammate proximity penalty increase for coordination",
-    "description": "Increased teammate_closer penalty from 6.0 to 9.0 in aligner_target_score to reduce duplicate targeting in multi-team format.",
-    "result": "VALIDATED VIA TOURNAMENT: gamma:v1 avg 7.74 per cog (rank #60) across 19 matches on beta-cvc",
+    "version": "014",
+    "focus": "Aligner contested territory avoidance",
+    "description": "Increased enemy_aoe penalty from 8.0 to 10.0 (+25%) in aligner_target_score to discourage targeting junctions near enemy territory.",
+    "result": "MAJOR IMPROVEMENT: gamma_v2:v1 avg 10.60 per cog vs gamma:v1 baseline 7.45 (+42.3%)",
     "tournament_scores": {
-      "matches": 19,
-      "avg": 7.74,
-      "range": "0.00-26.01",
-      "rank": 60,
+      "matches": 18,
+      "avg": 10.60,
+      "range": "0.00-42.52",
+      "rank": 37,
       "season": "beta-cvc"
     },
-    "status": "baseline_established",
-    "notes": "Baseline for gamma:v1 stabilizing around 7.74 avg (was 9.96 with 13 matches, natural variance). Includes improvements 004+007+011+RETREAT_MARGIN."
-  },
-  "testing_in_progress": {
-    "date": "20260403",
-    "version": "012",
-    "focus": "Scrambler territorial denial optimization",
-    "description": "Increased scrambler blocked_neutrals bonus from 6.0 to 8.0 (+33%) to prioritize enemy junctions that block multiple neutral junctions",
-    "rationale": "Better territorial denial - scramblers should target high-impact enemy junctions that prevent expansion",
-    "upload": "gamma:v2",
-    "season": "beta-cvc",
-    "status": "uploaded_awaiting_matches",
-    "uploaded_at": "20260403 22:36 UTC",
-    "parallel_test": "gamma_v2:v1 (aligner enemy_aoe 8.0→10.0) also running"
+    "status": "validated",
+    "notes": "Strong improvement in 2-team machina_1 format. Aligners avoid high-churn contested junctions near enemy territory. Uploaded as gamma_v2:v1. Four_score target season validation pending."
   },
   "failed_attempts": [
+    {
+      "date": "20260403",
+      "version": "015-reverted",
+      "focus": "Scrambler expansion-blocking prioritization",
+      "description": "Increased blocked_neutrals weight from 6.0 to 8.0 (+33%) in scramble_target_score. Tested combined with 014.",
+      "result": "MAJOR REGRESSION: gamma_v3:v1 avg 3.58 vs baseline 7.45 (-52.0%)",
+      "scores": {"matches": 4, "avg": 3.58, "rank": 76},
+      "analysis": "Over-prioritizing expansion-blocking disrupted scrambler targeting balance. Scramblers likely ignored closer/more threatening targets in favor of distant junctions that block neutrals. The 014 improvement alone (10.60 avg) shows strong results, but combining with this change caused catastrophic regression. Keep blocked_neutrals at 6.0."
+    },
     {
       "date": "20260403",
       "version": "002-reverted",
