@@ -1,6 +1,7 @@
 # gamma — Improvement TODOs
 
 ## In Progress
+- [ ] (20260403-014) Enemy AOE penalty increase: 8.0→10.0 (+25%) to avoid contested territory. Uploaded as gamma_v2:v1 to beta-cvc, awaiting tournament validation.
 - [ ] Monitor gamma:v1 tournament performance (currently rank #46, 9.96 avg, 13+ matches)
 
 ## Completed
