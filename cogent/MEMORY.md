@@ -25,6 +25,29 @@
 - Cannot upload policy to dashboard until container restart
 - Season mismatch discovered: optimizing four_score but only beta-cvc (machina_1) exists for freeplay
 
+## Session Summary (20260403)
+
+**Uploaded gamma:v1 to beta-cvc:**
+- Includes improvements 004+007+011
+- Tournament results: 9.96 avg, rank #46, 13 matches
+- Note: beta-cvc is machina_1 (2-team), not four_score (4-team) target
+
+**Critical learning - CPU testing infeasible:**
+- Local testing: 75+ min per seed with NO GAME OUTPUT
+- 5-seed validation would take 6+ hours
+- **NEW STRATEGY: Tournament-based validation**
+  - Upload → tournament matches → analyze results
+  - Much faster feedback (matches complete in ~5-15 min)
+  - Real competition data vs self-play
+
+**Improvements validated:**
+1. Hotspot penalty (004): +49.7%
+2. Early scrambler (007): +7.84%  
+3. Teammate penalty (011): validated via tournament (9.96 avg)
+
+**Failed approaches abandoned:**
+- LLM role suggestions: -41.6% (prescriptive), -39.4% (softer) - fundamentally flawed
+
 ## Current Session (20260403 continued)
 - Testing improvement 011: teammate penalty 6→9 for 4-team coordination
 - **Critical constraint discovered**: CPU testing extremely slow (50+ min/seed for 32-agent four_score)

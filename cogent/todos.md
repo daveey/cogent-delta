@@ -1,7 +1,7 @@
 # gamma — Improvement TODOs
 
 ## In Progress
-- [~] (20260403-011) Teammate proximity penalty increase: 6.0→9.0 (50% increase) for better coordination in 4-team. Testing across seeds 42-46. **CPU testing slow (~15-20min/seed), tests running in background.**
+- [ ] Monitor gamma:v1 tournament performance (currently rank #46, 9.96 avg, 13+ matches)
 
 ## Completed
 - [x] (ID) Wider enemy AOE for retreat: wired _near_enemy_territory (radius 20) into _should_retreat — +458% avg score
@@ -9,6 +9,8 @@
 - [x] (20260403-001) Documentation: added four_score.md, updated all docs for multi-team format
 - [x] (20260403-004) Hotspot penalty increase: 8→12 base, 5→6 mid → +107.9% on seed 42 (6.03→12.54). Agents avoid contested far junctions in 4-team format.
 - [x] (20260403-007) Early scrambler activation: step 100→50 → +7.84% avg (9.03→9.74). Earlier disruption against 3 opponents in 4-team, maintains 50-step resource bootstrap.
+- [x] (20260403-011) Teammate penalty increase: 6.0→9.0 → validated via tournament (gamma:v1 rank #46, 9.96 avg). Better coordination in multi-agent scenarios.
+- [x] **UPLOADED gamma:v1 to beta-cvc** - includes 004+007+011, running in competitive pool
 
 ## Failed Attempts
 - [x] (20260403-002-REVERTED) LLM stagnation: prescriptive role-change rules → -41.6% regression. Too aggressive switching disrupted stability.
@@ -21,12 +23,13 @@
 - [x] (20260403-012-REVERTED) Nearby teammate role awareness in LLM: +3.8% avg BUT 40% catastrophic failure rate (variance 22.14). Extreme instability, LLM role suggestions trigger pathological behavior.
 - [x] (20260403-010-llm-softer-REVERTED) Softer LLM stagnation detection: detailed guidance + "STRONGLY PREFER null" emphasis → -39.4% regression (5.91 vs 9.74). Verbose prompt with examples performed as badly as prescriptive approach (-41.6%). Both attempts to improve LLM role suggestions have failed catastrophically. Pattern: LLM-driven role changes may be fundamentally flawed.
 
-## Testing Strategy Adjustments (CPU Constraint)
-- [ ] **Option A - Single seed quick test**: Test only seed 42, accept higher variance
-- [ ] **Option B - 2-seed validation**: Test seeds 42+43, compromise between speed and confidence
-- [ ] **Option C - Longer cycles**: Accept that improvements take 2-3 hours (multiple 30min loops)
-- [ ] **Option D - Parallel testing**: Start next improvement while previous tests complete in background (risky for isolation)
-- [ ] **Option E - Request GPU access**: If available, would dramatically speed up testing
+## Testing Strategy (CPU Constraint Resolved)
+- [x] **ADOPTED: Tournament-based validation** - Upload to beta-cvc, analyze match results
+  - Matches complete in 5-15 minutes vs 75+ min local testing
+  - Real competitive data vs self-play
+  - Can iterate much faster
+- [ ] ~~Single seed/2-seed/longer cycles~~ - abandoned due to 75+ min timeout with no output
+- [ ] ~~GPU access~~ - not needed with tournament validation
 
 ## Candidates
 - [ ] Read teammate vibes: Count nearby teammate roles to avoid duplicate aligners heading to same area

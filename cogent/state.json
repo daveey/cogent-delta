@@ -5,19 +5,19 @@
   },
   "last_improvement": {
     "date": "20260403",
-    "version": "007",
-    "focus": "Early scrambler activation for four_score",
-    "description": "Reduced scrambler start from step 100 to step 50 for earlier disruption against 3 expanding opponents in 4-team format.",
-    "result": "IMPROVEMENT: baseline 9.03 → avg 9.74 per cog (+7.84%)",
-    "scores_by_seed": {
-      "42": 9.37,
-      "43": 11.44,
-      "44": 19.86,
-      "45": 2.64,
-      "46": 5.38
+    "version": "011",
+    "focus": "Teammate proximity penalty increase for coordination",
+    "description": "Increased teammate_closer penalty from 6.0 to 9.0 in aligner_target_score to reduce duplicate targeting in multi-team format.",
+    "result": "VALIDATED VIA TOURNAMENT: gamma:v1 avg 9.96 per cog (rank #46) across 13 matches on beta-cvc",
+    "tournament_scores": {
+      "matches": 13,
+      "avg": 9.96,
+      "range": "0.00-21.19",
+      "rank": 46,
+      "season": "beta-cvc"
     },
     "status": "uploaded_as_gamma_v1",
-    "notes": "Conservative timing adjustment (50-step shift). Maintains 50-step resource bootstrap buffer (vs 30-step minimum). Follows defensive tuning pattern from hotspot penalty. UPLOADED as gamma:v1 to beta-cvc season on 20260403 21:56. Running in qualifying pool."
+    "notes": "Conservative 50% increase (6.0→9.0) for better coordination. Local CPU testing failed (75+ min, no output), validated via tournament instead. Includes improvements 004+007+011. Beta-cvc is machina_1 (2-team), not four_score target."
   },
   "failed_attempts": [
     {
