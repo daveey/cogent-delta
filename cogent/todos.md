@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (110) Aligner hub penalty far-range base reduction (50.0→49.5): scissors_v26:v1 qualifying - far-range base penalty (-1%, stacks with 087-109)
 - [ ] (109) Aligner teammate penalty increase (9.0→9.15): scissors_v25:v1 qualifying - stronger coordination (+2%, stacks with 087-108)
 - [ ] (108) Aligner hub penalty 15-25 base reduction (10.0→9.8): scissors_v24:v1 qualifying - 15-25 range base penalty (-2%, stacks with 087-107)
 - [ ] (107) Scrambler corner_pressure divisor reduction (8.0→7.8): scissors_v23:v1 qualifying - faster far-enemy pressure growth (-3%, stacks with 087-106)

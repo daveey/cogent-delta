@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 44,
+      "attempts": 45,
       "improvements": 7,
-      "last_used": "20260404-109-testing"
+      "last_used": "20260404-110-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "109",
-    "focus": "Aligner teammate penalty increase",
-    "description": "Increased teammate_penalty from 9.0 to 9.15 (+2%)",
-    "rationale": "Validated in attempt 011 (6.0→9.0, +50%). Failed attempt 020 tried 9.0→10.0 (+11%) and regressed -42.8%. Much more conservative +2% increase to modestly strengthen teammate coordination and reduce multi-agent duplication without major disruption. Stacks with 087-108.",
-    "upload": "scissors_v25:v1",
+    "version": "110",
+    "focus": "Aligner hub penalty far-range base reduction",
+    "description": "Reduced hub penalty base from 50.0 to 49.5 (-1%) for junctions >25 distance",
+    "rationale": "Failed attempt 019 showed hub penalty reductions can fail badly (-48.6%). Extremely conservative -1% base reduction for far-range tier (>25 distance). Complements 102/105/106/108 reductions in closer tiers. Maintains strong hub-proximal strategy core to four_score success. Stacks with 087-109.",
+    "upload": "scissors_v26:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260404",
-    "note": "Scissors attempt 109. Clean baseline teammate coordination weight exploration. Awaiting tournament validation."
+    "note": "Scissors attempt 110. Clean baseline hub penalty far-range base exploration. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
