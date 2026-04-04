@@ -13,14 +13,14 @@
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "085",
-    "focus": "LLM role override removal for stability",
-    "description": "Removed role field from LLM analysis prompt to prevent catastrophic role-switching failures",
-    "rationale": "Historical LLM role override attempts caused major regressions: attempt 002 (-41.6%), attempt 012 (+3.8% avg but 40% catastrophic failure rate), attempt 010-llm-softer (-39.4%). Removed role field entirely, keeping only resource_bias and objective guidance which are safer strategic knobs. Local testing shows +43% improvement but with high variance (1.74 to 7.12 per cog across seeds 42-46).",
-    "upload": "scissors:v1",
+    "version": "086",
+    "focus": "LLM prompt streamlining (remove tactical context)",
+    "description": "Removed tactical/non-actionable context from LLM prompt: HP, hearts, position, gear counts, stalled/oscillating, safe distance, target hotspot. Kept strategic context: step, role, hub resources, team roles, junction counts.",
+    "rationale": "After removing role field in 085, stalled/oscillating info became wasted context. LLM should focus on strategic resource and objective decisions only. Delta local testing showed baseline 11.76 per cog (seed 42).",
+    "upload": "scissors:v2",
     "season": "beta-four-score",
     "uploaded_at": "20260404",
-    "note": "Delta attempt 085 uploaded as scissors:v1. Local testing: avg 5.11 vs baseline 3.57 (+43%). HIGH VARIANCE: seed range 1.74-7.12. Awaiting tournament validation."
+    "note": "Delta attempt 086 uploaded as scissors:v2. Builds on scissors:v1 (085). Awaiting tournament validation. Next: revert to gamma_v6:v1 clean baseline."
   },
   "last_improvement": {
     "date": "20260404",

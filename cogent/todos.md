@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (086) LLM prompt streamlining: scissors:v2 qualifying - removed tactical context, kept strategic (builds on v1)
 - [ ] (085) LLM role override removal: scissors:v1 qualifying - removed role field from LLM prompt (+43% local avg, HIGH VARIANCE 1.74-7.12)
 
 ## Current Status (20260404 UTC)
