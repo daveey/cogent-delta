@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 41,
+      "attempts": 42,
       "improvements": 7,
-      "last_used": "20260404-041-pending"
+      "last_used": "20260404-042-pending"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "041",
-    "focus": "Scrambler blocked_neutrals weight increase for stronger expansion blocking",
-    "description": "Increased blocked_neutrals weight from 8.0 to 8.4 (+5%) in scramble_target_score",
-    "rationale": "Attempt 015 successfully increased blocked_neutrals 6.0→8.0 for better scrambler targeting. Conservative +5% further increase to 8.4 encourages scramblers to prioritize high-impact targets that block multiple neutral junctions. Synergizes with scissors 039 (network_bonus) and 040-scissors (expansion) by helping scramblers protect expanding territory.",
-    "upload": "scissors_v1_v23:v1",
+    "version": "042",
+    "focus": "Network bonus weight increase for stronger consolidation",
+    "description": "Increased network_bonus weight from 0.75 to 0.8 (+7%) in aligner_target_score",
+    "rationale": "Attempt 018 successfully validated network_bonus 0.5→0.75 (+50%, +3.9%). Conservative +7% further increase to 0.8 strengthens chain-building incentive. Synergizes with scissors 041 (scrambler blocking) by making consolidated networks more attractive to defend. Stacks on delta's 036-038.",
+    "upload": "scissors_v1_v24:v1",
     "season": "beta-cvc",
-    "uploaded_at": "2026-04-04T06:46:50Z",
-    "note": "Third scissors improvement (039: network cap, 040-scissors: expansion, 041: scrambler blocking). Independent of delta's 036-040 penalty stack."
+    "uploaded_at": "2026-04-04T06:50:06Z",
+    "note": "Fourth scissors improvement. Stack: 039 (network cap 5), 040 (expansion 6.25), 041 (blocked 8.4), 042 (network weight 0.8)."
   },
   "last_improvement": {
     "date": "20260404",
