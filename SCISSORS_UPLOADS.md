@@ -23,3 +23,10 @@ Delta's 036-040 are committed but not uploaded (no COGAMES_TOKEN).
 - **Base**: Delta's 036-038 stack
 - **Status**: Awaiting tournament results (need 20+ matches)
 - **Rationale**: Builds on attempt 015's success (6.0→8.0). Stronger scrambler targeting for expansion blocking.
+
+## scissors_v1_v24:v1 (Attempt 042)
+- **Uploaded**: 2026-04-04T06:50:06Z
+- **Change**: Network bonus weight 0.75→0.8 (+7%)
+- **Base**: Delta's 036-038 stack + scissors 041
+- **Status**: Awaiting tournament results (need 20+ matches)
+- **Rationale**: Builds on attempt 018's success (0.5→0.75, +3.9%). Strengthens chain-building.
