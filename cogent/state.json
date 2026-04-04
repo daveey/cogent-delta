@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 99,
+      "attempts": 100,
       "improvements": 7,
-      "last_used": "20260404-099-pending"
+      "last_used": "20260404-100-pending"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "099",
-    "focus": "Expansion weight increase for territory acquisition",
-    "description": "Increased expansion weight from 6.45 to 6.5 (+0.8%) in scoring.py",
-    "rationale": "Builds on attempts 090 (6.4→6.45, +0.8%), 082 (6.35→6.4, +0.8%), 077 (6.3→6.35, +0.8%), 070 (6.25→6.3, +0.8%), 061 (6.2→6.25, +0.8%), 055 (6.15→6.2, +0.8%), 048 (6.1→6.15, +0.8%), 040 (6.0→6.15, +2.5%), and validated 016 (5.0→6.0, improvement) for continued expansion weight optimization. Cumulative +30% increase from baseline 5.0 to 6.5. Synergizes with hub penalty and hotspot weight reductions for hub-proximal expansion strategy. Progressive expansion weight increases enable increasingly aggressive safe territory acquisition.",
-    "upload": "scissors_v1_v81:v1",
+    "version": "100",
+    "focus": "Scrambler threat bonus increase for network defense",
+    "description": "Increased scrambler threat_bonus from 10.8 to 10.9 (+0.9%) in scoring.py",
+    "rationale": "Builds on attempts 085 (10.7→10.8, +0.9%), 072 (10.6→10.7, +0.9%), 058 (10.5→10.6, +1.0%), 043 (10.0→10.5, +5%), and baseline 10.0 for continued scrambler threat_bonus optimization. Cumulative +9% increase from baseline 10.0 to 10.9. Synergizes with network bonus increases (039, 042, 052, 060, 069, 076, 081, 089, 098) to protect consolidated junction clusters from enemy scramblers. Progressive threat_bonus increases enable increasingly effective defensive scrambler positioning near friendly junction networks.",
+    "upload": "scissors_v1_v82:v1",
     "season": "beta-cvc",
-    "uploaded_at": "2026-04-04T11:56:09Z",
-    "note": "Sixty-first scissors improvement. Continues expansion weight optimization (016, 040, 048, 055, 061, 070, 077, 082, 090, 099)."
+    "uploaded_at": "2026-04-04T11:57:03Z",
+    "note": "Sixty-second scissors improvement (attempt 100). Continues scrambler threat_bonus optimization (043, 058, 072, 085, 100)."
   },
   "last_improvement": {
     "date": "20260404",
