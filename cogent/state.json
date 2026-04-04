@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 31,
+      "attempts": 32,
       "improvements": 7,
-      "last_used": "20260404-031-testing"
+      "last_used": "20260404-032-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "031",
-    "focus": "LLM hotspot awareness for stagnation detection",
-    "description": "Enhanced LLM context with target hotspot information. LLM now sees when agent is targeting contested junctions (e.g. 'contested 3x') and can suggest role changes if stagnating on hotspots.",
-    "rationale": "Attempt 012 (prescriptive LLM role changes) failed catastrophically with 40% failure rate. This is a softer approach: give LLM visibility into hotspot data without prescriptive rules. LLM can detect when stalled+targeting hotspot indicates real stagnation vs temporary blockage. Combined with 030's hotspot decay, enables time-aware stagnation detection.",
-    "upload": "scissors_v1_v15:v1",
+    "version": "032",
+    "focus": "Extractor memory reduction for fresher resource targeting",
+    "description": "Reduced _EXTRACTOR_MEMORY_STEPS from 800 to 600 (-25%) so agents forget stale extractor locations faster",
+    "rationale": "Agents remember extractor locations for 800 steps. If extractors deplete or move, this causes wasted travel to exhausted locations. Reducing to 600 steps allows faster forgetting of stale information while still retaining useful memory. Independent of experiments 029-031 (doesn't interact with hotspot/AOE/LLM changes).",
+    "upload": "scissors_v1_v16:v1",
     "season": "beta-cvc",
-    "uploaded_at": "20260404 04:08 UTC",
-    "note": "Softer LLM enhancement vs failed 012. Provides context rather than prescribing actions. Builds on 030's hotspot decay infrastructure."
+    "uploaded_at": "TBD",
+    "note": "Parameter untested in all previous attempts. Conservative 25% reduction to test if shorter memory improves miner efficiency."
   },
   "last_improvement": {
     "date": "20260404",
