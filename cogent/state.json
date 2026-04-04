@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 43,
+      "attempts": 44,
       "improvements": 7,
-      "last_used": "20260404-043-pending"
+      "last_used": "20260404-044-pending"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "043",
-    "focus": "Scrambler threat bonus increase for stronger network defense",
-    "description": "Increased threat_bonus weight from 10.0 to 10.5 (+5%) in scramble_target_score",
-    "rationale": "Attempt 008 tried 10.0→15.0 (+50%) and failed (-17%). Conservative +5% to 10.5 prioritizes defending friendly networks without over-indexing defense. Synergizes with scissors 039+042 (network bonuses) by making scramblers more protective of consolidated friendly junctions.",
-    "upload": "scissors_v1_v25:v1",
+    "version": "044",
+    "focus": "Near-hub penalty reduction for stronger hub-proximal consolidation",
+    "description": "Reduced near-hub penalty multiplier from 0.3 to 0.28 (-7%) for junctions within 10 distance of hub",
+    "rationale": "Attempts 019 (-48.6%) and 023 (-29%) failed when reducing far/mid-range hub penalties. Near-hub zone (0-10 distance) is safest territory. Conservative -7% reduction (0.3→0.28) encourages slightly tighter hub-proximal consolidation. Synergizes with scissors 042 (network weight) by making near-hub networks more attractive.",
+    "upload": "scissors_v1_v26:v1",
     "season": "beta-cvc",
-    "uploaded_at": "2026-04-04T06:52:25Z",
-    "note": "Fifth scissors improvement. Defensive complement to offensive stack (039-042). Balanced expansion + defense."
+    "uploaded_at": "2026-04-04T07:04:19Z",
+    "note": "Sixth scissors improvement. Near-hub focus (safest zone) vs failed far-hub attempts."
   },
   "last_improvement": {
     "date": "20260404",
