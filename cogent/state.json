@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 65,
+      "attempts": 66,
       "improvements": 7,
-      "last_used": "20260404-065-pending"
+      "last_used": "20260404-066-pending"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "065",
-    "focus": "Mid-range hub penalty reduction for hub-proximal expansion",
-    "description": "Reduced mid-range (10-15 distance) hub_penalty multiplier from 1.47 to 1.45 (-1.4%) in scoring.py",
-    "rationale": "Builds on attempt 047 (1.5→1.47, -2%) for continued mid-range hub penalty optimization. Synergizes with near-hub hub penalty reduction (044: 0.3→0.28), mid-far hub penalty reduction (053: 3.0→2.95), and hotspot weight reductions (045, 046, 051, 062, 063, 064) for comprehensive hub-proximal expansion strategy. Attempt 023 showed -10% reduction to mid-far failed badly (-29%), confirming conservative incremental reductions work better.",
-    "upload": "scissors_v1_v47:v1",
+    "version": "066",
+    "focus": "Near-hub penalty reduction for strongest hub-proximal preference",
+    "description": "Reduced near-hub hub_penalty multiplier from 0.28 to 0.27 (-3.6%) in scoring.py",
+    "rationale": "Builds on attempt 044 (0.3→0.28, -7%) for continued near-hub penalty optimization. Near-hub zone (≤10 distance) is safest and most valuable for fast cycling. Synergizes with mid-range hub penalty reductions (047, 065), mid-far hub penalty reduction (053), and all hotspot weight reductions (045, 046, 051, 062, 063, 064) for comprehensive hub-proximal expansion strategy. Progressive hub penalty reductions show coordinated approach across all distance ranges.",
+    "upload": "scissors_v1_v48:v1",
     "season": "beta-cvc",
-    "uploaded_at": "2026-04-04T09:37:33Z",
-    "note": "Twenty-seventh scissors improvement. Continues mid-range hub penalty optimization (047, 065)."
+    "uploaded_at": "2026-04-04T09:41:15Z",
+    "note": "Twenty-eighth scissors improvement. Continues near-hub penalty optimization (044, 066)."
   },
   "last_improvement": {
     "date": "20260404",
