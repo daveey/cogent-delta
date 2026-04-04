@@ -97,7 +97,7 @@ def aligner_target_score(
     teammate_penalty = 9.0 if teammate_closer else 0.0
     return (
         distance
-        - min(expansion * 6.0, 36.0)
+        - min(expansion * 6.2, 36.0)  # Increased from 6.0 to 6.2 (+3%) for stronger expansion incentive
         + enemy_aoe * 10.0
         + (_CLAIMED_TARGET_PENALTY if claimed_by_other else 0.0)
         + hub_penalty
