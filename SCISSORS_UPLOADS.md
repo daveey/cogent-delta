@@ -450,3 +450,10 @@ Delta's 036-040 are committed but not uploaded (no COGAMES_TOKEN).
 - **Base**: Delta's 036-038 + scissors 039-101
 - **Status**: Awaiting tournament results (need 20+ matches)
 - **Rationale**: Builds on attempts 087 (10.7→10.6), 074 (10.8→10.7), 054 (11.0→10.8), and validated 040 (12.0→11.0). Synergizes with teammate penalty reductions (049, 056, 068, 075, 083, 096) for multi-agent coordination flexibility.
+
+## scissors_v1_v85:v1 (Attempt 103)
+- **Uploaded**: 2026-04-04T12:05:07Z
+- **Change**: Far-range hotspot weight 10.5→10.4 (-0.9%)
+- **Base**: Delta's 036-038 + scissors 039-102
+- **Status**: Awaiting tournament results (need 20+ matches)
+- **Rationale**: Builds on attempts 088 (10.6→10.5), 079 (10.7→10.6), 062 (10.8→10.7), and 051 (11.0→10.8). Synergizes with enemy AOE penalty reductions and mid-range hotspot reductions for contested territory strategy.
