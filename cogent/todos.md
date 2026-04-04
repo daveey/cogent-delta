@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (124) Target claim steps increase (32.0→32.5): scissors_v40:v1 qualifying - longer claim validity (+2%, stacks with 087-123)
 - [ ] (123) Scrambler HP threshold increase (33.0→33.66): scissors_v39:v1 qualifying - more aggressive disruption (+2%, stacks with 087-122)
 - [ ] (122) Aligner HP threshold reduction (47.0→46.5): scissors_v38:v1 qualifying - safer aligner retreat (-1%, stacks with 087-121)
 - [ ] (121) Miner HP threshold increase (18.0→18.3): scissors_v37:v1 qualifying - more aggressive resource gathering (+2%, stacks with 087-120)
