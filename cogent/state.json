@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 71,
+      "attempts": 72,
       "improvements": 7,
-      "last_used": "20260404-071-pending"
+      "last_used": "20260404-072-pending"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "071",
-    "focus": "Enemy AOE penalty reduction for aggressive contested targeting",
-    "description": "Reduced enemy_aoe penalty from 9.2 to 9.1 (-1.1%) in scoring.py",
-    "rationale": "Builds on attempts 057 (9.3→9.2, -1.1%) and 050 (9.5→9.3, -2.1%) for continued aggressive contested territory targeting. Synergizes with hotspot weight reductions (045, 046, 051, 062, 063, 064) for comprehensive contested junction strategy. Attempt 025 showed increasing AOE range failed catastrophically (-39%), confirming penalty reductions improve vs range expansion. Progressive enemy AOE penalty reductions enable more aggressive contested territory pursuit.",
-    "upload": "scissors_v1_v53:v1",
+    "version": "072",
+    "focus": "Scrambler threat bonus increase for network defense",
+    "description": "Increased scrambler threat_bonus from 10.6 to 10.7 (+0.9%) in scoring.py",
+    "rationale": "Builds on attempts 058 (10.5→10.6, +1.0%) and 043 (10.0→10.5, +5%) for continued network defense optimization. Synergizes with network bonus increases (039, 042, 052, 060, 069) to both build and defend junction clusters. Attempt 008 showed +50% increase failed badly (-17%), confirming conservative incremental increases work better. Progressive threat_bonus increases strengthen scrambler defensive prioritization.",
+    "upload": "scissors_v1_v54:v1",
     "season": "beta-cvc",
-    "uploaded_at": "2026-04-04T10:12:59Z",
-    "note": "Thirty-third scissors improvement. Continues enemy avoidance optimization (050, 057, 071)."
+    "uploaded_at": "2026-04-04T10:34:15Z",
+    "note": "Thirty-fourth scissors improvement. Continues scrambler defensive optimization (043, 058, 072)."
   },
   "last_improvement": {
     "date": "20260404",
