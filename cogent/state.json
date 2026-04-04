@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 66,
+      "attempts": 67,
       "improvements": 7,
-      "last_used": "20260404-066-pending"
+      "last_used": "20260404-067-pending"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "066",
-    "focus": "Near-hub penalty reduction for strongest hub-proximal preference",
-    "description": "Reduced near-hub hub_penalty multiplier from 0.28 to 0.27 (-3.6%) in scoring.py",
-    "rationale": "Builds on attempt 044 (0.3→0.28, -7%) for continued near-hub penalty optimization. Near-hub zone (≤10 distance) is safest and most valuable for fast cycling. Synergizes with mid-range hub penalty reductions (047, 065), mid-far hub penalty reduction (053), and all hotspot weight reductions (045, 046, 051, 062, 063, 064) for comprehensive hub-proximal expansion strategy. Progressive hub penalty reductions show coordinated approach across all distance ranges.",
-    "upload": "scissors_v1_v48:v1",
+    "version": "067",
+    "focus": "Mid-far hub penalty reduction for hub-proximal expansion",
+    "description": "Reduced mid-far (15-25 distance) hub_penalty multiplier from 2.95 to 2.93 (-0.7%) in scoring.py",
+    "rationale": "Builds on attempt 053 (3.0→2.95, -1.7%) for continued mid-far hub penalty optimization. Synergizes with near-hub penalty reductions (044, 066), mid-range penalty reductions (047, 065), and all hotspot weight reductions (045, 046, 051, 062, 063, 064) for comprehensive hub-proximal expansion strategy. Attempt 023 showed -10% reduction failed badly (-29%), confirming conservative incremental reductions work better. Progressive hub penalty reductions across all distance ranges.",
+    "upload": "scissors_v1_v49:v1",
     "season": "beta-cvc",
-    "uploaded_at": "2026-04-04T09:41:15Z",
-    "note": "Twenty-eighth scissors improvement. Continues near-hub penalty optimization (044, 066)."
+    "uploaded_at": "2026-04-04T09:42:57Z",
+    "note": "Twenty-ninth scissors improvement. Continues mid-far hub penalty optimization (053, 067)."
   },
   "last_improvement": {
     "date": "20260404",
