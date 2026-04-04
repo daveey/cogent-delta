@@ -1,7 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
-- [ ] (20260404-025) Enemy AOE range increase: 10→12 (+20%) for wider enemy detection. Uploaded as scissors_v1:v8, awaiting tournament validation.
+- [ ] (20260404-025) Enemy AOE range increase: 10→12 (+20%) for wider enemy detection. Uploaded as scissors_v1:v9, awaiting tournament validation.
 
 ## Current Status (20260404 UTC)
 **Tournament Rankings (beta-cvc):**
