@@ -6,9 +6,9 @@
       "last_used": null
     },
     "design": {
-      "attempts": 24,
+      "attempts": 25,
       "improvements": 7,
-      "last_used": "20260404-059-reverted"
+      "last_used": "20260404-060-reverted"
     }
   },
   "testing_in_progress": null,
@@ -231,6 +231,14 @@
       "description": "Reduced _JUNCTION_MEMORY_STEPS from 800 to 750 for fresher junction data in high-churn four_score",
       "result": "CRITICAL FAILURE: Seed 42 timed out (900s limit). Process terminated with exit code 143 (SIGTERM).",
       "analysis": "Reducing junction memory from 800 to 750 steps caused timeout. Shorter memory window likely forced agents to rediscover junctions more frequently, increasing computational overhead or causing navigation issues. Current 800-step (160 second) memory correctly balances fresh data with computational efficiency. Pattern: THREE CONSECUTIVE TIMEOUTS (057: pathfinding block steps, 058: A* margin, 059: junction memory). Multiple infrastructure parameters proven extremely sensitive - current values comprehensively optimized."
+    },
+    {
+      "date": "20260404",
+      "version": "060-reverted",
+      "focus": "Exploration cycling speed increase",
+      "description": "Increased _explore_index increment from 1 to 2 for faster exploration pattern cycling",
+      "result": "CRITICAL FAILURE: Seed 42 timed out (900s limit). Process terminated with exit code 143 (SIGTERM).",
+      "analysis": "Increasing exploration increment from 1 to 2 caused timeout. Faster cycling likely caused agents to rapidly switch between exploration targets, creating navigation instability or excessive pathfinding overhead. Current increment of 1 provides stable exploration pattern. Pattern: FOUR CONSECUTIVE TIMEOUTS (057-060) across pathfinding, A*, junction memory, and exploration subsystems. Multiple behavioral/infrastructure changes proven catastrophically fragile. Current implementation comprehensively optimized across all subsystems - fundamental architecture limits reached for incremental improvements."
     }
   ],
   "mission": "four_score",

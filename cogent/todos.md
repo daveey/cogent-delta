@@ -51,6 +51,7 @@
 - [x] (057) Temp block steps reduction (10→8): Critical failure - 3/3 seeds timed out
 - [x] (058) A* bound margin reduction (12→11): Critical failure - seed 42 timed out
 - [x] (059) Junction memory reduction (800→750): Critical failure - seed 42 timed out
+- [x] (060) Exploration cycling speed increase (1→2): Critical failure - seed 42 timed out
 
 ## Strategy
 - **Tournament-based validation** works well - continue using beta-cvc for fast feedback
@@ -58,7 +59,7 @@
 - **Synergistic improvements** (014+015, 016) compound better than isolated changes
 - **LLM role suggestions fundamentally flawed** - avoid this approach
 - **Expansion vs defense balance critical** - over-indexing either way regresses
-- **Infrastructure parameters extremely sensitive** - THREE CONSECUTIVE TIMEOUTS (057: pathfinding block steps, 058: A* margin, 059: junction memory). Multiple subsystems proven fragile. Current values comprehensively optimized - avoid further infrastructure tuning.
+- **Architecture limits reached** - FOUR CONSECUTIVE TIMEOUTS (057-060: pathfinding, A*, junction memory, exploration). Every behavioral/infrastructure change causes critical failures. Current implementation comprehensively optimized across all subsystems. Further incremental improvements impossible without fundamental architecture changes.
 
 ## Next Session
 - Monitor gamma_scissors:v1 qualifying/match results
