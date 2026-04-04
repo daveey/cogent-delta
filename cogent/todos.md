@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (137) Scrambler threat bonus weight increase (10.3→10.4): scissors_v53:v1 qualifying - slightly stronger defensive priority (+1%, stacks with 087-136)
 - [ ] (136) Scrambler corner pressure cap increase (10.5→10.6): scissors_v52:v1 qualifying - slightly stronger far-enemy pressure (+1%, stacks with 087-135)
 - [ ] (135) Aligner expansion bonus weight increase (6.2→6.28): scissors_v51:v1 qualifying - stronger expansion incentive (+1.3%, stacks with 087-134)
 - [ ] (134) Aligner network bonus weight increase (0.77→0.78): scissors_v50:v1 qualifying - stronger chain-building rewards (+1.3%, stacks with 087-133)

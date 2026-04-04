@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 71,
+      "attempts": 72,
       "improvements": 7,
-      "last_used": "20260404-136-testing"
+      "last_used": "20260404-137-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "136",
-    "focus": "Scrambler corner pressure cap increase",
-    "description": "Increased corner_pressure cap from 10.5 to 10.6 (+1%)",
-    "rationale": "Corner pressure encourages scramblers to target distant enemy junctions (hub_distance / divisor, capped). Conservative +1% cap increase allows slightly stronger far-enemy disruption incentive. Builds on validated 015 (blocked_neutrals 6.0→8.0) and attempts 100 (cap 10.0→10.5) + 107 (divisor 8.0→7.8). Stacks with 087-135.",
-    "upload": "scissors_v52:v1",
+    "version": "137",
+    "focus": "Scrambler threat bonus weight increase",
+    "description": "Increased threat_bonus weight from 10.3 to 10.4 (+1%)",
+    "rationale": "Threat bonus prioritizes enemy junctions near friendly junctions (defensive scrambling). Conservative +1% increase builds on attempt 099 (10.0→10.3). Balances offensive corner_pressure (136) with defensive protection. Failed attempt 008 (15.0) was too aggressive (-17%), but incremental tuning from 10.0 may improve. Stacks with 087-136.",
+    "upload": "scissors_v53:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260404",
-    "note": "Scissors attempt 136. Clean baseline scrambler corner pressure exploration. Awaiting tournament validation."
+    "note": "Scissors attempt 137. Clean baseline scrambler threat bonus exploration. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
