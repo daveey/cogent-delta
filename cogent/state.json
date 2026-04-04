@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 84,
+      "attempts": 85,
       "improvements": 7,
-      "last_used": "20260404-084-pending"
+      "last_used": "20260404-085-pending"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "084",
-    "focus": "Enemy AOE penalty reduction for contested territory aggression",
-    "description": "Reduced enemy_aoe penalty from 9.0 to 8.9 (-1.1%) in scoring.py",
-    "rationale": "Builds on attempts 078 (9.1→9.0, -1.1%), 071 (9.2→9.1, -1.1%), 057 (9.3→9.2, -1.1%), 050 (9.5→9.3, -2.1%), and validated 038 (10.0→9.5, -5%) for continued enemy AOE penalty optimization. Cumulative -11% reduction from baseline 10.0 to 8.9. Synergizes with hotspot weight reductions (045, 046, 051, 062, 063, 064, 079, 080) for comprehensive contested territory strategy. Progressive enemy AOE penalty reductions enable increasingly aggressive contested junction targeting.",
-    "upload": "scissors_v1_v66:v1",
+    "version": "085",
+    "focus": "Scrambler threat bonus increase for network defense",
+    "description": "Increased scrambler threat_bonus from 10.7 to 10.8 (+0.9%) in scoring.py",
+    "rationale": "Builds on attempts 072 (10.6→10.7, +0.9%), 058 (10.5→10.6, +1.0%), 043 (10.0→10.5, +5%), and baseline 10.0 for continued scrambler threat_bonus optimization. Cumulative +8% increase from baseline 10.0 to 10.8. Synergizes with network bonus increases (039, 042, 052, 060, 069, 076, 081) to protect consolidated junction clusters from enemy scramblers. Progressive threat_bonus increases enable increasingly effective defensive scrambler positioning near friendly junction networks.",
+    "upload": "scissors_v1_v67:v1",
     "season": "beta-cvc",
-    "uploaded_at": "2026-04-04T11:41:00Z",
-    "note": "Forty-sixth scissors improvement. Continues enemy AOE penalty optimization (038, 050, 057, 071, 078, 084)."
+    "uploaded_at": "2026-04-04T11:41:57Z",
+    "note": "Forty-seventh scissors improvement. Continues scrambler threat_bonus optimization (043, 058, 072, 085)."
   },
   "last_improvement": {
     "date": "20260404",
