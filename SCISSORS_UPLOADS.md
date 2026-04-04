@@ -86,3 +86,10 @@ Delta's 036-040 are committed but not uploaded (no COGAMES_TOKEN).
 - **Base**: Delta's 036-038 + scissors 039-049
 - **Status**: Awaiting tournament results (need 20+ matches)
 - **Rationale**: Builds on delta's 038 (10.0→9.5). Conservative further reduction for aggressive contested territory.
+
+## scissors_v1_v33:v1 (Attempt 051)
+- **Uploaded**: 2026-04-04T07:43:53Z
+- **Change**: Far-range hotspot weight 11.0→10.8 (-1.8%)
+- **Base**: Delta's 036-038 + scissors 039-050
+- **Status**: Awaiting tournament results (need 20+ matches)
+- **Rationale**: Completes hotspot optimization trilogy: near (045), mid (046), far (051). Builds on delta's 037 (12.0→11.0).
