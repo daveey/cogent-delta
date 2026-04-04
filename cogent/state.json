@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 57,
+      "attempts": 58,
       "improvements": 7,
-      "last_used": "20260404-057-pending"
+      "last_used": "20260404-058-pending"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "057",
-    "focus": "Enemy AOE penalty reduction for aggressive contested targeting",
-    "description": "Reduced enemy_aoe penalty from 9.3 to 9.2 (-1.1%) in scoring.py",
-    "rationale": "Builds on attempt 050 (9.5→9.3, -2.1%) for continued aggressive contested territory targeting. Synergizes with hotspot weight reductions (045, 046, 051) for comprehensive contested junction strategy. Attempt 025 showed increasing AOE range failed catastrophically (-39%), confirming penalty reductions improve vs range expansion.",
-    "upload": "scissors_v1_v39:v1",
+    "version": "058",
+    "focus": "Scrambler threat bonus increase for network defense",
+    "description": "Increased scrambler threat_bonus from 10.5 to 10.6 (+1.0%) in scoring.py",
+    "rationale": "Builds on attempt 043 (10.0→10.5, +5%) for continued network defense optimization. Synergizes with network bonus increases (039, 042, 052) to protect consolidated friendly junction clusters. Attempt 008 showed +50% increase failed badly (-17%), confirming conservative incremental increases work better.",
+    "upload": "scissors_v1_v40:v1",
     "season": "beta-cvc",
-    "uploaded_at": "2026-04-04T08:37:33Z",
-    "note": "Nineteenth scissors improvement. Continues enemy avoidance optimization (050, 057)."
+    "uploaded_at": "2026-04-04T08:41:12Z",
+    "note": "Twentieth scissors improvement. Continues scrambler defensive optimization (043, 058)."
   },
   "last_improvement": {
     "date": "20260404",
