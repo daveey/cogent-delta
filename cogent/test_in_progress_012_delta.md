@@ -26,4 +26,10 @@ Current baseline: **9.74 avg per cog** (from attempt 007: early scrambler activa
 **Seed 43**: Running...
 **Seeds 44-46**: Pending
 
-**Early indication**: Major regression on seed 42. Increased corner_pressure may be over-incentivizing distant scramblers, hurting local defense.
+**Test INVALIDATED**: Change was overwritten by concurrent development
+
+During test execution, scoring.py was modified by another agent (attempt 023: hub_penalty mid-tier reduction). The corner_pressure change (8.0→7.0) was reverted back to 8.0.
+
+Test results (seed 42: 5.42, -42%) are **NOT VALID** for attempt 012-delta since the code being tested no longer contains the intended change.
+
+**Lesson**: Concurrent development on same codebase invalidates isolated testing. Delta's attempt 012-delta abandoned due to codebase conflict.
