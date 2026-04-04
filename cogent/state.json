@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 81,
+      "attempts": 82,
       "improvements": 7,
-      "last_used": "20260404-146-testing"
+      "last_used": "20260404-147-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "146",
-    "focus": "Aligner hub penalty far-range base reduction",
-    "description": "Reduced hub penalty far-range base from 49.5 to 49.0 (-1%)",
-    "rationale": "Hub penalty far-range (>25 distance) base value sets minimum penalty before multiplier applied. Conservative -1% reduction builds on attempts 110 (50.0→49.5), 111 (multiplier 8.0→7.92). Slightly reduces penalty for junctions 26-30 distance from hub, allowing marginally more center-map exploration without over-extending. Stacks with 087-145.",
-    "upload": "scissors_v62:v1",
+    "version": "147",
+    "focus": "Aligner hub penalty 15-25 base reduction",
+    "description": "Reduced hub penalty 15-25 base from 9.8 to 9.7 (-1%)",
+    "rationale": "Hub penalty 15-25 range (hub_dist 16-25) base value sets minimum penalty for mid-range junctions. Conservative -1% reduction builds on attempts 108 (10.0→9.8), 106 (multiplier 3.0→2.94), 128 (multiplier 2.94→2.91). Slightly reduces penalty for junctions 16-20 distance, balancing hub-proximity with moderate expansion. Stacks with 087-146.",
+    "upload": "scissors_v63:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260404",
-    "note": "Scissors attempt 146. Clean baseline hub penalty base exploration. Awaiting tournament validation."
+    "note": "Scissors attempt 147. Clean baseline hub penalty 15-25 base exploration. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
