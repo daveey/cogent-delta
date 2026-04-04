@@ -19,7 +19,7 @@
     "rationale": "Agents remember extractor locations for 800 steps. If extractors deplete or move, this causes wasted travel to exhausted locations. Reducing to 600 steps allows faster forgetting of stale information while still retaining useful memory. Independent of experiments 029-031 (doesn't interact with hotspot/AOE/LLM changes).",
     "upload": "scissors_v1_v16:v1",
     "season": "beta-cvc",
-    "uploaded_at": "TBD",
+    "uploaded_at": "20260404 04:51 UTC",
     "note": "Parameter untested in all previous attempts. Conservative 25% reduction to test if shorter memory improves miner efficiency."
   },
   "last_improvement": {
