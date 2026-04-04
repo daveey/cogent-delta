@@ -81,7 +81,7 @@ def aligner_target_score(
         if hub_dist <= 10:
             hotspot_weight = 1.9  # Reduced from 2.0 for stronger near-hub recapture incentive
         elif hub_dist <= 15:
-            hotspot_weight = 5.8  # Reduced from 6.0 for mid-range contested junction flexibility
+            hotspot_weight = 5.7  # Reduced from 5.8 for mid-range contested junction flexibility
     hotspot_penalty = min(hotspot_count, 3) * hotspot_weight
     # Network bonus for chain-building near friendly junctions
     # Increased from alpha.0's 0.5 to 0.75 (+50%) for better consolidation synergy
