@@ -98,7 +98,7 @@ def aligner_target_score(
     return (
         distance
         - min(expansion * 6.0, 36.0)
-        + enemy_aoe * 10.0
+        + enemy_aoe * 9.5  # Reduced from 10.0 for slightly more territorial contestation
         + (_CLAIMED_TARGET_PENALTY if claimed_by_other else 0.0)
         + hub_penalty
         + hotspot_penalty
