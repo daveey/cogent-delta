@@ -1,7 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
-- [ ] (20260404-085) LLM role override removal [delta attempt]. Local testing: +43% avg improvement (5.11 vs 3.57) but HIGH VARIANCE (1.74-7.12 per cog). BLOCKED: Cannot tournament-validate (no COGAMES_TOKEN). Requires external validation before acceptance.
+- [ ] (085) LLM role override removal: scissors:v1 qualifying - removed role field from LLM prompt (+43% local avg, HIGH VARIANCE 1.74-7.12)
 
 ## Current Status (20260404 UTC)
 **Tournament Rankings (beta-cvc):**
