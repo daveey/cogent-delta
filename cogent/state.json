@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 50,
+      "attempts": 51,
       "improvements": 7,
-      "last_used": "20260404-115-testing"
+      "last_used": "20260404-116-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "115",
-    "focus": "Junction AOE range increase",
-    "description": "Increased _JUNCTION_AOE_RANGE from 10 to 10.3 (+3%)",
-    "rationale": "Affects both aligner enemy_aoe detection and scrambler blocked_neutrals calculation. Conservative +3% increase for slightly larger area-of-effect detection radius. Helps aligners avoid enemy-contested areas and scramblers count blocked neutral junctions more effectively. Stacks with 087-114.",
-    "upload": "scissors_v31:v1",
+    "version": "116",
+    "focus": "Aligner heart batch target increase",
+    "description": "Increased aligner heart batch target from 3 to 3.2 (+7%)",
+    "rationale": "Attempt 094 increased scrambler from 2 to 3 (+50%). Conservative +7% increase for aligner to improve persistence and reduce heart trips. Aligners are critical for scoring, so better persistence helps maintain junction control in four_score. Stacks with 087-115.",
+    "upload": "scissors_v32:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260404",
-    "note": "Scissors attempt 115. Clean baseline junction AOE range exploration. Awaiting tournament validation."
+    "note": "Scissors attempt 116. Clean baseline aligner heart batch target exploration. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",

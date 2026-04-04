@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (116) Aligner heart batch target increase (3.0→3.2): scissors_v32:v1 qualifying - better persistence (+7%, stacks with 087-115)
 - [ ] (115) Junction AOE range increase (10.0→10.3): scissors_v31:v1 qualifying - larger detection radius (+3%, stacks with 087-114)
 - [ ] (114) Aligner network bonus cap increase (4.0→4.2): scissors_v30:v1 qualifying - dense cluster scenarios (+5%, stacks with 087-113)
 - [ ] (113) Aligner expansion bonus cap increase (36.0→36.5): scissors_v29:v1 qualifying - extreme expansion cases (+1.4%, stacks with 087-112)
