@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 37,
+      "attempts": 38,
       "improvements": 7,
-      "last_used": "20260404-102-testing"
+      "last_used": "20260404-103-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "102",
-    "focus": "Aligner hub penalty reduction for very close junctions",
-    "description": "Reduced hub penalty multiplier from 0.3 to 0.28 (-7%) for junctions ≤10 distance",
-    "rationale": "Encourages tighter hub clustering for safer territory control. Very close junctions (≤10 distance) now slightly more attractive. Conservative -7% reduction strengthens hub-proximal strategy core to four_score success. Stacks with 087-101.",
-    "upload": "scissors_v18:v1",
+    "version": "103",
+    "focus": "Aligner near-hub hotspot weight reduction",
+    "description": "Reduced near-hub hotspot_weight from 2.0 to 1.9 (-5%) for junctions ≤10 distance",
+    "rationale": "Near-hub junctions worth defending despite enemy contest. Conservative -5% reduction encourages recapture of contested near-hub territory. Complements hub-proximal strategy. Different from failed attempt 021 (far-range base 12.0). Stacks with 087-102.",
+    "upload": "scissors_v19:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260404",
-    "note": "Scissors attempt 102. Clean baseline hub clustering exploration. Awaiting tournament validation."
+    "note": "Scissors attempt 103. Clean baseline near-hub hotspot weight exploration. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
