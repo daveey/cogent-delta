@@ -1,7 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
-(none)
+- [ ] (20260404-028) Hotspot cap increase: 3→4 for stronger contested junction avoidance. Uploaded as scissors_v1:v12, awaiting tournament validation.
 
 ## Current Status (20260404 UTC)
 **Tournament Rankings (beta-cvc):**

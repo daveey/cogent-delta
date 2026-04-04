@@ -6,12 +6,22 @@
       "last_used": null
     },
     "design": {
-      "attempts": 27,
+      "attempts": 28,
       "improvements": 7,
-      "last_used": "20260404-027-reverted"
+      "last_used": "20260404-028-testing"
     }
   },
-  "testing_in_progress": null,
+  "testing_in_progress": {
+    "date": "20260404",
+    "version": "028",
+    "focus": "Hotspot cap increase for contested junction avoidance",
+    "description": "Increased hotspot penalty cap from 3 to 4 scrambles to more strongly avoid frequently contested junctions",
+    "rationale": "Current cap of 3 means junctions scrambled 4, 5, or 10+ times get same penalty as 3 scrambles. In four_score with 4 teams, some junctions are hyper-contested. Increasing cap to 4 allows agents to more strongly avoid these hotspots. Conservative +1 increase follows successful pattern of increasing penalties for bad behavior. Max penalty increases from 36 to 48 for far contested junctions.",
+    "upload": "scissors_v1:v12",
+    "season": "beta-cvc",
+    "uploaded_at": "20260404 UTC",
+    "note": "Building on gamma_v6 baseline (15.75 avg, rank #9). Pattern: 9 consecutive parameter tuning attempts failed (019-027). This targets architectural feature (hotspot tracking) mentioned in docs/strategy.md 'What To Try'."
+  },
   "last_improvement": {
     "date": "20260404",
     "version": "018",
