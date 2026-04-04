@@ -58,7 +58,7 @@ def aligner_target_score(
     )
     enemy_aoe = (
         1.0
-        if any(manhattan(candidate.position, enemy.position) <= _JUNCTION_AOE_RANGE for enemy in enemy_junctions)
+        if any(manhattan(candidate.position, enemy.position) <= 15 for enemy in enemy_junctions)
         else 0.0
     )
     # Strongly prefer hub-proximal junctions: less travel, safer, faster cycling

@@ -6,12 +6,19 @@
       "last_used": null
     },
     "design": {
-      "attempts": 25,
+      "attempts": 26,
       "improvements": 7,
-      "last_used": "20260404-060-reverted"
+      "last_used": "20260404-061-testing"
     }
   },
-  "testing_in_progress": null,
+  "testing_in_progress": {
+    "version": "061",
+    "date": "20260404",
+    "focus": "Aligner enemy AOE detection increase",
+    "description": "Increased aligner enemy detection radius from 10 to 15 in scoring.py for more conservative targeting near enemies",
+    "upload": "gamma:v5",
+    "status": "qualifying"
+  },
   "local_testing_status": {
     "status": "FAILED",
     "date": "20260404",
