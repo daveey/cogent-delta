@@ -49,6 +49,7 @@
 - [x] (022) Hotspot weight mid-tier reduction (6.0→5.5): canceled (built on failed 021)
 - [x] (023) Hub penalty mid-tier reduction (3.0→2.7): -29.0%
 - [x] (057) Temp block steps reduction (10→8): Critical failure - 3/3 seeds timed out
+- [x] (058) A* bound margin reduction (12→11): Critical failure - seed 42 timed out
 
 ## Strategy
 - **Tournament-based validation** works well - continue using beta-cvc for fast feedback
@@ -56,6 +57,7 @@
 - **Synergistic improvements** (014+015, 016) compound better than isolated changes
 - **LLM role suggestions fundamentally flawed** - avoid this approach
 - **Expansion vs defense balance critical** - over-indexing either way regresses
+- **Pathfinding parameters extremely sensitive** - Both tested changes (057: _TEMP_BLOCK_STEPS, 058: _DEFAULT_BOUND_MARGIN) caused critical timeouts. Infrastructure optimally calibrated.
 
 ## Next Session
 - Monitor gamma_scissors:v1 qualifying/match results

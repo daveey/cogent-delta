@@ -6,9 +6,9 @@
       "last_used": null
     },
     "design": {
-      "attempts": 22,
+      "attempts": 23,
       "improvements": 7,
-      "last_used": "20260404-057-reverted"
+      "last_used": "20260404-058-reverted"
     }
   },
   "testing_in_progress": null,
@@ -215,6 +215,14 @@
       "description": "Reduced _TEMP_BLOCK_STEPS from 10 to 8 for faster blocked path recovery",
       "result": "CRITICAL FAILURE: 3/3 seeds timed out (900s limit each). Seeds 42, 43, 44 all exceeded timeout.",
       "analysis": "Reducing temporary block duration from 10 steps (2.0 sec) to 8 steps (1.6 sec) caused severe performance degradation. Agents likely entered pathfinding loops by retrying blocked paths too aggressively, consuming excessive CPU and never completing games. Current 10-step block duration is correctly calibrated to balance path retry with loop prevention. Pattern: Pathfinding parameters extremely sensitive - conservative values prevent infinite loops."
+    },
+    {
+      "date": "20260404",
+      "version": "058-reverted",
+      "focus": "A* pathfinding search width reduction",
+      "description": "Reduced _DEFAULT_BOUND_MARGIN from 12 to 11 for tighter A* pathfinding search area",
+      "result": "CRITICAL FAILURE: Seed 42 timed out (900s limit). Process terminated with exit code 143 (SIGTERM).",
+      "analysis": "Reducing A* bound margin from 12 to 11 steps caused timeout. Tighter search window likely prevented pathfinding from finding valid paths around obstacles, causing agents to fail navigation or retry excessively. Current 12-step margin correctly balances search efficiency with path finding success. Pattern: Both pathfinding parameters tested (057: _TEMP_BLOCK_STEPS, 058: _DEFAULT_BOUND_MARGIN) caused critical failures. Pathfinding infrastructure extremely sensitive - current values are optimally calibrated."
     }
   ],
   "mission": "four_score",
