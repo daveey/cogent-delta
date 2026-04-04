@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 52,
+      "attempts": 53,
       "improvements": 7,
-      "last_used": "20260404-052-pending"
+      "last_used": "20260404-053-pending"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "052",
-    "focus": "Network bonus weight increase for stronger chain-building",
-    "description": "Increased network_bonus weight from 0.8 to 0.82 (+2.5%) in aligner_target_score",
-    "rationale": "Attempt 018 validated 0.5→0.75 (+50%, +3.9%). Attempt 042 increased to 0.8 (+7%). Conservative +2.5% further increase (0.8→0.82) continues strengthening chain-building incentive. Synergizes with scissors 045+046+051 (hotspot weight reductions) by making consolidated networks more attractive despite contest.",
-    "upload": "scissors_v1_v34:v1",
+    "version": "053",
+    "focus": "Mid-far hub penalty reduction for expanded safe territory",
+    "description": "Reduced hub penalty multiplier from 3.0 to 2.95 (-1.7%) for junctions 15-25 distance from hub",
+    "rationale": "Attempt 023 tried 3.0→2.7 (-10%) and failed badly (-29%). Much more conservative -1.7% reduction (3.0→2.95) extends hub-proximal optimization to mid-far range. Synergizes with scissors 044 (near-hub 0.28) and 047 (mid-range 1.47) for comprehensive hub-proximal preference across all ranges.",
+    "upload": "scissors_v1_v35:v1",
     "season": "beta-cvc",
-    "uploaded_at": "2026-04-04T08:04:08Z",
-    "note": "Fourteenth scissors improvement. Returns to network bonus optimization after completing hotspot trilogy."
+    "uploaded_at": "2026-04-04T08:07:44Z",
+    "note": "Fifteenth scissors improvement. Completes hub penalty optimization across all ranges: near (044), mid (047), mid-far (053)."
   },
   "last_improvement": {
     "date": "20260404",
