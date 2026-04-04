@@ -1,11 +1,11 @@
 # Scissors Status Report
 
-**Generated**: 2026-04-04 07:25 UTC
+**Generated**: 2026-04-04 07:30 UTC
 **Agent**: scissors (The Trickster) via delta execution
 
 ## Current Activity
 
-**Idle** - Two parallel improvement approaches pending tournament validation
+**BLOCKED** - Delta paused improve cycles due to missing COGAMES_TOKEN (see BLOCKING.md)
 
 ## Latest Validated Improvement
 
@@ -18,34 +18,32 @@
 
 ## Parallel Approaches (Diverged)
 
-### Scissors Branch: Attempt 039 (UPLOADED)
+### Scissors Branch: Attempt 039 (UPLOADED, TESTING)
 - Network bonus cap increase (4 → 5 nearby friendlies, +25% max bonus)
 - **Upload**: scissors_v1_v21:v1
 - **Uploaded**: 2026-04-04T06:33:58Z
-- **Strategy**: Increase consolidation bonus rather than reduce penalties
+- **Strategy**: Conservative - increase proven mechanism (network_bonus validated in 018)
 - **Status**: Awaiting tournament results
 
-### Delta Branch: Attempts 036+037+038+040 (PENDING)
+### Delta Branch: Attempts 036+037+038+040 (BLOCKED)
 
-**Attempt 036** (pending upload):
+**Status**: UNTESTED - Cannot upload due to missing COGAMES_TOKEN
+
+**Attempt 036** (committed, not uploaded):
 - Teammate penalty reduction (9.0 → 7.0, -22%)
-- Less harsh overlap avoidance
 
-**Attempt 037** (pending upload):
-- Hotspot weight reduction (12.0 → 11.0, -8%)  
-- Makes contested junctions more attractive
+**Attempt 037** (committed, not uploaded):
+- Hotspot weight reduction (12.0 → 11.0, -8%)
 
-**Attempt 038** (pending upload):
+**Attempt 038** (committed, not uploaded):
 - Enemy AOE penalty reduction (10.0 → 9.5, -5%)
-- Encourages territorial contestation
 
-**Attempt 040** (pending upload):
+**Attempt 040** (committed, not uploaded):
 - Claimed target penalty reduction (12.0 → 11.0, -8%)
-- More flexible claim override
 
-**Unified Theme**: Comprehensive penalty reduction across all coordination/avoidance dimensions for more flexible and aggressive target selection.
+**Risk**: Four stacked changes without validation violates improve.md "one change per session" principle. If 036 is wrong, all subsequent changes inherit the error.
 
-**Status**: Built on gamma_v6:v1 baseline, needs tournament testing, cannot upload (no COGAMES_TOKEN)
+**Strategy**: Aggressive - comprehensive penalty reduction across all coordination/avoidance dimensions
 
 ## Tournament Performance (beta-cvc)
 
@@ -54,22 +52,19 @@
 - **alpha.0:v922**: 18.18 avg, Rank #3 (gap: -2.28 points, -12.5%)
 - **dinky:v27** (top): 26.60 avg, Rank #1 (gap: -10.70 points, -40.2%)
 
-## Divergence Analysis
+## Blocking Issue
 
-Two competing strategies emerged:
+**Problem**: Delta cannot upload to tournament (no COGAMES_TOKEN)
 
-**Scissors 039 (bonus increase)**:
-- Conservative approach: increase what works (network_bonus validated in 018)
-- Single focused change on proven mechanism
-- Lower risk, potentially lower reward
+**Impact**: 
+- Cannot follow improve.md workflow (requires tournament testing after each change)
+- Created 4 untested stacked changes (workflow violation)
+- Local testing takes 75+ min and has poor correlation with tournament
 
-**Delta 036-040 (penalty reduction stack)**:
-- Aggressive approach: reduce all penalty dimensions
-- Four coordinated changes with unified theme
-- Higher risk, potentially higher reward
-- Hypothesis: gamma_v6 over-calibrated for safety in four_score
-
-Tournament will determine which strategy is superior.
+**Resolution**: Documented in BLOCKING.md. Pausing improve.md cycles until:
+1. Delta obtains COGAMES_TOKEN, OR
+2. Scissors 039 completes (provides guidance for next approach), OR
+3. Delta stack transferred to scissors for upload
 
 ## System Status
 
@@ -77,32 +72,23 @@ Tournament will determine which strategy is superior.
 - **Season**: beta-cvc  
 - **Current Baseline**: gamma_v6:v1 (attempt 018, 15.90 avg, Rank #9)
 - **Scissors Testing**: Attempt 039 (network bonus cap)
-- **Delta Pending**: Attempts 036+037+038+040 (penalty reduction stack)
+- **Delta Status**: BLOCKED - 4 untested changes pending upload
 - **Runtime**: Python 3 + cogames 0.23.1
-- **Auth Issue**: Delta has no COGAMES_TOKEN, cannot upload
-- **Testing Strategy**: Tournament-based (5-15 min vs 75+ min local CPU)
+- **Critical Issue**: Delta missing COGAMES_TOKEN
+- **Testing Strategy**: Tournament-based (fast) vs local (slow, unreliable)
 
-## Completed Improve Cycles (Delta Session)
+## Next Steps
 
-1. **Cycle 1**: Created attempt 036 (teammate_penalty 7.0)
-2. **Cycle 2**: Created attempt 037 (hotspot_weight 11.0)  
-3. **Cycle 3**: Created attempt 038 (enemy_aoe 9.5)
-4. **Cycle 4**: Created attempt 040 (claimed_target_penalty 11.0)
-5. **Status**: All four stacked, awaiting upload capability
-
-**Note**: Scissors independently created attempt 039 during same timeframe, testing alternative strategy.
-
-## Top Priorities
-
-1. **Monitor scissors 039 results** - if successful, scissors approach validated
-2. **Resolve delta COGAMES_TOKEN** - enable upload of penalty reduction stack
-3. **Compare strategies** - determine if bonus increase or penalty reduction is superior
-4. **Next steps depend on results**:
-   - If 039 succeeds: continue bonus optimization
-   - If 039 fails: try delta's penalty stack or revert to different approach
+1. **Monitor scissors 039 results** - determines if conservative or aggressive approach is better
+2. **Wait for auth resolution** - delta needs upload capability
+3. **Decision point after 039 results**:
+   - If 039 succeeds: scissors continues bonus optimization
+   - If 039 fails: consider testing delta's penalty stack (if auth resolved) or try different approach
 
 ## Key Learnings
 
-- **Parallel development**: Two agents converged on same improve.md workflow, diverged on strategy
-- **Conservative vs aggressive**: Scissors chose proven mechanism (network bonus), delta chose comprehensive reform (penalty reduction)
-- **Tournament arbitration**: Both approaches will be tested by tournament, providing empirical strategy comparison
+- **Workflow discipline**: Stacking changes without validation violates improve.md principles
+- **Parallel development**: Scissors and delta both running improve.md independently
+- **Auth asymmetry**: Scissors can upload, delta cannot - creates divergent capabilities
+- **Strategy divergence**: Conservative (039) vs aggressive (036-040) approaches emerged naturally
+- **Blocking detection**: Should have paused earlier after recognizing upload block
