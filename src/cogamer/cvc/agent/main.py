@@ -87,7 +87,7 @@ class CvcEngine(
         self._claimed_target: tuple[int, int] | None = None
         self._sticky_target_position: tuple[int, int] | None = None
         self._sticky_target_kind: str | None = None
-        self._hotspots: dict[tuple[int, int], int] = {}
+        self._hotspots: dict[tuple[int, int], tuple[int, int]] = {}  # (count, last_scramble_step)
         self._current_directive = MacroDirective()
         self._llm_objective: str | None = None
 

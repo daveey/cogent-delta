@@ -28,9 +28,19 @@ _JUNCTION_MEMORY_STEPS = 800
 class JunctionMixin:
     _world_model: WorldModel
     _junctions: dict[tuple[int, int], tuple[str | None, int]]
-    _hotspots: dict[tuple[int, int], int]
+    _hotspots: dict[tuple[int, int], tuple[int, int]]  # (count, last_scramble_step)
     _agent_id: int
     _step_index: int
+
+    def _hotspot_count(self, position: tuple[int, int]) -> int:
+        """Get decayed hotspot count for a position. Decays by 1 per 2000 steps."""
+        entry = self._hotspots.get(position)
+        if entry is None:
+            return 0
+        count, last_step = entry
+        steps_elapsed = self._step_index - last_step
+        decay = steps_elapsed // 2000
+        return max(0, count - decay)
 
     def _nearest_hub(self, state: MettagridState) -> KnownEntity | None:
         hub = self._world_model.nearest(
@@ -96,7 +106,8 @@ class JunctionMixin:
             prev = self._junctions.get(rel_position)
             if prev is not None and prev[0] == team and new_owner != team:
                 abs_pos = (hub.global_x + rel_position[0], hub.global_y + rel_position[1])
-                self._hotspots[abs_pos] = self._hotspots.get(abs_pos, 0) + 1
+                old_count = self._hotspots.get(abs_pos, (0, 0))[0]
+                self._hotspots[abs_pos] = (old_count + 1, self._step_index)
             self._junctions[rel_position] = (new_owner, state.step or self._step_index)
 
     def _junction_entities(

@@ -30,7 +30,8 @@ _TARGET_SWITCH_THRESHOLD = 3.0
 class TargetingMixin:
     _world_model: WorldModel
     _claims: dict[tuple[int, int], tuple[int, int]]
-    _hotspots: dict[tuple[int, int], int]
+    _hotspots: dict[tuple[int, int], tuple[int, int]]  # (count, last_scramble_step)
+    _hotspot_count: callable  # Method from JunctionMixin
     _agent_id: int
     _step_index: int
     _claimed_target: tuple[int, int] | None
@@ -155,7 +156,7 @@ class TargetingMixin:
                     ),
                     hub_position=hub_pos,
                     friendly_sources=network_sources,
-                    hotspot_count=self._hotspots.get(entity.position, 0),
+                    hotspot_count=self._hotspot_count(entity.position),
                     teammate_closer=teammate_closer_to_target(
                         current_position=current_pos,
                         target=entity.position,
