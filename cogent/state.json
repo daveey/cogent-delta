@@ -8,20 +8,10 @@
     "design": {
       "attempts": 26,
       "improvements": 7,
-      "last_used": "20260404-026-testing"
+      "last_used": "20260404-026-reverted"
     }
   },
-  "testing_in_progress": {
-    "date": "20260404",
-    "version": "026",
-    "focus": "Scrambler corner pressure increase",
-    "description": "Increased corner_pressure divisor from 8.0 to 7.0 (-12.5% to divisor, +14% to bonus) to encourage more aggressive distant scrambling",
-    "rationale": "In four_score with 4 teams in corners, scramblers need to reach distant enemies more aggressively. Reducing divisor from 8.0 to 7.0 increases bonus for distant targets: 70+ distance now gets max 10.0 bonus (vs 80+ before). Conservative change that amplifies existing successful scrambler behavior (blocked_neutrals validated in 015).",
-    "upload": "scissors_v1:v10",
-    "season": "beta-cvc",
-    "uploaded_at": "20260404 UTC",
-    "note": "Building on gamma_v6 baseline (15.84 avg). Attempt 025 failed (-39.0%). Testing 026 in isolation."
-  },
+  "testing_in_progress": null,
   "last_improvement": {
     "date": "20260404",
     "version": "018",
@@ -245,6 +235,20 @@
         "season": "beta-cvc"
       },
       "analysis": "CATASTROPHIC FAILURE. Increasing AOE detection radius by 20% caused severe performance degradation. Agents likely became too cautious, avoiding too many contested areas or retreating too often. This affected both aligner targeting (enemy_aoe penalty) and scrambler targeting (blocked_neutrals bonus). Pattern: spatial detection parameters are extremely sensitive - even 20% changes can break behavior. Alpha.0's radius 20 may be compensated by other parameters we don't have."
+    },
+    {
+      "date": "20260404",
+      "version": "026-reverted",
+      "focus": "Scrambler corner pressure increase",
+      "description": "Reduced corner_pressure divisor from 8.0 to 7.0 (-12.5% to divisor, +14% to bonus) to encourage more aggressive distant scrambling",
+      "result": "MAJOR REGRESSION: scissors_v1:v10 avg 8.82 vs baseline 15.84 (-44.3%)",
+      "tournament_scores": {
+        "matches": 20,
+        "avg": 8.82,
+        "rank": 66,
+        "season": "beta-cvc"
+      },
+      "analysis": "CATASTROPHIC FAILURE. Increasing corner pressure bonus caused scramblers to over-prioritize distant targets, likely dying too often or missing nearby high-value targets. The current divisor 8.0 is correctly calibrated - distant targets (70+) getting 8.75-10 bonus vs 7.0-10 is already aggressive enough. Pattern: scrambler targeting extremely sensitive to changes. Both increasing defensive priority (008: -17%) and increasing distant aggression (026: -44%) failed badly."
     }
   ],
   "mission": "four_score",
