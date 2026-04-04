@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (094) Scrambler heart batch target increase (2→3): scissors:v10 qualifying - better scrambler persistence (+50%, stacks with 087-093)
 - [ ] (093) Junction alignment distance increase (15→16): scissors:v9 qualifying - chain-building reach (+7%, stacks with 087-092)
 - [ ] (092) Hub alignment distance increase (25→26): scissors:v8 qualifying - extended hub reach (+4%, stacks with 087-091)
 - [ ] (091) Target claim duration increase (30→32): scissors:v7 qualifying - longer claim validity (+7%, stacks with 087-090)

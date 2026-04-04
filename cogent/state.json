@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 28,
+      "attempts": 29,
       "improvements": 7,
-      "last_used": "20260404-093-testing"
+      "last_used": "20260404-094-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "093",
-    "focus": "Junction alignment distance increase for chain-building",
-    "description": "Increased _JUNCTION_ALIGN_DISTANCE from 15 to 16 (+7%)",
-    "rationale": "Junction alignment distance determines how far from friendly junctions agents can capture new junctions (chain-building). Modest increase to 16 could improve expansion reach and chain-building efficiency without overextending. Stacks with 087-092.",
-    "upload": "scissors:v9",
+    "version": "094",
+    "focus": "Scrambler heart batch target increase for better persistence",
+    "description": "Increased scrambler heart batch target from 2 to 3 hearts",
+    "rationale": "Scramblers currently batch 2 hearts before heading out. Increasing to 3 hearts (matching aligners) could improve scrambler persistence in enemy territory without overloading. Strategy notes validate 3 hearts for aligners as optimal; scramblers may benefit similarly. Stacks with 087-093.",
+    "upload": "scissors:v10",
     "season": "beta-four-score",
     "uploaded_at": "20260404",
-    "note": "Scissors attempt 093. Clean baseline spatial parameter exploration continuing. Awaiting tournament validation."
+    "note": "Scissors attempt 094. Clean baseline role resource exploration continuing. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
