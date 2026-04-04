@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 73,
+      "attempts": 74,
       "improvements": 7,
-      "last_used": "20260404-138-testing"
+      "last_used": "20260404-139-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "138",
-    "focus": "Scrambler blocked neutrals weight increase",
-    "description": "Increased blocked_neutrals weight from 8.5 to 8.6 (+1.2%)",
-    "rationale": "Blocked neutrals bonus rewards scramblers for occupying enemy junctions that block neutral junctions (expansion-blocking). Conservative +1.2% increase builds on validated 015 (6.0→8.0) and attempt 098 (8.0→8.5). Stronger expansion-blocking in four_score multi-team format. Stacks with 087-137.",
-    "upload": "scissors_v54:v1",
+    "version": "139",
+    "focus": "Aligner enemy AOE penalty increase",
+    "description": "Increased enemy_aoe penalty from 10.3 to 10.4 (+1%)",
+    "rationale": "Enemy AOE penalty discourages aligners from targeting junctions within enemy scrambler range (10-tile radius). Conservative +1% increase builds on validated 014 (8.0→10.0) and attempt 101 (10.0→10.3). Makes aligners slightly more cautious about contested territory in four_score. Stacks with 087-138.",
+    "upload": "scissors_v55:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260404",
-    "note": "Scissors attempt 138. Clean baseline scrambler blocked_neutrals exploration. Awaiting tournament validation."
+    "note": "Scissors attempt 139. Clean baseline enemy AOE penalty exploration. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
