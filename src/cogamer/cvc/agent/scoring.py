@@ -99,7 +99,7 @@ def aligner_target_score(
     return (
         distance
         - min(expansion * 6.2, 36.0)  # Increased from 6.0 to 6.2 (+3%) for stronger expansion incentive
-        + enemy_aoe * 10.0
+        + enemy_aoe * 10.3  # Increased from 10.0 to 10.3 (+3%)
         + (_CLAIMED_TARGET_PENALTY if claimed_by_other else 0.0)
         + hub_penalty
         + hotspot_penalty
