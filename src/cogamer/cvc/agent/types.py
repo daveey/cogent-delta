@@ -62,7 +62,7 @@ _HUB_ALIGN_DISTANCE = 25
 _JUNCTION_ALIGN_DISTANCE = 15
 _JUNCTION_AOE_RANGE = 10
 _CLAIMED_TARGET_PENALTY = 11.5  # Reduced from 12.0 (-4%) for more flexible claim override
-_TARGET_CLAIM_STEPS = 30
+_TARGET_CLAIM_STEPS = 32  # Increased from 30 (+7%) for slightly longer claim validity
 _EXTRACTOR_MEMORY_STEPS = 800
 _STATION_TARGETS_BY_AGENT = {
     "aligner": {
