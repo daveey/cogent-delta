@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 42,
+      "attempts": 43,
       "improvements": 7,
-      "last_used": "20260404-042-pending"
+      "last_used": "20260404-043-pending"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "042",
-    "focus": "Network bonus weight increase for stronger consolidation",
-    "description": "Increased network_bonus weight from 0.75 to 0.8 (+7%) in aligner_target_score",
-    "rationale": "Attempt 018 successfully validated network_bonus 0.5→0.75 (+50%, +3.9%). Conservative +7% further increase to 0.8 strengthens chain-building incentive. Synergizes with scissors 041 (scrambler blocking) by making consolidated networks more attractive to defend. Stacks on delta's 036-038.",
-    "upload": "scissors_v1_v24:v1",
+    "version": "043",
+    "focus": "Scrambler threat bonus increase for stronger network defense",
+    "description": "Increased threat_bonus weight from 10.0 to 10.5 (+5%) in scramble_target_score",
+    "rationale": "Attempt 008 tried 10.0→15.0 (+50%) and failed (-17%). Conservative +5% to 10.5 prioritizes defending friendly networks without over-indexing defense. Synergizes with scissors 039+042 (network bonuses) by making scramblers more protective of consolidated friendly junctions.",
+    "upload": "scissors_v1_v25:v1",
     "season": "beta-cvc",
-    "uploaded_at": "2026-04-04T06:50:06Z",
-    "note": "Fourth scissors improvement. Stack: 039 (network cap 5), 040 (expansion 6.25), 041 (blocked 8.4), 042 (network weight 0.8)."
+    "uploaded_at": "2026-04-04T06:52:25Z",
+    "note": "Fifth scissors improvement. Defensive complement to offensive stack (039-042). Balanced expansion + defense."
   },
   "last_improvement": {
     "date": "20260404",
