@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 74,
+      "attempts": 75,
       "improvements": 7,
-      "last_used": "20260404-074-pending"
+      "last_used": "20260404-075-pending"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "074",
-    "focus": "Claimed target penalty reduction for flexible coordination",
-    "description": "Reduced _CLAIMED_TARGET_PENALTY from 10.8 to 10.7 (-0.9%) in types.py",
-    "rationale": "Builds on attempt 054 (11.0→10.8, -1.8%) for continued claim coordination flexibility. Allows more flexible claim override when one agent is significantly closer. Synergizes with teammate penalty reductions (049, 056, 068: 9.0→7.0→6.8→6.7→6.6) for comprehensive multi-agent coordination. Attempt 009 showed reducing claim duration failed badly (-53%), confirming penalty reductions better than duration changes. Progressive claim penalty reductions enable more dynamic multi-agent targeting.",
-    "upload": "scissors_v1_v56:v1",
+    "version": "075",
+    "focus": "Teammate penalty reduction for coordination flexibility",
+    "description": "Reduced teammate_penalty from 6.6 to 6.5 (-1.5%) in scoring.py",
+    "rationale": "Builds on attempts 068 (6.7→6.6, -1.5%), 056 (6.8→6.7, -1.5%), and 049 (7.0→6.8, -2.9%) for continued coordination flexibility. Synergizes with claim penalty reductions (054: 11.0→10.8, 074: 10.8→10.7) for comprehensive multi-agent coordination. Attempt 020 showed increasing to 10.0 failed badly (-42.8%), confirming lower penalties improve coordination. Progressive teammate penalty reductions enable increasingly flexible multi-agent targeting.",
+    "upload": "scissors_v1_v57:v1",
     "season": "beta-cvc",
-    "uploaded_at": "2026-04-04T10:41:23Z",
-    "note": "Thirty-sixth scissors improvement. Continues coordination optimization (054, 074)."
+    "uploaded_at": "2026-04-04T10:43:24Z",
+    "note": "Thirty-seventh scissors improvement. Continues coordination optimization (049, 056, 068, 075)."
   },
   "last_improvement": {
     "date": "20260404",
