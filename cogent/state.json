@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 69,
+      "attempts": 70,
       "improvements": 7,
-      "last_used": "20260404-134-testing"
+      "last_used": "20260404-135-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260404",
-    "version": "134",
-    "focus": "Aligner network bonus weight increase",
-    "description": "Increased network_bonus weight from 0.77 to 0.78 (+1.3%)",
-    "rationale": "Network bonus rewards junctions near existing friendly junctions for chain-building. Conservative +1.3% increase builds on validated 018 improvement (0.5→0.75) and attempt 097 (0.75→0.77). Promotes tighter clustering around established territory without over-consolidating (unlike failed 006 with 3× multiplier). Stacks with 087-133.",
-    "upload": "scissors_v50:v1",
+    "version": "135",
+    "focus": "Aligner expansion bonus weight increase",
+    "description": "Increased expansion bonus weight from 6.2 to 6.28 (+1.3%)",
+    "rationale": "Expansion bonus rewards junctions that unlock new territory (unreachable junctions within alignment range). Conservative +1.3% increase builds on validated 016 improvement (5.0→6.0) and attempt 096 (6.0→6.2). Paired with network bonus increase (134) to balance expansion and consolidation. Stacks with 087-134.",
+    "upload": "scissors_v51:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260404",
-    "note": "Scissors attempt 134. Clean baseline network bonus exploration. Awaiting tournament validation."
+    "note": "Scissors attempt 135. Clean baseline expansion bonus exploration. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",

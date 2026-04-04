@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (135) Aligner expansion bonus weight increase (6.2→6.28): scissors_v51:v1 qualifying - stronger expansion incentive (+1.3%, stacks with 087-134)
 - [ ] (134) Aligner network bonus weight increase (0.77→0.78): scissors_v50:v1 qualifying - stronger chain-building rewards (+1.3%, stacks with 087-133)
 - [ ] (133) Aligner hotspot penalty cap increase (3.0→3.06): scissors_v49:v1 qualifying - higher penalty cap for heavily contested junctions (+2%, stacks with 087-132)
 - [ ] (132) Aligner mid-range hotspot weight reduction (5.8→5.74): scissors_v48:v1 qualifying - mid-range contested junctions (-1%, stacks with 087-131)
