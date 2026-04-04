@@ -141,7 +141,7 @@ def scramble_target_score(
     blocked_neutrals = sum(
         1 for neutral in neutral_junctions if manhattan(candidate.position, neutral.position) <= _JUNCTION_AOE_RANGE
     )
-    corner_pressure = min(manhattan(hub_position, candidate.position) / 8.0, 10.0)
+    corner_pressure = min(manhattan(hub_position, candidate.position) / 8.0, 10.5)  # Increased cap from 10.0 to 10.5 (+5%)
     # Strongly prioritize enemy junctions near our friendly network (defending our score)
     threat_bonus = 0.0
     if friendly_junctions:
