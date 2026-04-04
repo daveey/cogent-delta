@@ -6,12 +6,22 @@
       "last_used": null
     },
     "design": {
-      "attempts": 26,
+      "attempts": 27,
       "improvements": 7,
-      "last_used": "20260404-026-reverted"
+      "last_used": "20260404-027-testing"
     }
   },
-  "testing_in_progress": null,
+  "testing_in_progress": {
+    "date": "20260404",
+    "version": "027",
+    "focus": "Target switch threshold reduction for better adaptability",
+    "description": "Reduced _TARGET_SWITCH_THRESHOLD from 3.0 to 2.5 (-17%) to make agents switch targets more readily when better opportunities appear",
+    "rationale": "Sticky targets prevent oscillation (docs/strategy.md lists as 'What Works'), but threshold 3.0 may be too high for dynamic four_score with 4 teams. Reducing to 2.5 allows agents to adapt faster to changing battlefield conditions while still preventing excessive switching. Conservative 17% reduction maintains stability while improving responsiveness.",
+    "upload": "scissors_v1:v11",
+    "season": "beta-cvc",
+    "uploaded_at": "20260404 UTC",
+    "note": "Building on gamma_v6 baseline (15.84 avg). Attempts 025 & 026 both catastrophically failed. Trying behavioral parameter instead of scoring weights."
+  },
   "last_improvement": {
     "date": "20260404",
     "version": "018",

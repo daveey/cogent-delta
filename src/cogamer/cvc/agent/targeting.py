@@ -24,7 +24,7 @@ from cvc.agent import (
 if TYPE_CHECKING:
     from cvc.agent.world_model import WorldModel
 
-_TARGET_SWITCH_THRESHOLD = 3.0
+_TARGET_SWITCH_THRESHOLD = 2.5
 
 
 class TargetingMixin:

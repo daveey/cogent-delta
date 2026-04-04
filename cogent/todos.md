@@ -1,7 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
-(none)
+- [ ] (20260404-027) Target switch threshold: 3.0→2.5 (-17%) for better adaptability. Uploaded as scissors_v1:v11, awaiting tournament validation.
 
 ## Current Status (20260404 UTC)
 **Tournament Rankings (beta-cvc):**
