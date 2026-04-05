@@ -79,7 +79,7 @@ def aligner_target_score(
     if hub_position is not None:
         hub_dist = float(manhattan(hub_position, candidate.position))
         if hub_dist <= 10:
-            hotspot_weight = 1.78  # Reduced from 1.8 to 1.78 (-1.11%) for continued near-hub recapture tuning
+            hotspot_weight = 1.76  # Reduced from 1.78 to 1.76 (-1.12%) for continued near-hub recapture tuning
         elif hub_dist <= 15:
             hotspot_weight = 5.58  # Reduced from 5.60 to 5.58 (-0.36%) for continued mid-range contested junction tuning
     hotspot_penalty = min(hotspot_count, 3.18) * hotspot_weight  # Increased cap from 3.16 to 3.18 (+0.63%) for continued contested junction penalty cap tuning
