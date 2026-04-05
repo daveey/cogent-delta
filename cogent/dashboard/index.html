@@ -356,7 +356,7 @@
 
     <div class="alert">
         <div class="alert-title">⚠️ Testing Infrastructure Blocked</div>
-        <p><strong>Issue:</strong> Local four_score tests take 50+ minutes for 5-seed validation. Arena mission hits observation budget errors.</p>
+        <p><strong>Issue:</strong> Local four_score tests take 50+ minutes for 5-seed validation. Baseline eval timed out after 3 min (exit 143: SIGTERM).</p>
         <p><strong>Workaround:</strong> Tournament-based validation via direct beta-cvc submission (5-15 min feedback).</p>
         <p><strong>Status:</strong> improve.md workflow suspended - 30min loop incompatible with test duration.</p>
     </div>
@@ -394,13 +394,35 @@
                     <div class="chat-meta">From: scissors • 2026-04-05 21:53 UTC</div>
                 </div>
             </div>
+
+            <div class="chat-group">
+                <div class="chat-group-header">Channel: ch-93a5cd06fde7</div>
+
+                <div class="chat-message incoming">
+                    <div class="chat-bubble">
+                        Read ~/repo/memory/conversation.jsonl and tell me what's in it. Then regenerate the dashboard making sure to include the conversation data in the Recent Conversations section.
+                    </div>
+                    <div class="chat-meta">From: cli • 2026-04-05 22:02 UTC</div>
+                </div>
+
+                <div class="chat-message outgoing">
+                    <div class="chat-bubble">
+                        conversation.jsonl contains 3 messages from channel ch-2fa30b1097d9:<br><br>
+                        1. (21:50 UTC) Incoming from cli: URGENT request to regenerate dashboard<br>
+                        2. (21:51 UTC) Outgoing from scissors: Acknowledgment<br>
+                        3. (21:53 UTC) Outgoing from scissors: Completion report with key highlights<br><br>
+                        Dashboard already regenerated with conversations included in the Recent Conversations section, showing all 3 messages in a chat-style view grouped by channel.
+                    </div>
+                    <div class="chat-meta">From: scissors • 2026-04-05 22:02 UTC</div>
+                </div>
+            </div>
         </div>
     </div>
 
     <h2>📋 Active TODOs</h2>
     <div class="card">
         <h3>In Progress</h3>
-        <p><span class="badge badge-blocked">BLOCKED</span> Testing infrastructure - Local tests too slow (10+ min/seed), arena errors. Improve.md 30-min loop incompatible.</p>
+        <p><span class="badge badge-blocked">BLOCKED</span> Testing infrastructure - Baseline eval timed out (3min), local tests too slow (50+ min for 5 seeds). Improve.md workflow suspended.</p>
 
         <h3>Current Status</h3>
         <table>
@@ -435,6 +457,7 @@
             <li>Monitor gamma_v6:v1 stability at rank #5</li>
             <li>Continue iterative improvements targeting top 3</li>
             <li>Gap to leader (alpha.0:v922 at 18.40): +7.2%</li>
+            <li>Need architectural improvements: LLM stagnation, junction discovery, teammate vibes, PCO</li>
         </ul>
     </div>
 
@@ -536,7 +559,7 @@
     </div>
 
     <footer>
-        <p>Generated: 2026-04-05 21:56 UTC</p>
+        <p>Generated: 2026-04-05 22:12 UTC</p>
         <p style="margin-top: 0.5rem;">
             <button onclick="fetch('/regenerate',{method:'POST'}).then(()=>{this.textContent='Regenerating...';setTimeout(()=>location.reload(),30000)})">🔄 Regenerate</button>
         </p>
