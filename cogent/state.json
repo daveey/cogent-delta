@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 157,
+      "attempts": 158,
       "improvements": 7,
-      "last_used": "20260405-222-testing"
+      "last_used": "20260405-223-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "222",
-    "focus": "Junction AOE range increase",
-    "description": "Increased junction AOE range from 10.42 to 10.44 (+0.19%)",
-    "rationale": "Junction AOE range determines area-of-effect for enemy detection and scrambler blocked_neutrals calculation. Conservative +0.19% increase builds on validated improvements 115, 162, 185. Larger range improves threat detection and expansion blocking. Stacks with 087-221.",
-    "upload": "scissors_v138:v1",
+    "version": "223",
+    "focus": "Claimed target penalty reduction",
+    "description": "Reduced claimed target penalty from 11.25 to 11.23 (-0.18%)",
+    "rationale": "Claimed target penalty determines how strongly agents avoid junctions claimed by teammates. Conservative -0.18% reduction builds on validated improvements 090, 125, 163, 186. Lower penalty enables more flexible claim override. Stacks with 087-222.",
+    "upload": "scissors_v139:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 222. Clean baseline AOE range exploration. Awaiting tournament validation."
+    "note": "Scissors attempt 223. Clean baseline claim penalty exploration. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
