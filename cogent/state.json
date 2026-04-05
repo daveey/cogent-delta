@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 377,
+      "attempts": 378,
       "improvements": 7,
-      "last_used": "20260405-443-testing"
+      "last_used": "20260405-444-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "443",
-    "focus": "Expansion bonus weight increase",
-    "description": "Increased expansion bonus weight from 6.54 to 6.56 (+0.31%)",
-    "rationale": "Expansion bonus weight multiplies the number of unreachable junctions within alignment range. Higher value incentivizes capturing junctions that unlock more territory. Conservative +0.31% increase builds on validated improvements. Stacks with 087-442.",
-    "upload": "scissors_v359:v1",
+    "version": "444",
+    "focus": "Expansion bonus cap increase",
+    "description": "Increased expansion bonus cap from 37.55 to 37.60 (+0.13%)",
+    "rationale": "Expansion bonus cap limits maximum expansion bonus for junctions that unlock many unreachable targets. Higher ceiling rewards extremely valuable expansion junctions. Conservative +0.13% increase builds on validated improvements. Stacks with 087-443.",
+    "upload": "scissors_v360:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 443. Clean baseline expansion emphasis. Awaiting tournament validation."
+    "note": "Scissors attempt 444. Clean baseline higher expansion ceiling. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
