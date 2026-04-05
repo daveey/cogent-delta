@@ -6,9 +6,9 @@
       "last_used": null
     },
     "design": {
-      "attempts": 171,
+      "attempts": 172,
       "improvements": 14,
-      "last_used": "20260405-blocked-neutrals-091"
+      "last_used": "20260405-hub-penalty-near-025"
     }
   },
   "testing_in_progress": null,
@@ -947,6 +947,33 @@
       },
       "status": "reverted",
       "notes": "Delta Cycle 48 - Over-emphasis on expansion blocking. Stronger blocked_neutrals weight caused scramblers to over-commit to blocking positions at expense of network defense. Confirms 9.0 is optimal balance."
+    },
+    {
+      "date": "20260405",
+      "version": "hub-penalty-near-025-reverted",
+      "focus": "Near-hub penalty coefficient reduction",
+      "description": "Reduced near-hub (dist\u226410) penalty coefficient from 0.26 to 0.25 (-3.8%) to test if stronger near-hub preference improves",
+      "result": "REGRESSION: avg 14.51 vs baseline 15.73 (-7.8%)",
+      "local_scores": {
+        "seeds": [
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "scores": [
+          8.51,
+          13.84,
+          14.58,
+          18.17,
+          17.43
+        ],
+        "avg": 14.51,
+        "baseline": 15.73
+      },
+      "status": "reverted",
+      "notes": "Delta Cycle 49 - Slightly stronger near-hub preference caused agents to over-cluster near hub at expense of expansion. Confirms 0.26 is optimal balance for near-hub targeting."
     }
   ],
   "mission": "arena",
