@@ -6,7 +6,7 @@
       "last_used": null
     },
     "design": {
-      "attempts": 154,
+      "attempts": 155,
       "improvements": 13,
       "last_used": "20260405-hub-camp-dist-2"
     }
@@ -571,6 +571,21 @@
         "46": 6.51
       },
       "analysis": "Seed 46 collapsed (6.51, -57%). Reducing distant retreat threshold from 15 to 12 makes agents too conservative, retreating too early when far from hub. This wastes time and opportunity. The condition 'hp < 50 and hub_distance > 15' is precisely tuned - agents need to push farther (>15) before retreating at medium HP (40-50). Pattern: all early game safety parameter adjustments fail. Original calibration optimal."
+    },
+    {
+      "date": "20260405",
+      "version": "hub-camp-dist-1-reverted",
+      "focus": "Early game efficiency - hub camp distance continued",
+      "description": "Reduced hub camp distance threshold from 2 to 1 (-50%), building on Cycle 27 success",
+      "result": "REGRESSION: avg 13.35 vs baseline 15.52 (-14.0%)",
+      "scores_by_seed": {
+        "42": 16.37,
+        "43": 12.16,
+        "44": 7.43,
+        "45": 14.48,
+        "46": 16.33
+      },
+      "analysis": "Seed 44 collapsed (7.43, -52%). Hub camp distance 1 is too restrictive - agents only camp when literally at hub (distance \u22641), which is too limiting. Pattern: 3\u21922 (+1.7%), 2\u21921 (-14.0%). Optimal hub camp distance is 2. Similar to stall threshold pattern where optimal value exists with regression in both directions."
     }
   ],
   "mission": "arena",
