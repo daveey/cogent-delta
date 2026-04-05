@@ -11,7 +11,17 @@
       "last_used": "20260405-cycle10-breakthrough"
     }
   },
-  "testing_in_progress": null,
+  "testing_in_progress": {
+    "date": "20260405",
+    "version": "hub-camp-85",
+    "focus": "Early game efficiency - hub camp threshold",
+    "description": "Reduced hub camp HP threshold from 100 to 85 (-15%) for faster early game start",
+    "baseline": 13.63,
+    "mission": "machina_1",
+    "seeds": "42-46",
+    "started": "09:05 UTC",
+    "estimated_duration": "50 minutes"
+  },
   "last_improvement": {
     "date": "20260405",
     "version": "network-bonus-cap-5",
@@ -418,8 +428,9 @@
       "analysis": "Exit 143 timeout after 6 minutes, only 4 header lines captured, no score output. This DISPROVES the complexity/resource hypothesis - both simple (16 agents) and complex (32 agents) missions fail identically. 9 consecutive test failures across all variations: different missions, timeouts (2-6 min), test harnesses, seeds. Consistent pattern proves issue is NOT mission-specific, NOT complexity-related, NOT harness design. Root cause remains unknown but affects delta specifically (scissors works). Improve.md workflow definitively blocked - cannot execute Step 5 (testing) regardless of approach. See COGAMES_ISSUE.md for updated analysis."
     }
   ],
-  "mission": "four_score",
-  "season": "beta-four-score",
+  "mission": "machina_1",
+  "season": "beta-cvc",
+  "mission_note": "Switched from four_score to machina_1 due to delta-specific timeout issues (four_score >20min per seed, machina_1 ~10min)",
   "baseline_four_score": {
     "old_avg": 6.03,
     "new_avg": 9.74,
@@ -427,5 +438,11 @@
     "seeds": "42-46 (5 seeds)",
     "date": "20260403",
     "notes": "With hotspot penalty (004) + early scrambler (007). Validated across 5 seeds. Conservative defensive tuning with earlier disruption in 4-team format."
+  },
+  "baseline_machina_1": {
+    "avg": 13.63,
+    "seed": "42",
+    "date": "20260405",
+    "notes": "Delta Cycle 10 breakthrough baseline. Established after resolving timeout issues (10-min timeout required). 2-team format, 16 agents. Target mission for delta improve.md cycles due to four_score timeout issues (>20 min per seed)."
   }
 }

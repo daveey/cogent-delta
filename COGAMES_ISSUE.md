@@ -136,6 +136,28 @@ Tested machina_1 (2 teams, 16 agents) instead of four_score (4 teams, 32 agents)
 
 **Status:** Local testing NOW FUNCTIONAL with adequate timeout
 
+## Four_score Timeout Issue (2026-04-05 08:17-09:03 UTC)
+
+**Problem:** four_score takes >20 minutes per seed for delta
+
+**Evidence:**
+- 10-minute timeout: FAILED
+- 15-minute timeout: FAILED (12:27 CPU time when killed)  
+- 20-minute timeout: FAILED (exit 143)
+- All produced only 4 header lines, no completion
+
+**Comparison:**
+- machina_1 (16 agents): 10 min timeout ✓ SUCCESS
+- four_score (32 agents): 20 min timeout ✗ FAILED
+- Scissors four_score: Works (<6 min per seed based on commit timing)
+
+**Conclusion:** Delta has environment-specific issue with four_score complexity
+
+**Resolution:** Use **machina_1** as target mission for delta
+- Viable for 30-minute improve.md cycles
+- Baseline: 13.63 per cog (seed 42)
+- 5-seed testing: ~50 minutes (vs >100 min for four_score)
+
 ## Workaround: Tournament Validation (NO LONGER NEEDED)
 
 ~~If local testing cannot be fixed, provide `COGAMES_TOKEN` to enable:~~
