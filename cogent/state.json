@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 359,
+      "attempts": 360,
       "improvements": 7,
-      "last_used": "20260405-424-testing"
+      "last_used": "20260405-425-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "424",
-    "focus": "Junction align distance increase",
-    "description": "Increased junction align distance from 16.34 to 16.36 (+0.12%)",
-    "rationale": "Junction align distance determines the range at which junctions can chain together. Higher value extends junction reach, enabling longer chains and denser networks. Conservative +0.12% increase builds on validated improvements. Stacks with 087-423.",
-    "upload": "scissors_v340:v1",
+    "version": "425",
+    "focus": "Junction AOE range increase",
+    "description": "Increased junction AOE range from 10.54 to 10.56 (+0.19%)",
+    "rationale": "Junction AOE range determines the area-of-effect for junction detection (both for scramblers blocking neutrals and enemies threatening friendlies). Higher value extends detection radius. Conservative +0.19% increase builds on validated improvements. Stacks with 087-424.",
+    "upload": "scissors_v341:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 424. Clean baseline chain-building reach tuning. Awaiting tournament validation."
+    "note": "Scissors attempt 425. Clean baseline larger area-of-effect detection tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
