@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (285) Aligner HP threshold reduction (45.86→45.84): scissors_v201:v1 qualifying - continued aligner retreat tuning (-0.044%, stacks with 087-284)
 - [ ] (284) Aligner hotspot weight near-hub reduction (1.82→1.8): scissors_v200:v1 qualifying - continued near-hub recapture (-1.10%, stacks with 087-283)
 - [ ] (283) Aligner hotspot weight mid-range reduction (5.64→5.62): scissors_v199:v1 qualifying - continued mid-range contested tuning (-0.35%, stacks with 087-282)
 - [ ] (282) Aligner hotspot weight far-range reduction (11.7→11.68): scissors_v198:v1 qualifying - further far-range contested junction tuning (-0.17%, stacks with 087-281)
