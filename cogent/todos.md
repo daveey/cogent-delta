@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (271) Aligner hub penalty 15-25 base reduction (9.66→9.64): scissors_v187:v1 qualifying - 15-25 range base penalty (-0.21%, stacks with 087-270)
 - [ ] (270) Aligner hub penalty 10-15 multiplier reduction (1.42→1.41): scissors_v186:v1 qualifying - 10-15 range multiplier (-0.70%, stacks with 087-269) [MILESTONE: 270 attempts]
 - [ ] (269) Aligner hub penalty 10-15 base reduction (1.92→1.91): scissors_v185:v1 qualifying - 10-15 range base penalty (-0.52%, stacks with 087-268)
 - [ ] (268) Aligner hub penalty very-close multiplier reduction (0.272→0.271): scissors_v184:v1 qualifying - further tighter hub clustering (-0.37%, stacks with 087-267)
