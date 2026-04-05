@@ -1,22 +1,23 @@
 # scissors — Improvement TODOs
 
 ## In Progress
-- [ ] Network bonus cap 4→5: scissors_v1:v13 qualifying - rewards highly connected junction chains (+84.5% local)
+- None currently
 
 ## Current Status (20260405 UTC)
 **Tournament Rankings (beta-cvc):**
 - 🏆 gamma_v6:v1: rank #5, 17.16 avg (51 matches) - **TOP 5!**
   - Stack: 014 + 015 + 016 + 018 (network_bonus 0.5→0.75)
-- scissors_v1:v13: qualifying - network_bonus cap 4→5 (+84.5% local: 4.15→7.66 avg)
+- scissors_v1:v13: rank #64, 9.75 avg (20 matches) - FAILED (-37.2%)
 
-**Progress:** Scissors first improvement uploaded!
-- Local testing: 7.66 avg (seeds 42-46: 5.72, 8.62, 4.58, 14.93, 4.43)
-- Builds on gamma_v6 stack + network_bonus cap increase
+**Critical Learning:** Local testing on arena mission is UNRELIABLE
+- scissors_v1:v13 showed +84.5% locally but -37.2% in tournament
+- Most extreme local-vs-tournament mismatch observed
+- All future changes MUST be tournament-validated
 
 **Active Testing:**
-- Scissors: network_bonus cap 4→5 in beta-cvc qualifying
+- None - local testing infrastructure blocked
 
-## Completed (Design Approach: 8 validated improvements)
+## Completed (Design Approach: 13 validated improvements from 156 attempts, 8.3% hit rate)
 - [x] (004) Hotspot penalty increase: 8→12 base - avoid contested far junctions
 - [x] (007) Early scrambler: step 100→50 - earlier disruption vs 3 opponents
 - [x] (011) Teammate penalty: 6.0→9.0 - better multi-agent coordination
@@ -35,6 +36,7 @@
 - [ ] Test mixed-policy matches vs alpha.0, dinky, slanky
 
 ## Failed Attempts
+- [x] (network-bonus-cap-5) Network bonus cap 4→5: -37.2% (local +84.5%, extreme mismatch)
 - [x] (002) LLM prescriptive role-change: -41.6%
 - [x] (003) Early pressure ramp (30→15): -5.97%
 - [x] (005) Defensive scrambler (remove corner_pressure): -0.77%

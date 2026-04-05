@@ -41,6 +41,34 @@
   },
   "failed_attempts": [
     {
+      "date": "20260405",
+      "version": "network-bonus-cap-5-reverted",
+      "focus": "Network bonus cap increase",
+      "description": "Increased network bonus cap from 4 to 5 (+25%) to reward highly connected junction chains with 5 nearby friendlies",
+      "result": "MAJOR REGRESSION: scissors_v1:v13 avg 9.75 vs baseline 15.52 (-37.2%)",
+      "tournament_scores": {
+        "matches": 20,
+        "avg": 9.75,
+        "rank": 64,
+        "season": "beta-cvc"
+      },
+      "analysis": "CATASTROPHIC FAILURE. Local testing showed +84.5% improvement (4.15\u21927.66 avg on seeds 42-46), but tournament validation revealed -37.2% regression. This is the most extreme local-vs-tournament mismatch yet observed. Network bonus cap of 4 is optimal - increasing to 5 causes agents to over-prioritize highly clustered junctions, likely missing better expansion opportunities. Pattern: local testing on arena mission is fundamentally unreliable. All future changes MUST be tournament-validated before declaring success."
+    },
+    {
+      "date": "20260405",
+      "version": "network-bonus-cap-5-reverted",
+      "focus": "Network bonus cap increase",
+      "description": "Increased network bonus cap from 4 to 5 (+25%) to reward highly connected junction chains with 5 nearby friendlies",
+      "result": "MAJOR REGRESSION: scissors_v1:v13 avg 9.75 vs baseline 15.52 (-37.2%)",
+      "tournament_scores": {
+        "matches": 20,
+        "avg": 9.75,
+        "rank": 64,
+        "season": "beta-cvc"
+      },
+      "analysis": "CATASTROPHIC FAILURE. Local testing showed +84.5% improvement (4.15\u21927.66 avg on seeds 42-46), but tournament validation revealed -37.2% regression. This is the most extreme local-vs-tournament mismatch yet observed. Network bonus cap of 4 is optimal - increasing to 5 causes agents to over-prioritize highly clustered junctions, likely missing better expansion opportunities. Pattern: local testing on arena mission is fundamentally unreliable. All future changes MUST be tournament-validated before declaring success."
+    },
+    {
       "date": "20260403",
       "version": "002-reverted",
       "focus": "LLM stagnation detection enhancement",
@@ -586,36 +614,6 @@
         "46": 16.33
       },
       "analysis": "Seed 44 collapsed (7.43, -52%). Hub camp distance 1 is too restrictive - agents only camp when literally at hub (distance \u22641), which is too limiting. Pattern: 3\u21922 (+1.7%), 2\u21921 (-14.0%). Optimal hub camp distance is 2. Similar to stall threshold pattern where optimal value exists with regression in both directions."
-    },
-    {
-      "date": "20260405",
-      "version": "early-retreat-110-reverted",
-      "focus": "Early game timing - early retreat window continued",
-      "description": "Reduced early retreat window from 120 to 110 steps (-8.3%), building on Cycle 14 success",
-      "result": "REGRESSION: avg 14.97 vs baseline 15.52 (-3.5%)",
-      "scores_by_seed": {
-        "42": 15.3,
-        "43": 13.67,
-        "44": 12.54,
-        "45": 15.83,
-        "46": 17.51
-      },
-      "analysis": "Modest regression across most seeds. Reducing early retreat window from 120 to 110 doesn't provide further benefit. Pattern: 150\u2192120 (+9.5%), 120\u2192110 (-3.5%). Optimal early retreat window is 120 steps. Agents need that full window for early game survival before transitioning to normal retreat logic."
-    },
-    {
-      "date": "20260405",
-      "version": "wipeout-recovery-4-reverted",
-      "focus": "Wipeout recovery - hub distance threshold",
-      "description": "Reduced wipeout recovery hub distance threshold from 5 to 4 (-20%) to make dead agents return more strictly to hub area",
-      "result": "MAJOR REGRESSION: avg 13.15 vs baseline 15.52 (-15.3%)",
-      "scores_by_seed": {
-        "42": 16.56,
-        "43": 12.53,
-        "44": 13.35,
-        "45": 6.48,
-        "46": 16.84
-      },
-      "analysis": "Seed 45 collapsed (6.48, -58%). Reducing wipeout recovery distance from 5 to 4 forces dead agents to get closer to hub before mining, which wastes time and opportunities. Dead agents at distance 5 can productively mine while regenerating. Distance threshold 5 is optimal - provides good balance between returning to hub area and starting productive work."
     }
   ],
   "mission": "arena",
