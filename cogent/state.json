@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 184,
+      "attempts": 185,
       "improvements": 7,
-      "last_used": "20260405-249-testing"
+      "last_used": "20260405-250-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "249",
-    "focus": "Aligner network bonus cap increase",
-    "description": "Increased network_bonus cap from 4.36 to 4.38 (+0.46%)",
-    "rationale": "Network bonus cap limits maximum bonus for dense friendly clusters. Conservative +0.46% increase builds on validated improvements 231. Higher cap allows denser network clustering. Stacks with 087-248.",
-    "upload": "scissors_v165:v1",
+    "version": "250",
+    "focus": "Aligner teammate penalty increase",
+    "description": "Increased teammate_penalty from 9.31 to 9.33 (+0.22%)",
+    "rationale": "Teammate penalty reduces duplication when another aligner is closer. Conservative +0.22% increase builds on validated improvements 229. Higher penalty improves coordination. Stacks with 087-249.",
+    "upload": "scissors_v166:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 249. Clean baseline network clustering tuning. Milestone: 249 attempts. Awaiting tournament validation."
+    "note": "Scissors attempt 250. Clean baseline coordination tuning. MILESTONE: 250 attempts. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
