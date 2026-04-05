@@ -6,7 +6,7 @@
       "last_used": null
     },
     "design": {
-      "attempts": 160,
+      "attempts": 161,
       "improvements": 13,
       "last_used": "20260405-hub-camp-dist-2"
     }
@@ -719,6 +719,21 @@
         "46": 17.03
       },
       "analysis": "Modest regression across most seeds. Increasing wipeout distance from 5 to 6 allows dead agents to remain too far from hub before returning, reducing recovery efficiency. Combined with Cycle 30 (5\u21924 failed), confirms 5 as optimal wipeout recovery distance. Bidirectionally tested and validated."
+    },
+    {
+      "date": "20260405",
+      "version": "early-retreat-close-dist-7-reverted",
+      "focus": "Early game survival - early retreat close distance reduction",
+      "description": "Reduced early retreat close distance threshold from 8 to 7 (-12.5%) to subject more agents to early retreat checks",
+      "result": "REGRESSION: avg 14.75 vs baseline 15.52 (-4.9%)",
+      "scores_by_seed": {
+        "42": 16.09,
+        "43": 12.74,
+        "44": 13.5,
+        "45": 14.75,
+        "46": 16.69
+      },
+      "analysis": "Modest regression across most seeds. Reducing close distance from 8 to 7 subjects agents at distance 8 to early retreat checks, causing them to retreat unnecessarily when they're already reasonably safe. Combined with Cycles 22 (8\u219210 failed) and 36 (8\u21929 failed), confirms 8 as optimal through exhaustive three-way testing (7\u21928\u21929\u219210)."
     }
   ],
   "mission": "arena",
