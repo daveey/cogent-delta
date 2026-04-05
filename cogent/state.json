@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 125,
+      "attempts": 126,
       "improvements": 7,
-      "last_used": "20260405-190-testing"
+      "last_used": "20260405-191-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "190",
-    "focus": "Aligner network bonus cap increase",
-    "description": "Increased network bonus cap from 4.3 to 4.32 (+0.47%)",
-    "rationale": "Network bonus cap determines maximum bonus for dense junction clusters. Conservative +0.47% increase builds on validated improvements 114 (4.0\u21924.2), 142 (4.2\u21924.25), 169 (4.25\u21924.3). Higher cap rewards denser network formation for better territorial consolidation. Stacks with 087-189.",
-    "upload": "scissors_v106:v1",
+    "version": "191",
+    "focus": "Aligner teammate penalty increase",
+    "description": "Increased teammate penalty from 9.25 to 9.27 (+0.22%)",
+    "rationale": "Teammate penalty determines how strongly aligners avoid junctions when teammates are closer. Conservative +0.22% increase builds on validated improvements 011 (6.0\u21929.0), 109 (9.0\u21929.15), 140 (9.15\u21929.2), 171 (9.2\u21929.25). Higher penalty improves multi-agent coordination. Stacks with 087-190.",
+    "upload": "scissors_v107:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 190. Clean baseline network cap exploration. Awaiting tournament validation."
+    "note": "Scissors attempt 191. Clean baseline teammate coordination exploration. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",

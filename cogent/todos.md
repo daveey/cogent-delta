@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (191) Aligner teammate penalty increase (9.25→9.27): scissors_v107:v1 qualifying - continued better coordination (+0.22%, stacks with 087-190)
 - [ ] (190) Aligner network bonus cap increase (4.3→4.32): scissors_v106:v1 qualifying - denser network clustering (+0.47%, stacks with 087-189)
 - [ ] (189) Aligner expansion bonus cap increase (37.1→37.15): scissors_v105:v1 qualifying - higher expansion bonus ceiling (+0.13%, stacks with 087-188)
 - [ ] (188) Extractor memory steps increase (830→832): scissors_v104:v1 qualifying - continued longer extractor memory (+0.24%, stacks with 087-187)
