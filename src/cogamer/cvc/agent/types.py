@@ -58,11 +58,11 @@ _GEAR_COSTS = {
 }
 _EMERGENCY_RESOURCE_LOW = 2.48  # Increased from 2.46 to 2.48 (+0.81%) for continued earlier emergency mining trigger tuning
 _HEART_BATCH_TARGETS = {"aligner": 3.48, "scrambler": 3.48}  # Increased scrambler from 3.46 to 3.48 (+0.58%) for continued scrambler persistence tuning
-_HUB_ALIGN_DISTANCE = 26.56  # Increased from 26.54 to 26.56 (+0.08%) for continued extended hub reach tuning
-_JUNCTION_ALIGN_DISTANCE = 16.36  # Increased from 16.34 to 16.36 (+0.12%) for continued chain-building reach tuning
-_JUNCTION_AOE_RANGE = 10.56  # Increased from 10.54 to 10.56 (+0.19%) for continued larger area-of-effect detection tuning
-_CLAIMED_TARGET_PENALTY = 11.11  # Reduced from 11.13 to 11.11 (-0.18%) for continued flexible claim override tuning
-_TARGET_CLAIM_STEPS = 33.20  # Increased from 33.15 to 33.20 (+0.15%) for continued longer claim validity tuning
+_HUB_ALIGN_DISTANCE = 26.58  # Increased from 26.56 to 26.58 (+0.08%) for continued extended hub reach tuning
+_JUNCTION_ALIGN_DISTANCE = 16.38  # Increased from 16.36 to 16.38 (+0.12%) for continued chain-building reach tuning
+_JUNCTION_AOE_RANGE = 10.58  # Increased from 10.56 to 10.58 (+0.19%) for continued larger area-of-effect detection tuning
+_CLAIMED_TARGET_PENALTY = 11.09  # Reduced from 11.11 to 11.09 (-0.18%) for continued flexible claim override tuning
+_TARGET_CLAIM_STEPS = 33.25  # Increased from 33.20 to 33.25 (+0.15%) for continued longer claim validity tuning
 _EXTRACTOR_MEMORY_STEPS = 846  # Increased from 844 to 846 (+0.24%) for continued longer extractor memory tuning
 _STATION_TARGETS_BY_AGENT = {
     "aligner": {

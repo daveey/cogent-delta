@@ -1,6 +1,11 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (460) Target claim steps increase (33.20→33.25): scissors_v376:v1 qualifying - continued longer claim validity tuning (+0.15%, stacks with 087-459) [MILESTONE: 460 attempts]
+- [ ] (459) Claimed target penalty reduction (11.11→11.09): scissors_v375:v1 qualifying - continued flexible claim override tuning (-0.18%, stacks with 087-458)
+- [ ] (458) Junction AOE range increase (10.56→10.58): scissors_v374:v1 qualifying - continued larger area-of-effect detection tuning (+0.19%, stacks with 087-457)
+- [ ] (457) Junction align distance increase (16.36→16.38): scissors_v373:v1 qualifying - continued chain-building reach tuning (+0.12%, stacks with 087-456)
+- [ ] (456) Hub align distance increase (26.56→26.58): scissors_v372:v1 qualifying - continued extended hub reach tuning (+0.08%, stacks with 087-455)
 - [ ] (455) Scrambler heart batch target increase (3.46→3.48): scissors_v371:v1 qualifying - continued scrambler persistence tuning (+0.58%, stacks with 087-454)
 - [ ] (454) Aligner heart batch target increase (3.46→3.48): scissors_v370:v1 qualifying - continued aligner persistence tuning (+0.58%, stacks with 087-453)
 - [ ] (453) Emergency resource low threshold increase (2.46→2.48): scissors_v369:v1 qualifying - continued earlier emergency mining trigger tuning (+0.81%, stacks with 087-452)
