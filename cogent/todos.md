@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (243) Scrambler corner pressure cap increase (10.72→10.74): scissors_v159:v1 qualifying - further far-enemy pressure (+0.19%, stacks with 087-242)
 - [ ] (242) Scrambler threat bonus weight increase (10.42→10.44): scissors_v158:v1 qualifying - further defensive priority (+0.19%, stacks with 087-241)
 - [ ] (241) Aligner hub penalty far-range base reduction (48.95→48.94): scissors_v157:v1 qualifying - far-range base penalty (-0.02%, stacks with 087-240)
 - [ ] (240) Aligner hub penalty 15-25 multiplier reduction (2.9→2.89): scissors_v156:v1 qualifying - 15-25 range multiplier (-0.34%, stacks with 087-239)
