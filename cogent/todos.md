@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (178) Miner HP threshold increase (18.4→18.42): scissors_v94:v1 qualifying - continued aggressive resource gathering (+0.11%, stacks with 087-177)
 - [ ] (177) Aligner HP threshold reduction (46.0→45.9): scissors_v93:v1 qualifying - continued retreat timing tuning (-0.22%, stacks with 087-176)
 - [ ] (176) Aligner enemy AOE penalty increase (10.5→10.52): scissors_v92:v1 qualifying - continued stronger enemy avoidance (+0.19%, stacks with 087-175)
 - [ ] (175) Aligner network bonus bonus weight increase (0.8→0.81): scissors_v91:v1 qualifying - continued network consolidation (+1.25%, stacks with 087-174)
