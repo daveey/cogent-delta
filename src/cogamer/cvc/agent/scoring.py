@@ -66,7 +66,7 @@ def aligner_target_score(
     if hub_position is not None:
         hub_dist = float(manhattan(hub_position, candidate.position))
         if hub_dist > 25:
-            hub_penalty = (hub_dist - 25) * 7.83 + 48.87  # Reduced multiplier from 7.84 to 7.83 (-0.13%) for continued far-range multiplier tuning
+            hub_penalty = (hub_dist - 25) * 7.83 + 48.86  # Reduced base from 48.87 to 48.86 (-0.02%) for continued far-range base tuning
         elif hub_dist > 15:
             hub_penalty = (hub_dist - 15) * 2.81 + 9.57  # Reduced multiplier from 2.82 to 2.81 (-0.35%) for continued 15-25 range multiplier tuning
         elif hub_dist > 10:
@@ -75,13 +75,13 @@ def aligner_target_score(
             hub_penalty = hub_dist * 0.264  # Reduced from 0.265 to 0.264 (-0.38%) for continued tighter hub clustering tuning
     # Reduce hotspot penalty for hub-proximal junctions (worth defending)
     # Four_score: higher base penalty due to 3x more scramblers (4 teams)
-    hotspot_weight = 11.56  # Reduced from 11.58 to 11.56 (-0.17%) for continued far-range contested junction tuning
+    hotspot_weight = 11.54  # Reduced from 11.56 to 11.54 (-0.17%) for continued far-range contested junction tuning
     if hub_position is not None:
         hub_dist = float(manhattan(hub_position, candidate.position))
         if hub_dist <= 10:
-            hotspot_weight = 1.68  # Reduced from 1.70 to 1.68 (-1.18%) for continued near-hub recapture tuning
+            hotspot_weight = 1.66  # Reduced from 1.68 to 1.66 (-1.19%) for continued near-hub recapture tuning
         elif hub_dist <= 15:
-            hotspot_weight = 5.50  # Reduced from 5.52 to 5.50 (-0.36%) for continued mid-range contested junction tuning
+            hotspot_weight = 5.48  # Reduced from 5.50 to 5.48 (-0.36%) for continued mid-range contested junction tuning
     hotspot_penalty = min(hotspot_count, 3.28) * hotspot_weight  # Increased cap from 3.26 to 3.28 (+0.61%) for continued contested junction penalty cap tuning
     # Network bonus for chain-building near friendly junctions
     # Increased from alpha.0's 0.5 to 0.75 for better consolidation (gamma_v6 validated)

@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 434,
+      "attempts": 438,
       "improvements": 7,
-      "last_used": "20260405-500-testing"
+      "last_used": "20260405-504-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "500",
-    "focus": "Hub penalty far-range multiplier reduction",
-    "description": "Reduced hub penalty far-range multiplier from 7.84 to 7.83 (-0.13%)",
-    "rationale": "Hub penalty far-range multiplier controls penalty growth for very distant junctions (>25 from hub). Lower value encourages slightly more far-range expansion. Conservative -0.13% reduction builds on validated improvements. Stacks with 087-499.",
-    "upload": "scissors_v417:v1",
+    "version": "504",
+    "focus": "Hotspot weight near-hub reduction",
+    "description": "Reduced near-hub hotspot weight from 1.68 to 1.66 (-1.19%)",
+    "rationale": "Near-hub hotspot weight controls penalty for contested junctions very close to hub (≤10 distance). Lower value encourages recapturing near-hub contested territory. Conservative -1.19% reduction builds on validated improvements. Stacks with 087-503.",
+    "upload": "scissors_v421:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 500. Clean baseline far-range multiplier tuning. Awaiting tournament validation. [MILESTONE: 500 ATTEMPTS - HALF A THOUSAND!]"
+    "note": "Scissors attempt 504. Clean baseline near-hub recapture tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
