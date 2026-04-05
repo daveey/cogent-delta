@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 454,
+      "attempts": 455,
       "improvements": 7,
-      "last_used": "20260405-520-testing"
+      "last_used": "20260405-521-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "520",
-    "focus": "Aligner heart batch target increase",
-    "description": "Increased aligner heart batch target from 3.50 to 3.52 (+0.57%)",
-    "rationale": "Heart batch target controls how many hearts aligners request per batch. Higher target enables longer persistence before returning for hearts. Conservative +0.57% increase builds on validated improvements. Stacks with 087-519.",
-    "upload": "scissors_v437:v1",
+    "version": "521",
+    "focus": "Scrambler heart batch target increase",
+    "description": "Increased scrambler heart batch target from 3.50 to 3.52 (+0.57%)",
+    "rationale": "Heart batch target controls how many hearts scramblers request per batch. Higher target enables longer persistence before returning for hearts. Conservative +0.57% increase builds on validated improvements. Stacks with 087-520.",
+    "upload": "scissors_v438:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 520. Clean baseline longer aligner persistence. Awaiting tournament validation. [MILESTONE: 520 attempts]"
+    "note": "Scissors attempt 521. Clean baseline longer scrambler persistence. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
