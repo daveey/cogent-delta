@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 246,
+      "attempts": 247,
       "improvements": 7,
-      "last_used": "20260405-311-testing"
+      "last_used": "20260405-312-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "311",
-    "focus": "Teammate penalty increase",
-    "description": "Increased aligner teammate penalty from 9.35 to 9.37 (+0.21%)",
-    "rationale": "Higher penalty further reduces multi-agent duplication by discouraging pursuit of same target. Conservative +0.21% increase builds on validated improvements. Stacks with 087-310.",
-    "upload": "scissors_v227:v1",
+    "version": "312",
+    "focus": "Network bonus weight increase",
+    "description": "Increased aligner network bonus weight from 0.85 to 0.86 (+1.18%)",
+    "rationale": "Higher weight increases reward for chain-building near friendly junctions. Conservative +1.18% increase builds on validated improvements. Stacks with 087-311.",
+    "upload": "scissors_v228:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 311. Clean baseline coordination tuning. Awaiting tournament validation."
+    "note": "Scissors attempt 312. Clean baseline network consolidation tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
