@@ -6,9 +6,9 @@
       "last_used": null
     },
     "design": {
-      "attempts": 181,
+      "attempts": 182,
       "improvements": 14,
-      "last_used": "20260405-aligner-hp-49"
+      "last_used": "20260405-scrambler-hp-29"
     }
   },
   "testing_in_progress": null,
@@ -1217,6 +1217,33 @@
       },
       "status": "reverted",
       "notes": "Delta Cycle 58 - Marginal negative impact. Earlier aligner retreat at 49 HP instead of 50 caused very slight performance reduction. Confirms 50 is optimal threshold."
+    },
+    {
+      "date": "20260405",
+      "version": "scrambler-hp-29-reverted",
+      "focus": "Scrambler HP retreat threshold",
+      "description": "Reduced scrambler HP retreat threshold from 30 to 29 (-3.3%) to test if slightly earlier retreat improves survival",
+      "result": "REGRESSION: avg 13.73 vs baseline 15.73 (-12.7%)",
+      "local_scores": {
+        "seeds": [
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "scores": [
+          15.64,
+          6.07,
+          13.5,
+          16.79,
+          16.67
+        ],
+        "avg": 13.73,
+        "baseline": 15.73
+      },
+      "status": "reverted",
+      "notes": "Delta Cycle 59 - Earlier scrambler retreat at 29 HP caused significant performance drop, particularly on seed 43 (6.07). Scramblers need to maintain aggression until 30 HP. Confirms 30 is optimal."
     }
   ],
   "mission": "arena",
