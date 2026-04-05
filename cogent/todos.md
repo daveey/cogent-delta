@@ -1,6 +1,10 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (479) Scrambler corner pressure cap increase (10.84→10.86): scissors_v396:v1 qualifying - continued corner pressure tuning (+0.18%, stacks with 087-478)
+- [ ] (478) Enemy AOE penalty increase (10.70→10.72): scissors_v394:v1 qualifying - continued enemy avoidance tuning (+0.19%, stacks with 087-477)
+- [ ] (477) Expansion bonus cap increase (37.60→37.65): scissors_v393:v1 qualifying - continued higher expansion bonus ceiling (+0.13%, stacks with 087-476)
+- [ ] (476) Expansion bonus weight increase (6.56→6.58): scissors_v392:v1 qualifying - continued expansion emphasis (+0.30%, stacks with 087-475)
 - [ ] (475) Teammate penalty increase (9.45→9.47): scissors_v391:v1 qualifying - continued coordination tuning (+0.21%, stacks with 087-474)
 - [ ] (474) Network bonus cap increase (4.50→4.52): scissors_v390:v1 qualifying - continued denser network clustering (+0.44%, stacks with 087-473)
 - [ ] (473) Network bonus weight increase (0.90→0.91): scissors_v389:v1 qualifying - continued stronger network consolidation (+1.11%, stacks with 087-472)

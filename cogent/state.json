@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 409,
+      "attempts": 413,
       "improvements": 7,
-      "last_used": "20260405-475-testing"
+      "last_used": "20260405-479-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "475",
-    "focus": "Teammate penalty increase",
-    "description": "Increased teammate penalty from 9.45 to 9.47 (+0.21%)",
-    "rationale": "Teammate penalty discourages multiple aligners from targeting the same junction when a teammate is closer. Higher value improves coordination. Conservative +0.21% increase builds on validated improvements. Stacks with 087-474.",
-    "upload": "scissors_v391:v1",
+    "version": "479",
+    "focus": "Scrambler corner pressure cap increase",
+    "description": "Increased scrambler corner pressure cap from 10.84 to 10.86 (+0.18%)",
+    "rationale": "Corner pressure cap limits maximum far-enemy disruption incentive. Higher ceiling encourages scramblers to disrupt distant enemies. Conservative +0.18% increase builds on validated improvements. Stacks with 087-478.",
+    "upload": "scissors_v396:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 475. Clean baseline coordination tuning. Awaiting tournament validation."
+    "note": "Scissors attempt 479. Clean baseline corner pressure tuning. Awaiting tournament validation. (Note: v395 was duplicate of v394, v396 is correct version)"
   },
   "last_improvement": {
     "date": "20260404",

@@ -99,8 +99,8 @@ def aligner_target_score(
     teammate_penalty = 9.47 if teammate_closer else 0.0  # Increased from 9.45 to 9.47 (+0.21%) for continued coordination tuning
     return (
         distance
-        - min(expansion * 6.56, 37.60)  # Increased cap from 37.55 to 37.60 (+0.13%) for continued higher expansion bonus ceiling
-        + enemy_aoe * 10.70  # Increased from 10.68 to 10.70 (+0.19%) for continued enemy avoidance tuning
+        - min(expansion * 6.58, 37.65)  # Increased cap from 37.60 to 37.65 (+0.13%) for continued higher expansion bonus ceiling
+        + enemy_aoe * 10.72  # Increased from 10.70 to 10.72 (+0.19%) for continued enemy avoidance tuning
         + (_CLAIMED_TARGET_PENALTY if claimed_by_other else 0.0)
         + hub_penalty
         + hotspot_penalty
@@ -142,7 +142,7 @@ def scramble_target_score(
     blocked_neutrals = sum(
         1 for neutral in neutral_junctions if manhattan(candidate.position, neutral.position) <= _JUNCTION_AOE_RANGE
     )
-    corner_pressure = min(manhattan(hub_position, candidate.position) / 7.56, 10.84)  # Reduced divisor from 7.58 to 7.56 (-0.26%) for continued faster pressure growth
+    corner_pressure = min(manhattan(hub_position, candidate.position) / 7.56, 10.86)  # Increased cap from 10.84 to 10.86 (+0.18%) for continued corner pressure tuning
     # Strongly prioritize enemy junctions near our friendly network (defending our score)
     threat_bonus = 0.0
     if friendly_junctions:
