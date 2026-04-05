@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (247) Aligner expansion bonus weight increase (6.42→6.44): scissors_v163:v1 qualifying - continued expansion emphasis (+0.31%, stacks with 087-246)
 - [ ] (246) Aligner network bonus weight increase (0.83→0.84): scissors_v162:v1 qualifying - stronger network consolidation (+1.2%, stacks with 087-245)
 - [ ] (245) Scrambler corner pressure divisor reduction (7.68→7.66): scissors_v161:v1 qualifying - faster pressure growth (-0.26%, stacks with 087-244)
 - [ ] (244) Scrambler blocked neutrals weight increase (8.62→8.64): scissors_v160:v1 qualifying - further expansion-blocking (+0.23%, stacks with 087-243)
