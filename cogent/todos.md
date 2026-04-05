@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (193) Aligner hotspot weight far-range reduction (11.76→11.74): scissors_v109:v1 qualifying - further far-range contested tuning (-0.17%, stacks with 087-192)
 - [ ] (192) Aligner hotspot penalty cap increase (3.09→3.1): scissors_v108:v1 qualifying - continued contested junction penalty cap (+0.32%, stacks with 087-191)
 - [ ] (191) Aligner teammate penalty increase (9.25→9.27): scissors_v107:v1 qualifying - continued better coordination (+0.22%, stacks with 087-190)
 - [ ] (190) Aligner network bonus cap increase (4.3→4.32): scissors_v106:v1 qualifying - denser network clustering (+0.47%, stacks with 087-189)
