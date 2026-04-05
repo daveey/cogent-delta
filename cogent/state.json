@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 307,
+      "attempts": 308,
       "improvements": 7,
-      "last_used": "20260405-372-testing"
+      "last_used": "20260405-373-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "372",
-    "focus": "Hotspot weight near-hub reduction",
-    "description": "Reduced hotspot weight near-hub from 1.76 to 1.74 (-1.14%)",
-    "rationale": "Lower penalty for contested near-hub junctions (≤10 from hub) encourages more aggressive recapture attempts. Conservative -1.14% reduction builds on validated improvements. Stacks with 087-371.",
-    "upload": "scissors_v288:v1",
+    "version": "373",
+    "focus": "Hotspot penalty cap increase",
+    "description": "Increased hotspot penalty cap from 3.20 to 3.22 (+0.63%)",
+    "rationale": "Higher cap allows penalty to scale further with hotspot count (contested junctions). Conservative +0.63% increase builds on validated improvements. Stacks with 087-372.",
+    "upload": "scissors_v289:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 372. Clean baseline near-hub recapture tuning. Awaiting tournament validation."
+    "note": "Scissors attempt 373. Clean baseline contested junction penalty cap tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
