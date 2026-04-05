@@ -6,7 +6,7 @@
       "last_used": null
     },
     "design": {
-      "attempts": 149,
+      "attempts": 150,
       "improvements": 11,
       "last_used": "20260405-stall-unstick-13"
     }
@@ -526,6 +526,21 @@
         "46": 6.46
       },
       "analysis": "Seed 46 collapsed (6.46, -57%). Increasing distance threshold from 8 to 10 allows agents too far from hub to continue in early game, likely leading to more deaths when they encounter enemies. Hub distance 8 is optimal - agents within this range can safely operate, beyond it they're too exposed. Pattern: early game safety parameters are precisely calibrated. All attempts to relax early game constraints (retreat HP, retreat distance, hub camp HP) have failed."
+    },
+    {
+      "date": "20260405",
+      "version": "hub-camp-condition-reverted",
+      "focus": "Code review - hub camp heal condition",
+      "description": "Removed redundant hp > 0 check from hub_camp_heal condition (ctx.hp < 85 and ctx.hp > 0 \u2192 ctx.hp < 85)",
+      "result": "MAJOR REGRESSION: avg 12.69 vs baseline 15.16 (-16.3%)",
+      "scores_by_seed": {
+        "42": 14.23,
+        "43": 11.58,
+        "44": 14.24,
+        "45": 5.64,
+        "46": 17.75
+      },
+      "analysis": "Seed 45 collapsed (5.64, -63%). The hp > 0 check is NOT redundant despite wipeout_recovery existing - pipeline order matters. hub_camp_heal runs BEFORE wipeout_recovery in DECISION_PIPELINE. Without hp > 0 check, agents with HP=0 match hub_camp_heal (if within step 20, distance 3) and hold instead of returning to hub via wipeout_recovery. This blocks recovery behavior. Learning: seemingly redundant conditions may be essential for correct pipeline interaction."
     }
   ],
   "mission": "arena",
