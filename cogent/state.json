@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 242,
+      "attempts": 243,
       "improvements": 7,
-      "last_used": "20260405-307-testing"
+      "last_used": "20260405-308-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "307",
-    "focus": "Hotspot penalty cap increase",
-    "description": "Increased aligner hotspot penalty cap from 3.16 to 3.18 (+0.63%)",
-    "rationale": "Higher cap allows penalty to scale higher for heavily contested junctions. Conservative +0.63% increase builds on validated improvements. Stacks with 087-306.",
-    "upload": "scissors_v223:v1",
+    "version": "308",
+    "focus": "Enemy AOE penalty increase",
+    "description": "Increased aligner enemy AOE penalty from 10.6 to 10.62 (+0.19%)",
+    "rationale": "Higher penalty makes aligners avoid junctions near enemy junctions more strongly. Conservative +0.19% increase builds on validated improvements. Stacks with 087-307.",
+    "upload": "scissors_v224:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 307. Clean baseline hotspot penalty tuning. Awaiting tournament validation."
+    "note": "Scissors attempt 308. Clean baseline enemy avoidance tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
