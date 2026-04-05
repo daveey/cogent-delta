@@ -6,7 +6,7 @@
       "last_used": null
     },
     "design": {
-      "attempts": 142,
+      "attempts": 143,
       "improvements": 11,
       "last_used": "20260405-hub-camp-15"
     }
@@ -436,6 +436,21 @@
       "description": "Increased early retreat HP threshold from 40 to 45 (+12.5%)",
       "result": "TIMEOUT PATTERN: 2 timeouts, 0 scores",
       "analysis": "Despite following Cycle 10 early-game timing pattern, multiple timeouts observed (2). Pattern differs from Cycle 10 (1 timeout, 4 scores = viable). If this follows Cycles 11-12 catastrophic pattern (multiple consecutive timeouts), suggests infrastructure or environmental issue rather than code-specific problem. Reverted conservatively."
+    },
+    {
+      "date": "20260405",
+      "version": "aligner-gear-delay-5-reverted",
+      "focus": "Early game economy - aligner gear delay",
+      "description": "Increased aligner gear delay from 0 to 5 steps to allow initial mining for resource bootstrapping",
+      "result": "MAJOR REGRESSION: avg 10.82 vs baseline 14.28 (-24.2%)",
+      "scores_by_seed": {
+        "42": 16.51,
+        "43": 15.78,
+        "44": 10.13,
+        "45": 5.89,
+        "46": 5.78
+      },
+      "analysis": "CATASTROPHIC FAILURE on seeds 45-46 (5.89, 5.78 per cog, -60% from baseline). Delaying aligner gear acquisition even briefly (5 steps) severely disrupts early game economy. Agents apparently need immediate gear access to establish territory and resource flow. Arena mission may be more sensitive to early timing than machina_1. Pattern: any delay in gear acquisition is harmful."
     }
   ],
   "mission": "arena",
