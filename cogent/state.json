@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 227,
+      "attempts": 228,
       "improvements": 7,
-      "last_used": "20260405-292-testing"
+      "last_used": "20260405-293-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "292",
-    "focus": "Junction align distance increase",
-    "description": "Increased _JUNCTION_ALIGN_DISTANCE from 16.26 to 16.28 (+0.12%)",
-    "rationale": "Junction align distance determines junction-to-junction alignment range. Conservative +0.12% increase builds on validated improvements 263. Higher distance extends chain-building reach. Stacks with 087-291.",
-    "upload": "scissors_v208:v1",
+    "version": "293",
+    "focus": "Junction AOE range increase",
+    "description": "Increased _JUNCTION_AOE_RANGE from 10.46 to 10.48 (+0.19%)",
+    "rationale": "Junction AOE range determines area-of-effect detection radius. Conservative +0.19% increase builds on validated improvements 264. Higher range extends detection radius. Stacks with 087-292.",
+    "upload": "scissors_v209:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 292. Clean baseline chain-building reach tuning. Awaiting tournament validation."
+    "note": "Scissors attempt 293. Clean baseline AOE detection tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
