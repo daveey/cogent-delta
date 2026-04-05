@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 223,
+      "attempts": 224,
       "improvements": 7,
-      "last_used": "20260405-288-testing"
+      "last_used": "20260405-289-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "288",
-    "focus": "Emergency resource low threshold increase",
-    "description": "Increased _EMERGENCY_RESOURCE_LOW from 2.36 to 2.38 (+0.85%)",
-    "rationale": "Emergency resource threshold determines when agents emergency-mine. Conservative +0.85% increase builds on validated improvements 259. Higher threshold triggers earlier emergency mining. Stacks with 087-287.",
-    "upload": "scissors_v204:v1",
+    "version": "289",
+    "focus": "Aligner heart batch target increase",
+    "description": "Increased aligner heart batch target from 3.36 to 3.38 (+0.60%)",
+    "rationale": "Aligner heart batch target determines respawn heart requirement. Conservative +0.60% increase builds on validated improvements 260. Higher target requires more hearts for respawn. Stacks with 087-288.",
+    "upload": "scissors_v205:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 288. Clean baseline emergency mining tuning. Awaiting tournament validation."
+    "note": "Scissors attempt 289. Clean baseline aligner persistence tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
