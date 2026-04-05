@@ -9,10 +9,11 @@
   - Stack: 014 + 015 + 016 + 018 (network_bonus 0.5→0.75, cap 4)
 - scissors_v1:v13: rank #64, 9.75 avg (20 matches) - FAILED (-37.2%)
 
-**Latest Action:** Reverted scissors_v1:v13 failed change
-- network_bonus cap reverted from 5→4
-- network_bonus weight reverted from 0.98→0.75
-- Restores proven gamma_v6:v1 parameters
+**Latest Actions:** Fixed 2 critical bugs in codebase
+- network_bonus cap reverted from 5→4, weight from 0.98→0.75
+- RETREAT_MARGIN reverted from 20→15
+- Both were failed tournament changes accidentally left in codebase
+- Restores proven gamma_v6:v1 + stable retreat parameters
 
 **Critical Learning:** Local testing on arena mission is UNRELIABLE
 - scissors_v1:v13 showed +84.5% locally but -37.2% in tournament

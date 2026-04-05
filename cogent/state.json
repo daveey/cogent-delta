@@ -6,7 +6,7 @@
       "last_used": null
     },
     "design": {
-      "attempts": 161,
+      "attempts": 159,
       "improvements": 13,
       "last_used": "20260405-hub-camp-dist-2"
     }
@@ -37,7 +37,7 @@
       "baseline": 15.26
     },
     "status": "local-only",
-    "notes": "Delta Cycle 27 - Fifth successful improve.md cycle on arena. Hub camp distance reduced from 3 to 2 allows agents to start moving earlier while still benefiting from hub healing. Consistent improvement across all seeds. Cumulative improvement: 19.8% from arena start (12.96\u219215.52). NOTE: scissors_v1:v13 failed change (network_bonus cap 5) was reverted back to 4 on 20260405."
+    "notes": "Delta Cycle 27 - Fifth successful improve.md cycle on arena. Hub camp distance reduced from 3 to 2 allows agents to start moving earlier while still benefiting from hub healing. Consistent improvement across all seeds. Cumulative improvement: 19.8% from arena start (12.96\u219215.52). NOTE: scissors_v1:v13 failed change (network_bonus cap 5) was reverted back to 4 on 20260405. RETREAT_MARGIN bug fixed: reverted from 20\u219215 on 20260405 (was accidentally re-introduced after af1ab0f revert)."
   },
   "failed_attempts": [
     {
