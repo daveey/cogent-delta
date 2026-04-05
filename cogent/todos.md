@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (160) Hub align distance increase (26.3→26.4): scissors_v76:v1 qualifying - continued extended hub reach (+0.4%, stacks with 087-159)
 - [ ] (159) Scrambler heart batch target increase (3.2→3.3): scissors_v75:v1 qualifying - continued scrambler persistence (+3%, stacks with 087-158)
 - [ ] (158) Aligner heart batch target increase (3.2→3.3): scissors_v74:v1 qualifying - even better aligner persistence (+3%, stacks with 087-157)
 - [ ] (157) Emergency resource low threshold increase (2.2→2.3): scissors_v73:v1 qualifying - continued earlier emergency mining (+5%, stacks with 087-156)

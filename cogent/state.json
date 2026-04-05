@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 94,
+      "attempts": 95,
       "improvements": 7,
-      "last_used": "20260405-159-testing"
+      "last_used": "20260405-160-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "159",
-    "focus": "Scrambler heart batch target increase",
-    "description": "Increased scrambler heart batch target from 3.2 to 3.3 (+3%)",
-    "rationale": "Scrambler heart batch target determines when scramblers return to hub for hearts. Conservative +3% increase builds on attempts 094 (2→3), 118 (3→3.2). Allows scramblers to disrupt one more enemy junction before returning, improving field persistence and disruption effectiveness. Stacks with 087-158.",
-    "upload": "scissors_v75:v1",
+    "version": "160",
+    "focus": "Hub align distance increase",
+    "description": "Increased hub align distance from 26.3 to 26.4 (+0.4%)",
+    "rationale": "Hub align distance determines maximum distance from hub to consider junctions alignable. Conservative +0.4% increase builds on attempts 092 (25→26), 126 (26→26.3). Extends hub reach slightly further, allowing aligners to consider junctions marginally farther from hub without over-extending. Stacks with 087-159.",
+    "upload": "scissors_v76:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 159. Clean baseline scrambler heart batch target exploration. Awaiting tournament validation."
+    "note": "Scissors attempt 160. Clean baseline hub align distance exploration. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
