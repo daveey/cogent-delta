@@ -6,22 +6,12 @@
       "last_used": null
     },
     "design": {
-      "attempts": 137,
+      "attempts": 138,
       "improvements": 9,
       "last_used": "20260405-hub-camp-85-improved"
     }
   },
-  "testing_in_progress": {
-    "date": "20260405",
-    "version": "stall-unstick-10",
-    "focus": "Faster stall recovery",
-    "description": "Reduced stall unstick threshold from 12 to 10 steps (-17%) for faster recovery from stuck states",
-    "baseline": 14.62,
-    "mission": "machina_1",
-    "seeds": "42-46",
-    "started": "10:19 UTC",
-    "estimated_duration": "50 minutes"
-  },
+  "testing_in_progress": null,
   "last_improvement": {
     "date": "20260405",
     "version": "hub-camp-85",
@@ -419,6 +409,15 @@
       "description": "Cycle 9 (07:39 UTC): Tested machina_1 (2 teams, 16 agents) instead of four_score (4 teams, 32 agents)",
       "result": "FAILED: Identical behavior to four_score tests",
       "analysis": "Exit 143 timeout after 6 minutes, only 4 header lines captured, no score output. This DISPROVES the complexity/resource hypothesis - both simple (16 agents) and complex (32 agents) missions fail identically. 9 consecutive test failures across all variations: different missions, timeouts (2-6 min), test harnesses, seeds. Consistent pattern proves issue is NOT mission-specific, NOT complexity-related, NOT harness design. Root cause remains unknown but affects delta specifically (scissors works). Improve.md workflow definitively blocked - cannot execute Step 5 (testing) regardless of approach. See COGAMES_ISSUE.md for updated analysis."
+    },
+    {
+      "date": "20260405",
+      "version": "stall-unstick-10-reverted",
+      "focus": "Faster stall recovery",
+      "description": "Reduced stall unstick threshold from 12 to 10 steps (-17%)",
+      "result": "INSUFFICIENT DATA: 0 scores, 5 timeouts",
+      "scores_by_seed": {},
+      "analysis": "Testing failed with 5 consecutive timeouts (seeds 42-44+). Only 0 of 5 seeds produced scores. Pattern differs from Cycle 10 (1 timeout, 4 scores). Insufficient data to validate change. Reverted conservatively per improve.md principle. Possible causes: (1) code change introduced hanging behavior, (2) infrastructure degradation, (3) random timeout cluster. Need investigation before retrying stall threshold changes."
     }
   ],
   "mission": "machina_1",
