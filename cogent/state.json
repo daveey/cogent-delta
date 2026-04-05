@@ -6,7 +6,7 @@
       "last_used": null
     },
     "design": {
-      "attempts": 147,
+      "attempts": 148,
       "improvements": 11,
       "last_used": "20260405-stall-unstick-13"
     }
@@ -496,6 +496,21 @@
         "46": 6.64
       },
       "analysis": "CATASTROPHIC on seed 46 (6.64, -56%). Increasing hub camp HP from 85 to 90 causes agents to wait too long at hub, missing critical early opportunities. Cycle 10's reduction from 100\u219285 was successful (+7.2%). Pattern: 85 HP is optimal hub camp threshold - higher values cause excessive waiting, lower values insufficient healing. Both Cycle 10 (100\u219285, success) and this cycle (85\u219290, failure) confirm 85 as sweet spot."
+    },
+    {
+      "date": "20260405",
+      "version": "early-retreat-hp-35-reverted",
+      "focus": "Early game aggression - early retreat HP",
+      "description": "Reduced early retreat HP threshold from 40 to 35 (-12.5%) for more aggressive early game operation",
+      "result": "REGRESSION: avg 13.17 vs baseline 15.16 (-13.1%)",
+      "scores_by_seed": {
+        "42": 8.98,
+        "43": 13.23,
+        "44": 12.38,
+        "45": 13.53,
+        "46": 17.75
+      },
+      "analysis": "Seed 42 collapsed (8.98, -41%). Reducing retreat threshold from 40 to 35 HP makes agents too aggressive in early game, likely dying more often. Combined with Cycle 13's failed attempt (40\u219245, timeouts), confirms 40 HP is optimal early retreat threshold. Both increasing and decreasing from 40 cause failures. Pattern: early game HP thresholds are precisely calibrated."
     }
   ],
   "mission": "arena",
