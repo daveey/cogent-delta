@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (228) Aligner enemy AOE penalty increase (10.54→10.56): scissors_v144:v1 qualifying - continued stronger enemy avoidance (+0.19%, stacks with 087-227)
 - [ ] (227) Aligner network bonus weight increase (0.82→0.83): scissors_v143:v1 qualifying - continued network consolidation (+1.22%, stacks with 087-226)
 - [ ] (226) Aligner expansion bonus weight increase (6.4→6.42): scissors_v142:v1 qualifying - continued expansion emphasis (+0.31%, stacks with 087-225)
 - [ ] (225) Extractor memory steps increase (832→834): scissors_v141:v1 qualifying - continued longer extractor memory (+0.24%, stacks with 087-224)
