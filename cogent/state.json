@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 244,
+      "attempts": 245,
       "improvements": 7,
-      "last_used": "20260405-309-testing"
+      "last_used": "20260405-310-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "309",
-    "focus": "Expansion bonus weight increase",
-    "description": "Increased aligner expansion bonus weight from 6.46 to 6.48 (+0.31%)",
-    "rationale": "Higher weight increases bonus for junctions that unlock many neutral junctions. Conservative +0.31% increase builds on validated improvements. Stacks with 087-308.",
-    "upload": "scissors_v225:v1",
+    "version": "310",
+    "focus": "Expansion bonus cap increase",
+    "description": "Increased aligner expansion bonus cap from 37.35 to 37.4 (+0.13%)",
+    "rationale": "Higher cap allows expansion bonus to scale higher for junctions unlocking many neutrals. Conservative +0.13% increase builds on validated improvements. Stacks with 087-309.",
+    "upload": "scissors_v226:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 309. Clean baseline expansion bonus tuning. Awaiting tournament validation."
+    "note": "Scissors attempt 310 [MILESTONE: 310 attempts, 70 this session]. Clean baseline expansion bonus tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
