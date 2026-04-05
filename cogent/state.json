@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 176,
+      "attempts": 177,
       "improvements": 7,
-      "last_used": "20260405-241-testing"
+      "last_used": "20260405-242-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "241",
-    "focus": "Aligner hub penalty far-range base reduction",
-    "description": "Reduced hub penalty far-range base from 48.95 to 48.94 (-0.02%)",
-    "rationale": "Hub penalty far-range base determines starting penalty for junctions >25 from hub. Conservative -0.02% reduction completes hub penalty tier exploration. Lower base reduces penalty floor at far range. Stacks with 087-240.",
-    "upload": "scissors_v157:v1",
+    "version": "242",
+    "focus": "Scrambler threat bonus weight increase",
+    "description": "Increased scrambler threat_bonus from 10.42 to 10.44 (+0.19%)",
+    "rationale": "Scrambler threat bonus determines priority for defending friendly junctions. Conservative +0.19% increase builds on validated improvements 203, 206. Higher weight increases defensive priority near friendly network. Stacks with 087-241.",
+    "upload": "scissors_v158:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 241. Clean baseline far-range base exploration. Milestone: 241 attempts. Awaiting tournament validation."
+    "note": "Scissors attempt 242. Clean baseline scrambler defensive tuning. Milestone: 242 attempts. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
