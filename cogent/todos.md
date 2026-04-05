@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (374) Enemy AOE penalty increase (10.64→10.66): scissors_v290:v1 qualifying - continued enemy avoidance tuning (+0.19%, stacks with 087-373)
 - [ ] (373) Hotspot penalty cap increase (3.20→3.22): scissors_v289:v1 qualifying - continued contested junction penalty cap tuning (+0.63%, stacks with 087-372)
 - [ ] (372) Hotspot weight near-hub reduction (1.76→1.74): scissors_v288:v1 qualifying - continued near-hub recapture tuning (-1.14%, stacks with 087-371)
 - [ ] (371) Hotspot weight mid-range reduction (5.58→5.56): scissors_v287:v1 qualifying - continued mid-range contested junction tuning (-0.36%, stacks with 087-370)
