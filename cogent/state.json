@@ -6,9 +6,9 @@
       "last_used": null
     },
     "design": {
-      "attempts": 164,
+      "attempts": 165,
       "improvements": 13,
-      "last_used": "20260405-hub-camp-dist-2"
+      "last_used": "20260405-network-bonus-080"
     }
   },
   "testing_in_progress": null,
@@ -779,6 +779,33 @@
         "46": 16.83
       },
       "analysis": "Seed 44 collapsed (7.07, -54%). Reverting Cycle 27's successful 3\u21922 change confirms 2 as optimal hub camp distance. Agents at distance 3 camping unnecessarily delays activation. Combined with Cycle 28 (2\u21921 failed), exhaustively validates 2 as optimal through three-way testing (1\u21922\u21923)."
+    },
+    {
+      "date": "20260405",
+      "version": "network-bonus-080-reverted",
+      "focus": "Network bonus weight increase",
+      "description": "Increased aligner network_bonus weight from 0.75 to 0.80 (+6.7%) to reward junction chain building more strongly",
+      "result": "REGRESSION: avg 12.43 vs baseline 15.52 (-19.9%)",
+      "local_scores": {
+        "seeds": [
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "scores": [
+          15.85,
+          14.65,
+          12.61,
+          11.48,
+          7.55
+        ],
+        "avg": 12.43,
+        "baseline": 15.52
+      },
+      "status": "reverted",
+      "notes": "Delta Cycle 42 - First scoring weight test after exhausting parameter tuning. Weight increase caused agents to over-prioritize network consolidation at expense of expansion or other factors."
     }
   ],
   "mission": "arena",
