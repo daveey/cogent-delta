@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (319) Miner HP threshold increase (18.48→18.50): scissors_v235:v1 qualifying - continued aggressive resource gathering (+0.11%, stacks with 087-318)
 - [ ] (318) Aligner HP threshold reduction (45.84→45.82): scissors_v234:v1 qualifying - continued aligner retreat tuning (-0.044%, stacks with 087-317)
 - [ ] (317) Scrambler blocked neutrals weight increase (8.64→8.66): scissors_v233:v1 qualifying - continued expansion-blocking (+0.23%, stacks with 087-316)
 - [ ] (316) Scrambler threat bonus increase (10.44→10.46): scissors_v232:v1 qualifying - continued defensive priority tuning (+0.19%, stacks with 087-315)
