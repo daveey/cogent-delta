@@ -1,6 +1,10 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (500) Hub penalty far-range multiplier reduction (7.84→7.83): scissors_v417:v1 qualifying - continued far-range multiplier tuning (-0.13%, stacks with 087-499) [MILESTONE: 500 ATTEMPTS!]
+- [ ] (499) Hub penalty 15-25 range multiplier reduction (2.82→2.81): scissors_v416:v1 qualifying - continued 15-25 range multiplier tuning (-0.35%, stacks with 087-498)
+- [ ] (498) Hub penalty 15-25 range base reduction (9.58→9.57): scissors_v415:v1 qualifying - continued 15-25 range base tuning (-0.10%, stacks with 087-497)
+- [ ] (497) Hub penalty 10-15 range multiplier reduction (1.35→1.34): scissors_v414:v1 qualifying - continued 10-15 range multiplier tuning (-0.74%, stacks with 087-496)
 - [ ] (496) Hub penalty 10-15 range base reduction (1.85→1.84): scissors_v413:v1 qualifying - continued 10-15 range base penalty tuning (-0.54%, stacks with 087-495)
 - [ ] (495) Hub penalty very-close multiplier reduction (0.265→0.264): scissors_v412:v1 qualifying - continued tighter hub clustering tuning (-0.38%, stacks with 087-494)
 - [ ] (494) Extractor memory steps increase (848→850): scissors_v411:v1 qualifying - continued longer extractor memory tuning (+0.24%, stacks with 087-493)
