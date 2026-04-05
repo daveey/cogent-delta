@@ -6,7 +6,7 @@
       "last_used": null
     },
     "design": {
-      "attempts": 160,
+      "attempts": 161,
       "improvements": 13,
       "last_used": "20260405-hub-camp-dist-2"
     }
@@ -689,6 +689,21 @@
         "46": 17.38
       },
       "analysis": "Seed 44 collapsed (6.73, -57%). Reducing distance threshold from 15 to 14 makes agents retreat too conservatively when moderately far from hub. The precise condition 'hp < 50 and hub_distance > 15' allows agents at distance 14-15 with medium HP to continue operating, which is optimal. All distant retreat parameters exhaustively tested."
+    },
+    {
+      "date": "20260405",
+      "version": "early-retreat-close-dist-9-reverted",
+      "focus": "Early game survival - early retreat close distance",
+      "description": "Increased early retreat close distance threshold from 8 to 9 (+12.5%) to allow agents slightly closer to hub to avoid early retreat",
+      "result": "MAJOR REGRESSION: avg 12.80 vs baseline 15.52 (-17.5%)",
+      "scores_by_seed": {
+        "42": 14.77,
+        "43": 13.73,
+        "44": 14.09,
+        "45": 15.83,
+        "46": 5.58
+      },
+      "analysis": "Seed 46 collapsed (5.58, -64%). Increasing close distance from 8 to 9 exempts more agents from early retreat checks, allowing low-HP agents at distance 9 to remain vulnerable. Distance 8 is optimal - agents within 8 tiles are close enough to hub for safety. Combined with Cycle 22 (8\u219210 failed), confirms 8 as optimal close distance."
     }
   ],
   "mission": "arena",
