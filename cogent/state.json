@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 344,
+      "attempts": 345,
       "improvements": 7,
-      "last_used": "20260405-409-testing"
+      "last_used": "20260405-410-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "409",
-    "focus": "Teammate penalty increase",
-    "description": "Increased teammate penalty from 9.41 to 9.43 (+0.21%)",
-    "rationale": "Teammate penalty discourages multiple aligners from targeting the same junction when a teammate is closer. Higher value improves coordination by reducing duplicate targeting. Conservative +0.21% increase builds on validated improvements. Stacks with 087-408.",
-    "upload": "scissors_v325:v1",
+    "version": "410",
+    "focus": "Expansion bonus weight increase",
+    "description": "Increased expansion bonus weight from 6.52 to 6.54 (+0.31%)",
+    "rationale": "Expansion bonus weight rewards junctions that can reach many unreachable neutrals. Higher value encourages strategic expansion into high-value territory. Conservative +0.31% increase builds on validated improvements. Stacks with 087-409.",
+    "upload": "scissors_v326:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 409. Clean baseline coordination tuning. Awaiting tournament validation."
+    "note": "Scissors attempt 410 [MILESTONE: 410 attempts]. Clean baseline expansion emphasis tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
