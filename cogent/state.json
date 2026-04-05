@@ -6,7 +6,7 @@
       "last_used": null
     },
     "design": {
-      "attempts": 161,
+      "attempts": 162,
       "improvements": 13,
       "last_used": "20260405-hub-camp-dist-2"
     }
@@ -734,6 +734,21 @@
         "46": 16.69
       },
       "analysis": "Modest regression across most seeds. Reducing close distance from 8 to 7 subjects agents at distance 8 to early retreat checks, causing them to retreat unnecessarily when they're already reasonably safe. Combined with Cycles 22 (8\u219210 failed) and 36 (8\u21929 failed), confirms 8 as optimal through exhaustive three-way testing (7\u21928\u21929\u219210)."
+    },
+    {
+      "date": "20260405",
+      "version": "distant-retreat-dist-16-reverted",
+      "focus": "Early game aggression - distant retreat distance increase",
+      "description": "Increased distant retreat distance threshold from 15 to 16 (+6.7%) to allow farther agents to avoid distant retreat condition",
+      "result": "MAJOR REGRESSION: avg 13.32 vs baseline 15.52 (-14.2%)",
+      "scores_by_seed": {
+        "42": 15.3,
+        "43": 14.0,
+        "44": 12.65,
+        "45": 18.06,
+        "46": 6.59
+      },
+      "analysis": "Seed 46 collapsed (6.59, -58%). Increasing distance from 15 to 16 exempts agents at distance 16 from distant retreat check, allowing them to remain too exposed with medium HP. Combined with Cycle 35 (15\u219214 failed), confirms 15 as optimal distant retreat distance through bidirectional testing."
     }
   ],
   "mission": "arena",
