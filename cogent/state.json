@@ -6,7 +6,7 @@
       "last_used": null
     },
     "design": {
-      "attempts": 158,
+      "attempts": 159,
       "improvements": 13,
       "last_used": "20260405-hub-camp-dist-2"
     }
@@ -659,6 +659,21 @@
         "46": 17.35
       },
       "analysis": "Seed 42 collapsed (8.69, -44%). Reducing hub camp HP from 85 to 80 makes agents leave hub too early without sufficient healing. Pattern: 100\u219285 (+7.2%, Cycle 10), 85\u219290 (-21.4%, Cycle 20), 85\u219280 (-7.3%, this cycle). Confirms 85 HP is optimal hub camp threshold - bidirectionally tested and confirmed as sweet spot."
+    },
+    {
+      "date": "20260405",
+      "version": "distant-retreat-hp-45-reverted",
+      "focus": "Early game aggression - distant retreat HP threshold",
+      "description": "Reduced distant retreat HP threshold from 50 to 45 (-10%) to allow more aggressive play when far from hub",
+      "result": "MAJOR REGRESSION: avg 13.38 vs baseline 15.52 (-13.8%)",
+      "scores_by_seed": {
+        "42": 15.35,
+        "43": 12.74,
+        "44": 14.29,
+        "45": 18.03,
+        "46": 6.48
+      },
+      "analysis": "Seed 46 collapsed (6.48, -58%). Reducing distant HP threshold from 50 to 45 makes agents too aggressive when far from hub, likely dying more often. The condition 'hp < 50 and hub_distance > 15' is precisely tuned - agents need that extra safety margin (HP 45-50) to survive when far from hub. All early game safety parameters exhaustively tested."
     }
   ],
   "mission": "arena",
