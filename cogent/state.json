@@ -392,6 +392,14 @@
       "description": "Reduced hub camp HP threshold from 100 to 80 (-20%) to start productive work 10-15 steps earlier",
       "result": "BLOCKED: No validation method available",
       "analysis": "Cannot test locally (cogames broken for 3 cycles). Cannot validate via tournament (no COGAMES_TOKEN). No way to evaluate if change improves vs regresses. Reverted conservatively per improve.md principle. BLOCKER: improve.md workflow requires either local testing OR tournament upload capability. Neither available. Cycles 1-4 all failed. Need operator intervention to either: (1) fix local cogames output issue, or (2) provide COGAMES_TOKEN for tournament validation."
+    },
+    {
+      "date": "20260405",
+      "version": "diagnostic-cycle5",
+      "focus": "Root cause analysis of cogames failures",
+      "description": "Ran diagnostic to understand why cogames doesn't produce score output",
+      "result": "ROOT CAUSE IDENTIFIED: cogames process becomes zombie",
+      "analysis": "Diagnostic run (06:09-06:21 UTC): PID 18127 ran for 4:10 CPU time, then became zombie <defunct>. Only 4 header lines captured, no 'Episode Complete' or score output. All 4 cogames processes in system are zombies. Root cause: cogames play crashes/hangs after 4-5 minutes without producing final output. NOT a test harness issue - the process itself fails. Possible causes: memory exhaustion (32 agents), container timeout, Python crash, output buffering. See COGAMES_ISSUE.md for full analysis. BLOCKER: Cannot proceed with improve.md cycles until cogames fixed OR COGAMES_TOKEN provided for tournament validation."
     }
   ],
   "mission": "four_score",
