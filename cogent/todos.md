@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (523) Junction align distance increase (16.40→16.42): scissors_v440:v1 qualifying - continued chain-building reach tuning (+0.12%, stacks with 087-522)
 - [ ] (522) Hub align distance increase (26.60→26.62): scissors_v439:v1 qualifying - continued extended hub reach tuning (+0.08%, stacks with 087-521)
 - [ ] (521) Scrambler heart batch target increase (3.50→3.52): scissors_v438:v1 qualifying - continued scrambler persistence tuning (+0.57%, stacks with 087-520)
 - [ ] (520) Aligner heart batch target increase (3.50→3.52): scissors_v437:v1 qualifying - continued aligner persistence tuning (+0.57%, stacks with 087-519) [MILESTONE: 520 attempts]
