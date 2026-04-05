@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 295,
+      "attempts": 296,
       "improvements": 7,
-      "last_used": "20260405-360-testing"
+      "last_used": "20260405-361-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "360",
-    "focus": "Claimed target penalty reduction",
-    "description": "Reduced claimed target penalty from 11.17 to 11.15 (-0.18%)",
-    "rationale": "Lower penalty allows more flexible claim override when high-value targets are claimed by teammates. Conservative -0.18% reduction builds on validated improvements. Stacks with 087-359.",
-    "upload": "scissors_v276:v1",
+    "version": "361",
+    "focus": "Target claim steps increase",
+    "description": "Increased target claim steps from 33.05 to 33.10 (+0.15%)",
+    "rationale": "Higher value extends how long a claim remains valid, reducing unnecessary duplication when agents are en route. Conservative +0.15% increase builds on validated improvements. Stacks with 087-360.",
+    "upload": "scissors_v277:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 360. MILESTONE: 360 attempts. Clean baseline flexible claim override tuning. Awaiting tournament validation."
+    "note": "Scissors attempt 361. Clean baseline longer claim validity tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
