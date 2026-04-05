@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (546) Scrambler corner pressure divisor reduction (7.52→7.50): scissors_v463:v1 qualifying - continued faster pressure growth (-0.27%, stacks with 087-545)
 - [ ] (545) Scrambler corner pressure cap increase (10.88→10.90): scissors_v462:v1 qualifying - continued corner pressure tuning (+0.18%, stacks with 087-544)
 - [ ] (544) Enemy AOE penalty increase (10.74→10.76): scissors_v461:v1 qualifying - continued enemy avoidance tuning (+0.19%, stacks with 087-543)
 - [ ] (543) Expansion bonus cap increase (37.70→37.75): scissors_v460:v1 qualifying - continued higher expansion bonus ceiling (+0.13%, stacks with 087-542)

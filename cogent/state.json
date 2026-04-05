@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 479,
+      "attempts": 480,
       "improvements": 7,
-      "last_used": "20260405-545-testing"
+      "last_used": "20260405-546-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "545",
-    "focus": "Scrambler corner pressure cap increase",
-    "description": "Increased scrambler corner pressure cap from 10.88 to 10.90 (+0.18%)",
-    "rationale": "Corner pressure cap limits maximum corner pressure bonus for scrambler targeting. Higher ceiling allows more aggressive far-corner targeting. Conservative +0.18% increase builds on validated improvements. Stacks with 087-544.",
-    "upload": "scissors_v462:v1",
+    "version": "546",
+    "focus": "Scrambler corner pressure divisor reduction",
+    "description": "Reduced scrambler corner pressure divisor from 7.52 to 7.50 (-0.27%)",
+    "rationale": "Corner pressure divisor controls growth rate of corner pressure bonus. Lower divisor means faster pressure growth with distance. Conservative -0.27% reduction builds on validated improvements. Stacks with 087-545.",
+    "upload": "scissors_v463:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 545. Clean baseline higher corner pressure ceiling. Awaiting tournament validation."
+    "note": "Scissors attempt 546. Clean baseline faster pressure growth. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
