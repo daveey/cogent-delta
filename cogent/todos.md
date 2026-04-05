@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (216) Scrambler HP threshold increase (34.05→34.07): scissors_v132:v1 qualifying - continued aggressive disruption (+0.059%, stacks with 087-215)
 - [ ] (215) Miner HP threshold increase (18.42→18.44): scissors_v131:v1 qualifying - continued aggressive resource gathering (+0.11%, stacks with 087-214)
 - [ ] (214) Aligner HP threshold reduction (45.9→45.88): scissors_v130:v1 qualifying - continued retreat timing tuning (-0.044%, stacks with 087-213)
 - [ ] (213) Aligner hotspot penalty cap increase (3.1→3.11): scissors_v129:v1 qualifying - continued contested junction penalty cap (+0.32%, stacks with 087-212)
