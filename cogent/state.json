@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 444,
+      "attempts": 445,
       "improvements": 7,
-      "last_used": "20260405-510-testing"
+      "last_used": "20260405-511-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "510",
-    "focus": "Expansion bonus cap increase",
-    "description": "Increased expansion bonus cap from 37.65 to 37.70 (+0.13%)",
-    "rationale": "Expansion bonus cap limits maximum expansion bonus for junctions that unlock many unreachable targets. Higher ceiling rewards extremely valuable expansion junctions. Conservative +0.13% increase builds on validated improvements. Stacks with 087-509.",
-    "upload": "scissors_v427:v1",
+    "version": "511",
+    "focus": "Enemy AOE penalty increase",
+    "description": "Increased enemy AOE penalty from 10.72 to 10.74 (+0.19%)",
+    "rationale": "Enemy AOE penalty discourages aligners from targeting junctions within enemy junction range. Higher penalty improves enemy avoidance for safer expansion. Conservative +0.19% increase builds on validated improvements. Stacks with 087-510.",
+    "upload": "scissors_v428:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 510. Clean baseline higher expansion bonus ceiling. Awaiting tournament validation. [MILESTONE: 510 attempts]"
+    "note": "Scissors attempt 511. Clean baseline stronger enemy avoidance. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
