@@ -6,22 +6,12 @@
       "last_used": null
     },
     "design": {
-      "attempts": 120,
+      "attempts": 121,
       "improvements": 7,
-      "last_used": "20260405-aoe-local-only"
+      "last_used": "20260405-aoe-12-failed"
     }
   },
-  "testing_in_progress": {
-    "date": "20260405",
-    "version": "aoe-range-11",
-    "focus": "Junction AOE range increase for wider enemy detection",
-    "description": "Increased _JUNCTION_AOE_RANGE from 10 to 11 (+10%) for slightly wider enemy detection range",
-    "rationale": "Conservative approach toward alpha.0's wider AOE range (20). With 085's LLM changes (no role field), enemy detection may have different impact. Testing minimal +10% increase vs failed attempt 025's aggressive +20% (10→12, -39% regression). Local testing shows +24% improvement (9.24 vs 7.46 baseline) but with high variance (5.31-15.35 range, 2.9x). Cannot tournament-validate due to missing COGAMES_TOKEN.",
-    "upload": null,
-    "season": "beta-four-score",
-    "uploaded_at": null,
-    "note": "Delta local testing only: avg 9.24 vs baseline 7.46 (+23.9%). HIGH VARIANCE: 5.31-15.35 per cog, 3/5 seeds above baseline. Requires tournament validation before acceptance. BLOCKED: No COGAMES_TOKEN for upload. Keeping change due to positive average per improve.md principle."
-  },
+  "testing_in_progress": null,
   "last_improvement": {
     "date": "20260404",
     "version": "018",
@@ -332,6 +322,21 @@
         "46": 3.95
       },
       "analysis": "FAILED STABILITY RESTORATION. Attempt to revert 085 (LLM role field removal) to eliminate variance caused -23% regression. Despite 085's instability (seed 42 ranged 3.57-11.76-7.31 across runs), reverting it performed even worse. Only 1 of 5 seeds above baseline with 085. Variance range 3.95 to 10.48 (2.7x) still high. Decision: Keep 085 despite instability, as it performs better on average than alternatives. The high variance may be inherent to this architecture regardless of role field presence. Need different approach to improve stability (possibly tournament validation vs local testing)."
+    },
+    {
+      "date": "20260405",
+      "version": "aoe-range-12-reverted",
+      "focus": "Wider junction AOE detection range",
+      "description": "Increased _JUNCTION_AOE_RANGE from 11 to 12 (+9%, cumulative +20% from baseline 10)",
+      "result": "MAJOR REGRESSION: avg 6.36 vs baseline 17.06 (-63%, incomplete: 2/5 seeds)",
+      "scores_by_seed": {
+        "42": 3.47,
+        "43": 9.25,
+        "44": "incomplete",
+        "45": "incomplete",
+        "46": "incomplete"
+      },
+      "analysis": "CATASTROPHIC FAILURE with incomplete testing. Testing interrupted after 2 seeds showing major regression (seed 42: -80%, seed 43: -46%). Matches historical attempt 025 failure (10\u219212, -39% regression). Pattern: AOE range extremely sensitive. Even conservative +9% increase from already-increased baseline 11 causes severe performance degradation. Agents likely over-avoiding contested areas or missing valuable targets due to overly conservative enemy detection. AOE 11 appears optimal; further increases break behavior. Note: Baseline seed 42 showed extreme variance (17.06 this run vs 8.29 previous run, +106%), indicating local testing unreliability. Cannot tournament-validate due to missing COGAMES_TOKEN."
     }
   ],
   "mission": "four_score",
