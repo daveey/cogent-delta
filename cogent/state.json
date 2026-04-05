@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 414,
+      "attempts": 418,
       "improvements": 7,
-      "last_used": "20260405-480-testing"
+      "last_used": "20260405-484-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260405",
-    "version": "480",
-    "focus": "Scrambler corner pressure divisor reduction",
-    "description": "Reduced scrambler corner pressure divisor from 7.56 to 7.54 (-0.26%)",
-    "rationale": "Corner pressure divisor controls how quickly pressure grows with distance from hub. Lower divisor means faster pressure growth, encouraging scramblers to target distant enemies sooner. Conservative -0.26% reduction builds on validated improvements. Stacks with 087-479.",
-    "upload": "scissors_v397:v1",
+    "version": "484",
+    "focus": "Miner HP threshold increase",
+    "description": "Increased miner HP threshold from 18.58 to 18.60 (+0.11%)",
+    "rationale": "Miner HP retreat threshold controls when miners flee from danger. Higher threshold allows miners to stay aggressive longer during resource gathering. Conservative +0.11% increase builds on validated improvements. Stacks with 087-483.",
+    "upload": "scissors_v401:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260405",
-    "note": "Scissors attempt 480. Clean baseline faster pressure growth. Awaiting tournament validation. [MILESTONE: 480 attempts]"
+    "note": "Scissors attempt 484. Clean baseline aggressive resource gathering tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
