@@ -87,7 +87,6 @@
         }
         .badge-improvement { background: var(--ctp-green); color: var(--ctp-crust); }
         .badge-regression { background: var(--ctp-red); color: var(--ctp-crust); }
-        .badge-testing { background: var(--ctp-yellow); color: var(--ctp-crust); }
         .score-positive { color: var(--ctp-green); font-weight: 600; }
         .score-negative { color: var(--ctp-red); font-weight: 600; }
         ul { list-style: none; padding: 0; }
@@ -150,55 +149,55 @@
                 <div class="card-title">Approach Stats</div>
                 <div class="kpi">
                     <span class="kpi-label">Design Attempts</span>
-                    <span class="kpi-value">7 (8 testing)</span>
+                    <span class="kpi-value">8</span>
                 </div>
                 <div class="kpi">
                     <span class="kpi-label">Design Improvements</span>
-                    <span class="kpi-value">3 (42.9%)</span>
+                    <span class="kpi-value">4 (50.0%)</span>
                 </div>
                 <div class="kpi">
                     <span class="kpi-label">PCO Attempts</span>
                     <span class="kpi-value">0</span>
                 </div>
                 <div class="kpi">
-                    <span class="kpi-label">Current Cycle</span>
-                    <span class="kpi-value"><span class="badge badge-testing">TESTING</span> Cycle 86</span>
+                    <span class="kpi-label">Last Cycle</span>
+                    <span class="kpi-value"><span class="badge badge-improvement">IMPROVED</span> Cycle 86</span>
                 </div>
             </div>
 
             <div class="card">
-                <div class="card-title">Current Best</div>
+                <div class="card-title">Current Best 🎉</div>
                 <div class="kpi">
                     <span class="kpi-label">Version</span>
-                    <span class="kpi-value">hub-camp-85</span>
+                    <span class="kpi-value">aligner-hp-45</span>
                 </div>
                 <div class="kpi">
                     <span class="kpi-label">Avg Score</span>
-                    <span class="kpi-value score-positive">16.37</span>
+                    <span class="kpi-value score-positive">23.11</span>
                 </div>
                 <div class="kpi">
-                    <span class="kpi-label">Baseline</span>
-                    <span class="kpi-value">Cycle 82</span>
+                    <span class="kpi-label">Delta from Previous</span>
+                    <span class="kpi-value score-positive">+41.2%!</span>
+                </div>
+                <div class="kpi">
+                    <span class="kpi-label">Status</span>
+                    <span class="kpi-value">Uploaded to beta-cvc</span>
                 </div>
             </div>
 
             <div class="card">
-                <div class="card-title">Cycle 86 Testing</div>
+                <div class="card-title">Tournament</div>
                 <div class="kpi">
-                    <span class="kpi-label">Change</span>
-                    <span class="kpi-value">Aligner HP 50→45</span>
+                    <span class="kpi-label">Season</span>
+                    <span class="kpi-value">beta-cvc</span>
                 </div>
                 <div class="kpi">
-                    <span class="kpi-label">Seeds 42-45</span>
-                    <span class="kpi-value score-positive">21.43, 22.06, 24.88, 25.14</span>
+                    <span class="kpi-label">Latest Upload</span>
+                    <span class="kpi-value">scissors_v86_aligner_hp_45</span>
                 </div>
                 <div class="kpi">
-                    <span class="kpi-label">Avg (4 seeds)</span>
-                    <span class="kpi-value score-positive">23.38 (+43%!)</span>
-                </div>
-                <div class="kpi">
-                    <span class="kpi-label">Progress</span>
-                    <span class="kpi-value">Testing seed 46/5 (final)</span>
+                    <span class="kpi-label">Pool</span>
+                    <span class="kpi-value">qualifying</span>
                 </div>
             </div>
         </div>
@@ -216,15 +215,15 @@
                 </li>
                 <li class="todo-item">
                     <span class="todo-checkbox">✓</span>
-                    <span>RETREAT_MARGIN tested and reverted</span>
+                    <span>Aligner HP threshold optimization (+41.2%!)</span>
+                </li>
+                <li class="todo-item">
+                    <span class="todo-checkbox unchecked">☐</span>
+                    <span>Test miner/scrambler HP thresholds</span>
                 </li>
                 <li class="todo-item">
                     <span class="todo-checkbox unchecked">☐</span>
                     <span>LLM stagnation detection</span>
-                </li>
-                <li class="todo-item">
-                    <span class="todo-checkbox unchecked">☐</span>
-                    <span>Teammate vibes coordination</span>
                 </li>
             </ul>
         </div>
@@ -236,15 +235,15 @@
                     <th>Cycle</th>
                     <th>Version</th>
                     <th>Result</th>
-                    <th>Status</th>
+                    <th>Delta</th>
                 </tr>
             </thead>
             <tbody>
-                <tr style="background: var(--ctp-surface0);">
-                    <td>86</td>
-                    <td>aligner-hp-45</td>
-                    <td><span class="badge badge-testing">TESTING</span></td>
-                    <td class="score-positive">Avg 23.38 (+43%) across 4 seeds, 1 remaining</td>
+                <tr style="background: var(--ctp-green); color: var(--ctp-crust);">
+                    <td><strong>86</strong></td>
+                    <td><strong>aligner-hp-45</strong></td>
+                    <td><span class="badge badge-improvement">MAJOR WIN</span></td>
+                    <td><strong>+41.2%</strong></td>
                 </tr>
                 <tr>
                     <td>85</td>
@@ -258,11 +257,28 @@
                     <td><span class="badge badge-improvement">IMPROVED</span></td>
                     <td class="score-positive">+7.2%</td>
                 </tr>
+                <tr>
+                    <td>84</td>
+                    <td>early-retreat-120</td>
+                    <td><span class="badge badge-regression">REVERTED</span></td>
+                    <td class="score-negative">-11.0%</td>
+                </tr>
             </tbody>
         </table>
 
+        <h2>Recent Commits</h2>
+        <div class="card">
+            <ul>
+                <li><code>c9331ad</code> <strong>Cycle 86: Aligner HP 50→45 improvement (+41.2%)</strong></li>
+                <li><code>d9df4e4</code> Cycle 85: RETREAT_MARGIN 20→15 reverted (-13%)</li>
+                <li><code>1c76325</code> Merge remote-tracking branch 'origin/main'</li>
+                <li><code>c379df6</code> Cycle 84: Early retreat 150→120 reverted (-11.0%)</li>
+                <li><code>4a3901e</code> Cycle 82: Hub camp HP 100→85 improvement (+7.2%)</li>
+            </ul>
+        </div>
+
         <div class="footer">
-            Generated: 2026-04-06 03:38 UTC
+            Generated: 2026-04-06 03:40 UTC
             <br>
             <button onclick="fetch('/regenerate',{method:'POST'}).then(()=>{this.textContent='Regenerating...';setTimeout(()=>location.reload(),30000)})">Regenerate</button>
         </div>
