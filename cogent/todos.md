@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (659) Extractor memory steps increase (854→856): gamma_v108:v1 qualifying - continued longer extractor memory tuning (+0.23%, stacks with 087-658)
 - [ ] (658) Target claim steps increase (33.40→33.45): gamma_v107:v1 qualifying - continued longer claim validity tuning (+0.15%, stacks with 087-657)
 - [ ] (657) Claimed target penalty reduction (11.03→11.01): gamma_v106:v1 qualifying - continued flexible claim override tuning (-0.18%, stacks with 087-656)
 - [ ] (656) Junction AOE range increase (10.64→10.66): gamma_v105:v1 qualifying - continued larger area-of-effect detection tuning (+0.19%, stacks with 087-655)
