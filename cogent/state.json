@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 583,
+      "attempts": 584,
       "improvements": 7,
-      "last_used": "20260406-649-testing"
+      "last_used": "20260406-650-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "649",
-    "focus": "Miner HP threshold increase",
-    "description": "Increased miner HP threshold from 18.64 to 18.66 (+0.11%)",
-    "rationale": "Miner HP threshold controls retreat timing. Higher threshold triggers earlier retreat for safer resource gathering. Conservative +0.11% increase builds on validated improvements. Stacks with 087-648.",
-    "upload": "gamma_v98:v1",
+    "version": "650",
+    "focus": "Scrambler HP threshold increase",
+    "description": "Increased scrambler HP threshold from 34.27 to 34.29 (+0.058%)",
+    "rationale": "Scrambler HP threshold controls retreat timing. Higher threshold triggers earlier retreat for safer disruption. Conservative +0.058% increase builds on validated improvements. Stacks with 087-649.",
+    "upload": "gamma_v99:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Scissors attempt 649. Clean baseline increased miner HP threshold. Awaiting tournament validation."
+    "note": "Scissors attempt 650. Clean baseline increased scrambler HP threshold. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",

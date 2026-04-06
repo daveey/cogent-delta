@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (650) Scrambler HP threshold increase (34.27→34.29): gamma_v99:v1 qualifying - continued aggressive disruption (+0.058%, stacks with 087-649) [MILESTONE: 650 attempts!]
 - [ ] (649) Miner HP threshold increase (18.64→18.66): gamma_v98:v1 qualifying - continued aggressive resource gathering (+0.11%, stacks with 087-648)
 - [ ] (648) Aligner HP threshold reduction (45.68→45.66): gamma_v97:v1 qualifying - continued aligner retreat tuning (-0.044%, stacks with 087-647)
 - [ ] (647) Scrambler blocked neutrals weight increase (8.80→8.82): gamma_v96:v1 qualifying - continued expansion-blocking (+0.23%, stacks with 087-646)
