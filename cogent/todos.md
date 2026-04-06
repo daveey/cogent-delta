@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (724) Extractor memory steps reduction (858→856): gamma_v173_v1:v1 qualifying - bidirectional extractor memory tuning (-0.23%, stacks with 087-723)
 - [ ] (723) Target claim steps reduction (33.50→33.45): gamma_v172_v1:v1 qualifying - bidirectional claim validity tuning (-0.15%, stacks with 087-722)
 - [ ] (722) Claimed target penalty increase (10.99→11.01): gamma_v171_v1:v1 qualifying - bidirectional claim override tuning (+0.18%, stacks with 087-721)
 - [ ] (721) Junction align distance reduction (16.48→16.46): gamma_v170_v1:v1 qualifying - bidirectional chain-building reach tuning (-0.12%, stacks with 087-720)
