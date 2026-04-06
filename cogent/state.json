@@ -6,12 +6,27 @@
       "last_used": null
     },
     "design": {
-      "attempts": 19,
+      "attempts": 20,
       "improvements": 7,
       "last_used": "20260406-junction-aoe-20"
     }
   },
   "failed_attempts": [
+    {
+      "date": "20260406",
+      "version": "target-switch-2.5-reverted",
+      "focus": "Target switch threshold reduction",
+      "description": "Reduced _TARGET_SWITCH_THRESHOLD from 3.0 to 2.5 (-16.7%)",
+      "result": "REGRESSION: avg 22.76 vs baseline 25.42 (-10.5%)",
+      "local_scores": {
+        "seeds": [42, 43, 44, 45, 46],
+        "scores": [14.60, 20.54, 30.86, 23.78, 24.01],
+        "avg": 22.76,
+        "baseline": 25.42
+      },
+      "status": "reverted",
+      "notes": "Cycle 97 - Regression with extreme variance. Seed 42 crashed -31.9%, seed 44 spiked +43.8%. Lower threshold caused unpredictable target switching behavior. Current 3.0 threshold balances commitment vs flexibility optimally."
+    },
     {
       "date": "20260406",
       "version": "claim-penalty-8.0-reverted",

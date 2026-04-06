@@ -10,14 +10,19 @@
 - [ ] Junction scoring parameter tuning: hub penalty curves, network bonus, teammate penalty  
 - [ ] Enemy AOE weight in scoring (currently 8.0)
 - [ ] Hotspot weight in scoring (currently 8.0, reduced to 2.0/5.0 near hub)
-- [ ] Target switch threshold (currently 3.0)
 - [ ] Explore other non-HP parameters that can be validated locally
 - [ ] **BLOCKED:** LLM-dependent changes (cannot validate without LLM access in local tests)
+
+## Dead Ends Confirmed (Recent Testing)
+- Expansion bonus 5.0 is optimal (7.0 failed -8.3%)
+- Claim penalty 12.0 is optimal (both 8.0 and 25.0 failed)
+- Target switch threshold 3.0 is optimal (2.5 failed -10.5% with high variance)
 
 ## Testing Protocol Issue
 **Critical finding:** Local tests run with `ANTHROPIC_API_KEY=` (no LLM) per docs/cogames.md, but tournament uses Bedrock (LLM enabled). Cannot validate LLM-dependent changes locally. Cycle 94 reverted due to this issue.
 
 ## Completed
+- [x] Target switch threshold 3.0→2.5 tested and reverted (-10.5%, high variance)
 - [x] Claim penalty 12.0→8.0 tested and reverted (-7.3%)
 - [x] Expansion bonus weight 5.0→7.0 tested and reverted (-8.3%)
 - [x] LLM objective wiring tested and reverted (false positive, testing protocol issue)
