@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 740,
+      "attempts": 741,
       "improvements": 7,
-      "last_used": "20260406-806-testing"
+      "last_used": "20260406-807-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "806",
-    "focus": "Junction align distance increase",
-    "description": "Increased junction align distance from 16.49 to 16.50 (+0.06%)",
-    "rationale": "Junction align distance controls maximum range for junction-to-junction chain-building. Higher distance improves network connectivity and expansion. Conservative +0.06% increase for bidirectional chain-building reach tuning. Stacks with 087-805.",
-    "upload": "gamma_v255_v1:v1",
+    "version": "807",
+    "focus": "Junction AOE range increase",
+    "description": "Increased junction AOE range from 15.03 to 15.04 (+0.07%)",
+    "rationale": "Junction AOE range controls detection radius for enemy junction interference and scrambler blocked neutrals calculations. Higher range improves threat awareness. Conservative +0.07% increase for bidirectional enemy AOE detection tuning. Stacks with 087-806.",
+    "upload": "gamma_v256_v1:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 806. Increased junction align distance for bidirectional chain-building reach tuning. Awaiting tournament validation."
+    "note": "Attempt 807. Increased junction AOE range for bidirectional enemy AOE detection tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
