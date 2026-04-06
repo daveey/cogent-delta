@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 700,
+      "attempts": 701,
       "improvements": 7,
-      "last_used": "20260406-766-testing"
+      "last_used": "20260406-767-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "766",
-    "focus": "Expansion bonus weight increase",
-    "description": "Increased expansion bonus weight from 6.62 to 6.63 (+0.15%)",
-    "rationale": "Expansion bonus weight controls incentive to unlock unreachable entities. Higher weight prioritizes junctions that enable access to more territory. Conservative +0.15% increase for bidirectional expansion bonus weight tuning. Stacks with 087-765.",
-    "upload": "gamma_v215_v1:v1",
+    "version": "767",
+    "focus": "Enemy AOE penalty increase",
+    "description": "Increased enemy AOE penalty from 10.76 to 10.77 (+0.09%)",
+    "rationale": "Enemy AOE penalty controls avoidance of junctions near enemy agents. Higher penalty reduces risk of combat losses. Conservative +0.09% increase for bidirectional enemy avoidance tuning. Stacks with 087-766.",
+    "upload": "gamma_v216_v1:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 766. Increased expansion bonus weight for bidirectional expansion bonus weight tuning. Awaiting tournament validation."
+    "note": "Attempt 767. Increased enemy AOE penalty for bidirectional enemy avoidance tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",

@@ -739,3 +739,4 @@
 - [ ] (764) Hub penalty far-range base reduction (48.83→48.82): gamma_v213_v1 qualifying - bidirectional far-range base tuning (-0.02%, stacks with 087-763)
 - [ ] (765) Network bonus cap increase (4.56→4.57): gamma_v214_v1 qualifying - bidirectional network consolidation cap tuning (+0.22%, stacks with 087-764)
 - [ ] (766) Expansion bonus weight increase (6.62→6.63): gamma_v215_v1 qualifying - bidirectional expansion bonus weight tuning (+0.15%, stacks with 087-765)
+- [ ] (767) Enemy AOE penalty increase (10.76→10.77): gamma_v216_v1 qualifying - bidirectional enemy avoidance tuning (+0.09%, stacks with 087-766)

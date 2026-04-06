@@ -100,7 +100,7 @@ def aligner_target_score(
     return (
         distance
         - min(expansion * 6.63, 37.75)  # Increased weight from 6.62 to 6.63 (+0.15%) for bidirectional expansion bonus weight tuning
-        + enemy_aoe * 10.76  # Increased from 10.74 to 10.76 (+0.19%) for bidirectional enemy avoidance tuning
+        + enemy_aoe * 10.77  # Increased from 10.76 to 10.77 (+0.09%) for bidirectional enemy avoidance tuning
         + (_CLAIMED_TARGET_PENALTY if claimed_by_other else 0.0)
         + hub_penalty
         + hotspot_penalty
