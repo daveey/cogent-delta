@@ -868,3 +868,4 @@
 - [ ] (893) Hub penalty far-range base increase (48.85→48.86): gamma_v342_v1 qualifying - bidirectional far-range base tuning (+0.02%, stacks with 087-892)
 - [ ] (894) Corner pressure cap increase (10.93→10.94): gamma_v343_v1 qualifying - bidirectional corner pressure cap tuning (+0.09%, stacks with 087-893)
 - [ ] (895) Threat bonus weight increase (10.64→10.65): gamma_v344_v1 qualifying - bidirectional defensive priority tuning (+0.09%, stacks with 087-894)
+- [ ] (896) Blocked neutrals weight increase (8.84→8.85): gamma_v345_v1 qualifying - bidirectional expansion-blocking tuning (+0.11%, stacks with 087-895)
