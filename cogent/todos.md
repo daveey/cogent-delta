@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (656) Junction AOE range increase (10.64→10.66): gamma_v105:v1 qualifying - continued larger area-of-effect detection tuning (+0.19%, stacks with 087-655)
 - [ ] (655) Junction align distance increase (16.44→16.46): gamma_v104:v1 qualifying - continued chain-building reach tuning (+0.12%, stacks with 087-654)
 - [ ] (654) Hub align distance increase (26.64→26.66): gamma_v103:v1 qualifying - continued extended hub reach tuning (+0.08%, stacks with 087-653)
 - [ ] (653) Scrambler heart batch target increase (3.54→3.56): gamma_v102:v1 qualifying - continued scrambler persistence tuning (+0.57%, stacks with 087-652)
