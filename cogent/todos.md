@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (613) Scrambler threat bonus reduction (10.62→10.60): gamma:v62 qualifying - continued defensive priority tuning (-0.19%, stacks with 087-612)
 - [ ] (612) Scrambler corner pressure divisor increase (7.48→7.50): gamma:v61 qualifying - continued faster pressure growth (+0.27%, stacks with 087-611)
 - [ ] (611) Scrambler corner pressure cap reduction (10.92→10.90): gamma:v60 qualifying - continued corner pressure tuning (-0.18%, stacks with 087-610)
 - [ ] (610) Enemy AOE penalty reduction (10.78→10.76): gamma:v59 qualifying - continued enemy avoidance tuning (-0.19%, stacks with 087-609) [MILESTONE: 610 attempts]
