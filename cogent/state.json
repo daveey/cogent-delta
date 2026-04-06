@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 783,
+      "attempts": 784,
       "improvements": 7,
-      "last_used": "20260406-849-testing"
+      "last_used": "20260406-850-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "849",
-    "focus": "Expansion bonus weight increase",
-    "description": "Increased expansion bonus weight from 6.64 to 6.65 (+0.15%)",
-    "rationale": "Expansion bonus weight scales the value of unlocking unreachable entities. Higher weight encourages targeting junctions that open access to new territory. Conservative +0.15% increase for bidirectional expansion bonus weight tuning. Stacks with 087-848.",
-    "upload": "gamma_v298_v1:v1",
+    "version": "850",
+    "focus": "Expansion bonus cap increase",
+    "description": "Increased expansion bonus cap from 37.77 to 37.78 (+0.03%)",
+    "rationale": "Expansion bonus cap limits maximum territory unlock value. Higher cap allows junctions with many unreachable neighbors to provide greater expansion incentive. Conservative +0.03% increase for bidirectional expansion bonus cap tuning. Stacks with 087-849.",
+    "upload": "gamma_v299_v1:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 849. Increased expansion bonus weight for bidirectional expansion bonus weight tuning. Awaiting tournament validation."
+    "note": "Attempt 850. Increased expansion bonus cap for bidirectional expansion bonus cap tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
