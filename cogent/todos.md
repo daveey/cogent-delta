@@ -743,3 +743,4 @@
 - [ ] (768) Teammate coordination penalty increase (9.51→9.52): gamma_v217_v1 qualifying - bidirectional coordination tuning (+0.11%, stacks with 087-767)
 - [ ] (769) Scrambler corner pressure divisor reduction (7.50→7.49): gamma_v218_v1 qualifying - bidirectional corner pressure divisor tuning (-0.13%, stacks with 087-768)
 - [ ] (770) Scrambler corner pressure cap increase (10.90→10.91): gamma_v219_v1 qualifying - bidirectional corner pressure cap tuning (+0.09%, stacks with 087-769)
+- [ ] (771) Scrambler threat bonus increase (10.60→10.61): gamma_v220_v1 qualifying - bidirectional defensive priority tuning (+0.09%, stacks with 087-770)
