@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 567,
+      "attempts": 568,
       "improvements": 7,
-      "last_used": "20260406-633-testing"
+      "last_used": "20260406-634-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "633",
-    "focus": "Hub penalty far-range base increase",
-    "description": "Increased hub penalty far-range base from 48.83 to 48.84 (+0.02%)",
-    "rationale": "Hub penalty far-range base (>25 distance) controls the baseline penalty for far junctions. Higher base increases penalty for distant junctions slightly. Conservative +0.02% increase builds on validated improvements. Stacks with 087-632.",
-    "upload": "gamma_v82:v1",
+    "version": "634",
+    "focus": "Hotspot weight far-range increase",
+    "description": "Increased hotspot weight far-range from 11.52 to 11.54 (+0.17%)",
+    "rationale": "Hotspot weight far-range (>15 distance from hub) controls penalty for contested far junctions. Higher weight increases avoidance of far contested junctions. Conservative +0.17% increase builds on validated improvements. Stacks with 087-633.",
+    "upload": "gamma_v83:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Scissors attempt 633. Clean baseline increased hub penalty far-range base. Awaiting tournament validation."
+    "note": "Scissors attempt 634. Clean baseline increased hotspot weight far-range. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
