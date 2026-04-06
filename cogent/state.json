@@ -163,7 +163,7 @@
       "avg": 25.42,
       "baseline": 25.05
     },
-    "status": "local-only",
+    "status": "uploaded-beta-cvc",
     "notes": "Cycle 91 - Alpha.0 parity achievement. Wider enemy AOE radius improves agent survival near enemy junctions. Particularly strong on seed 42 (+16.6%). This parameter controls enemy detection range for retreat decisions, targeting, and pressure calculations. New baseline: 25.42."
   }
 }
