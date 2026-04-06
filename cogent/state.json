@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 494,
+      "attempts": 495,
       "improvements": 7,
-      "last_used": "20260406-560-testing"
+      "last_used": "20260406-561-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "560",
-    "focus": "Extractor memory steps increase",
-    "description": "Increased extractor memory steps from 852 to 854 (+0.23%)",
-    "rationale": "Extractor memory steps defines how long extractors remain in agent memory. Longer memory improves resource site awareness. Conservative +0.23% increase builds on validated improvements. Stacks with 087-559.",
-    "upload": "scissors_v477:v1",
+    "version": "561",
+    "focus": "Hub penalty very-close multiplier reduction",
+    "description": "Reduced hub penalty very-close multiplier from 0.263 to 0.262 (-0.38%)",
+    "rationale": "Hub penalty very-close multiplier applies to junctions ≤10 distance from hub. Lower multiplier encourages tighter hub clustering for safer expansion. Conservative -0.38% reduction builds on validated improvements. Stacks with 087-560.",
+    "upload": "scissors_v478:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Scissors attempt 560. Clean baseline longer extractor memory. Awaiting tournament validation. [MILESTONE: 560 attempts]"
+    "note": "Scissors attempt 561. Clean baseline tighter hub clustering. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
