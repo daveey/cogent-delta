@@ -258,10 +258,15 @@ def _build_analysis_prompt(context: dict) -> str:
         "\nAnalyze the game state and provide strategic guidance."
         "\nRespond with ONLY a JSON object:"
         '\n{"resource_bias": "carbon"|"oxygen"|"germanium"|"silicon",'
+        ' "role": null|"miner"|"aligner"|"scrambler",'
         ' "objective": null|"expand"|"defend"|"economy_bootstrap",'
         ' "analysis": "1-2 sentence strategic assessment"}'
         "\nRules:"
         "\n- resource_bias: element with lowest supply"
+        "\n- role: change if agent is stuck. If Stalled=True or Oscillating=True,"
+        "\n  suggest switching roles to break out (miner→aligner, aligner→scrambler)."
+        "\n  If target is contested (hotspot >0) and we keep losing it, try different role."
+        "\n  null = keep current role."
         "\n- objective: 'expand' if friendly < enemy (need more junctions),"
         "\n  'defend' if we have junctions but enemy is catching up,"
         "\n  'economy_bootstrap' if resources are critically low,"
