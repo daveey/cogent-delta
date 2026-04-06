@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 638,
+      "attempts": 639,
       "improvements": 7,
-      "last_used": "20260406-704-testing"
+      "last_used": "20260406-705-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "704",
-    "focus": "Network bonus cap reduction",
-    "description": "Reduced network bonus cap from 4.56 to 4.54 (-0.44%)",
-    "rationale": "Network bonus cap controls maximum bonus for chain-building near friendly junctions. Lower cap reduces maximum bonus for dense network clusters, encouraging more distributed expansion. Conservative -0.44% reduction for continued denser network clustering tuning. Stacks with 087-703.",
-    "upload": "gamma_v153:v1",
+    "version": "705",
+    "focus": "Network bonus weight reduction",
+    "description": "Reduced network bonus weight from 0.93 to 0.92 (-1.08%)",
+    "rationale": "Network bonus weight controls the per-junction bonus for chain-building near friendly junctions. Lower weight reduces network consolidation incentive, encouraging more balanced expansion. Conservative -1.08% reduction for continued network consolidation tuning. Stacks with 087-704.",
+    "upload": "gamma_v154:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 704. Reduced network bonus cap for continued denser network clustering tuning. Awaiting tournament validation."
+    "note": "Attempt 705. Reduced network bonus weight for continued network consolidation tuning. Awaiting tournament validation."
   },
   },
   "last_improvement": {
