@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 643,
+      "attempts": 644,
       "improvements": 7,
-      "last_used": "20260406-709-testing"
+      "last_used": "20260406-710-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "709",
-    "focus": "Teammate penalty reduction",
-    "description": "Reduced teammate penalty from 9.51 to 9.49 (-0.21%)",
-    "rationale": "Teammate penalty controls penalty for targeting junctions when a teammate is closer. Lower penalty allows more flexible claim override when tactically beneficial. Conservative -0.21% reduction for continued coordination tuning. Stacks with 087-708.",
-    "upload": "gamma_v158:v1",
+    "version": "710",
+    "focus": "Scrambler blocked neutrals weight reduction",
+    "description": "Reduced scrambler blocked neutrals weight from 8.80 to 8.78 (-0.23%)",
+    "rationale": "Scrambler blocked neutrals weight controls bonus for blocking enemy access to neutral junctions. Lower weight slightly reduces expansion-blocking priority for more balanced scrambler targeting. Conservative -0.23% reduction for continued expansion-blocking tuning. Stacks with 087-709.",
+    "upload": "gamma_v159:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 709. Reduced teammate penalty for continued coordination tuning. Awaiting tournament validation."
+    "note": "Attempt 710. Reduced scrambler blocked neutrals weight for continued expansion-blocking tuning. MILESTONE: 710 attempts! Awaiting tournament validation."
   },
   },
   "last_improvement": {
