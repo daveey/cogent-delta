@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 734,
+      "attempts": 735,
       "improvements": 7,
-      "last_used": "20260406-800-testing"
+      "last_used": "20260406-801-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "800",
-    "focus": "Aligner HP threshold increase",
-    "description": "Increased aligner HP threshold from 45.69 to 45.70 (+0.02%)",
-    "rationale": "Aligner HP threshold controls retreat timing for junction capturers. Higher threshold enables more aggressive alignment before retreating. Conservative +0.02% increase for bidirectional aligner retreat tuning. Stacks with 087-799.",
-    "upload": "gamma_v249_v1:v1",
+    "version": "801",
+    "focus": "Scrambler HP threshold increase",
+    "description": "Increased scrambler HP threshold from 34.32 to 34.33 (+0.03%)",
+    "rationale": "Scrambler HP threshold controls retreat timing for disruptors. Higher threshold enables more aggressive disruption before retreating. Conservative +0.03% increase for bidirectional disruption tuning. Stacks with 087-800.",
+    "upload": "gamma_v250_v1:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 800. Increased aligner HP threshold for bidirectional aligner retreat tuning. Awaiting tournament validation."
+    "note": "Attempt 801. Increased scrambler HP threshold for bidirectional disruption tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
