@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (582) Aligner HP threshold reduction (45.68→45.66): gamma:v31 qualifying - continued aligner retreat tuning (-0.044%, stacks with 087-581)
 - [ ] (581) Scrambler blocked neutrals weight increase (8.80→8.82): gamma:v30 qualifying - continued expansion-blocking (+0.23%, stacks with 087-580)
 - [ ] (580) Scrambler threat bonus increase (10.60→10.62): gamma:v29 qualifying - continued defensive priority tuning (+0.19%, stacks with 087-579) [MILESTONE: 580 attempts]
 - [ ] (579) Scrambler corner pressure divisor reduction (7.50→7.48): gamma:v28 qualifying - continued faster pressure growth (-0.27%, stacks with 087-578)
