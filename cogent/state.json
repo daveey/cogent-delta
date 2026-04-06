@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 633,
+      "attempts": 634,
       "improvements": 7,
-      "last_used": "20260406-699-testing"
+      "last_used": "20260406-700-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "699",
-    "focus": "Hub penalty far-range base reduction",
-    "description": "Reduced hub penalty far-range base from 48.83 to 48.82 (-0.02%)",
-    "rationale": "Hub penalty far-range base controls the base penalty for distant junctions (>25 distance from hub). Lower base penalty slightly reduces the strong discouragement of far-range junctions. Conservative -0.02% reduction for continued far-range base tuning. Stacks with 087-698.",
-    "upload": "gamma_v148:v1",
+    "version": "700",
+    "focus": "Hotspot weight far-range reduction",
+    "description": "Reduced hotspot weight far-range from 11.52 to 11.50 (-0.17%)",
+    "rationale": "Hotspot weight far-range controls penalty for contested junctions far from hub (>15 distance). Lower weight reduces avoidance of contested far junctions. Conservative -0.17% reduction for continued far-range contested junction tuning. Stacks with 087-699.",
+    "upload": "gamma_v149:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 699. Reduced hub penalty far-range base for continued far-range tuning. Awaiting tournament validation."
+    "note": "Attempt 700. Reduced hotspot weight far-range for continued contested junction tuning. MILESTONE: 700 attempts! Awaiting tournament validation."
   },
   },
   "last_improvement": {
