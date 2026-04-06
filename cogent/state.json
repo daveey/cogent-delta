@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 727,
+      "attempts": 728,
       "improvements": 7,
-      "last_used": "20260406-793-testing"
+      "last_used": "20260406-794-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "793",
-    "focus": "Expansion bonus cap increase",
-    "description": "Increased expansion bonus cap from 37.75 to 37.76 (+0.03%)",
-    "rationale": "Expansion bonus cap limits maximum expansion bonus for junctions unlocking many entities. Higher cap rewards extreme expansion opportunities more. Conservative +0.03% increase for bidirectional expansion bonus cap tuning. Stacks with 087-792.",
-    "upload": "gamma_v242_v1:v1",
+    "version": "794",
+    "focus": "Hub penalty 15-25 range base increase",
+    "description": "Increased hub penalty 15-25 range base from 9.53 to 9.54 (+0.10%)",
+    "rationale": "Hub penalty 15-25 range base sets penalty floor for junctions 15-25 distance from hub. Higher base increases minimum penalty for mid-range junctions. Conservative +0.10% increase for bidirectional 15-25 range base tuning. Stacks with 087-793.",
+    "upload": "gamma_v243_v1:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 793. Increased expansion bonus cap for bidirectional expansion bonus cap tuning. Awaiting tournament validation."
+    "note": "Attempt 794. Increased hub penalty 15-25 range base for bidirectional 15-25 range base tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
