@@ -856,3 +856,4 @@
 - [ ] (881) Far-range hotspot weight increase (11.54→11.55): gamma_v330_v1 qualifying - bidirectional far-range contested junction tuning (+0.09%, stacks with 087-880)
 - [ ] (882) Corner pressure divisor decrease (7.52→7.51): gamma_v331_v1 qualifying - bidirectional corner pressure divisor tuning (-0.13%, stacks with 087-881)
 - [ ] (883) Expansion bonus cap increase (37.78→37.79): gamma_v332_v1 qualifying - bidirectional expansion bonus cap tuning (+0.03%, stacks with 087-882)
+- [ ] (884) Enemy AOE penalty increase (10.79→10.80): gamma_v333_v1 qualifying - bidirectional enemy avoidance tuning (+0.09%, stacks with 087-883)

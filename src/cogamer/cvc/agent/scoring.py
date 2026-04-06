@@ -100,7 +100,7 @@ def aligner_target_score(
     return (
         distance
         - min(expansion * 6.66, 37.79)  # Increased cap from 37.78 to 37.79 (+0.03%) for bidirectional expansion bonus cap tuning
-        + enemy_aoe * 10.79  # Increased from 10.78 to 10.79 (+0.09%) for bidirectional enemy avoidance tuning
+        + enemy_aoe * 10.80  # Increased from 10.79 to 10.80 (+0.09%) for bidirectional enemy avoidance tuning
         + (_CLAIMED_TARGET_PENALTY if claimed_by_other else 0.0)
         + hub_penalty
         + hotspot_penalty
