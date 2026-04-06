@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (609) Expansion bonus cap reduction (37.80→37.75): gamma:v58 qualifying - continued higher expansion bonus ceiling (-0.13%, stacks with 087-608)
 - [ ] (608) Expansion bonus weight reduction (6.64→6.62): gamma:v57 qualifying - continued expansion emphasis (-0.30%, stacks with 087-607)
 - [ ] (607) Teammate penalty reduction (9.53→9.51): gamma:v56 qualifying - continued coordination tuning (-0.21%, stacks with 087-606)
 - [ ] (606) Network bonus cap reduction (4.58→4.56): gamma:v55 qualifying - continued denser network clustering (-0.44%, stacks with 087-605)
