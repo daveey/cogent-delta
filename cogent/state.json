@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 664,
+      "attempts": 665,
       "improvements": 7,
-      "last_used": "20260406-730-testing"
+      "last_used": "20260406-731-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "730",
-    "focus": "Hub penalty far-range multiplier increase",
-    "description": "Increased hub penalty far-range multiplier from 7.79 to 7.80 (+0.13%)",
-    "rationale": "Hub penalty far-range multiplier controls penalty growth rate for junctions >25 distance from hub. Higher multiplier increases penalty slope for distant junctions. Conservative +0.13% increase for bidirectional far-range multiplier tuning. Stacks with 087-729.",
-    "upload": "gamma_v179_v1:v1",
+    "version": "731",
+    "focus": "Hub penalty far-range base increase",
+    "description": "Increased hub penalty far-range base from 48.82 to 48.83 (+0.02%)",
+    "rationale": "Hub penalty far-range base controls base penalty offset for junctions >25 distance from hub. Higher base increases minimum penalty for distant junctions. Conservative +0.02% increase for bidirectional far-range base tuning. Stacks with 087-730.",
+    "upload": "gamma_v180_v1:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 730. Increased hub penalty far-range multiplier for bidirectional far-range multiplier tuning. MILESTONE: 730 attempts! Awaiting tournament validation."
+    "note": "Attempt 731. Increased hub penalty far-range base for bidirectional far-range base tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
