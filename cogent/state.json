@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 489,
+      "attempts": 490,
       "improvements": 7,
-      "last_used": "20260406-555-testing"
+      "last_used": "20260406-556-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "555",
-    "focus": "Hub align distance increase",
-    "description": "Increased hub align distance from 26.62 to 26.64 (+0.08%)",
-    "rationale": "Hub align distance defines maximum range for hub to align junctions. Higher distance extends hub reach for larger alignment network. Conservative +0.08% increase builds on validated improvements. Stacks with 087-554.",
-    "upload": "scissors_v472:v1",
+    "version": "556",
+    "focus": "Junction align distance increase",
+    "description": "Increased junction align distance from 16.42 to 16.44 (+0.12%)",
+    "rationale": "Junction align distance defines maximum range for junction-to-junction chain-building. Higher distance extends chain-building reach for denser networks. Conservative +0.12% increase builds on validated improvements. Stacks with 087-555.",
+    "upload": "scissors_v473:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Scissors attempt 555. Clean baseline extended hub reach. Awaiting tournament validation."
+    "note": "Scissors attempt 556. Clean baseline extended chain-building reach. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
