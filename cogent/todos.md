@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (682) Junction AOE range increase (10.66→15.0): gamma_v131:v1 qualifying - wider enemy detection for earlier retreats (+41%, toward alpha.0's approach)
 - [ ] (681) Aligner HP threshold increase (45.66→45.68): gamma_v130:v1 qualifying - continued aligner retreat tuning (+0.044%, stacks with 087-680)
 - [ ] (680) Scrambler blocked neutrals weight reduction (8.82→8.80): gamma_v129:v1 qualifying - continued expansion-blocking (-0.23%, stacks with 087-679) [MILESTONE: 680 attempts!]
 - [ ] (679) Scrambler threat bonus reduction (10.62→10.60): gamma_v128:v1 qualifying - continued defensive priority tuning (-0.19%, stacks with 087-678)
