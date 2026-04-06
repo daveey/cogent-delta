@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (707) Expansion bonus cap reduction (37.75→37.70): gamma_v156:v1 qualifying - continued higher expansion bonus ceiling tuning (-0.13%, stacks with 087-706)
 - [ ] (706) Expansion bonus weight reduction (6.62→6.60): gamma_v155:v1 qualifying - continued expansion emphasis tuning (-0.30%, stacks with 087-705)
 - [ ] (705) Network bonus weight reduction (0.93→0.92): gamma_v154:v1 qualifying - continued network consolidation tuning (-1.08%, stacks with 087-704)
 - [ ] (704) Network bonus cap reduction (4.56→4.54): gamma_v153:v1 qualifying - continued denser network clustering tuning (-0.44%, stacks with 087-703)

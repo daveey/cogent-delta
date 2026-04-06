@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 640,
+      "attempts": 641,
       "improvements": 7,
-      "last_used": "20260406-706-testing"
+      "last_used": "20260406-707-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "706",
-    "focus": "Expansion bonus weight reduction",
-    "description": "Reduced expansion bonus weight from 6.62 to 6.60 (-0.30%)",
-    "rationale": "Expansion bonus weight controls the per-junction bonus for unlocking access to unreachable junctions. Lower weight slightly reduces expansion incentive for more balanced targeting. Conservative -0.30% reduction for continued expansion emphasis tuning. Stacks with 087-705.",
-    "upload": "gamma_v155:v1",
+    "version": "707",
+    "focus": "Expansion bonus cap reduction",
+    "description": "Reduced expansion bonus cap from 37.75 to 37.70 (-0.13%)",
+    "rationale": "Expansion bonus cap controls maximum bonus for unlocking access to unreachable junctions. Lower cap reduces maximum expansion incentive in extreme cases with many unreachable junctions. Conservative -0.13% reduction for continued higher expansion bonus ceiling tuning. Stacks with 087-706.",
+    "upload": "gamma_v156:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 706. Reduced expansion bonus weight for continued expansion emphasis tuning. Awaiting tournament validation."
+    "note": "Attempt 707. Reduced expansion bonus cap for continued higher expansion bonus ceiling tuning. Awaiting tournament validation."
   },
   },
   "last_improvement": {
