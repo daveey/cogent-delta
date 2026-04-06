@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 646,
+      "attempts": 647,
       "improvements": 7,
-      "last_used": "20260406-712-testing"
+      "last_used": "20260406-713-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "712",
-    "focus": "Scrambler corner pressure cap increase",
-    "description": "Increased scrambler corner_pressure cap from 10.90 to 10.92 (+0.18%)",
-    "rationale": "Scrambler corner_pressure cap limits maximum bonus for distant enemy junction targeting. Higher cap allows more aggressive distant targeting when enemies are far from their hubs. Conservative +0.18% increase for continued corner pressure tuning. Stacks with 087-711.",
-    "upload": "gamma_v161_v1:v1",
+    "version": "713",
+    "focus": "Scrambler threat bonus increase",
+    "description": "Increased scrambler threat_bonus from 10.60 to 10.62 (+0.19%)",
+    "rationale": "Scrambler threat_bonus weight controls priority for defending friendly junctions from nearby enemy presence. Higher weight increases defensive priority to protect friendly network. Conservative +0.19% increase for continued defensive priority tuning. Stacks with 087-712.",
+    "upload": "gamma_v162_v1:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 712. Increased scrambler corner_pressure cap for continued corner pressure tuning. Awaiting tournament validation."
+    "note": "Attempt 713. Increased scrambler threat_bonus for continued defensive priority tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
