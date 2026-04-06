@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (726) Hub penalty 10-15 range multiplier increase (1.30→1.31): gamma_v175_v1:v1 qualifying - bidirectional 10-15 range multiplier tuning (+0.77%, stacks with 087-725)
 - [ ] (725) Hub penalty very-close multiplier increase (0.260→0.261): gamma_v174_v1:v1 qualifying - bidirectional hub clustering tuning (+0.38%, stacks with 087-724)
 - [ ] (724) Extractor memory steps reduction (858→856): gamma_v173_v1:v1 qualifying - bidirectional extractor memory tuning (-0.23%, stacks with 087-723)
 - [ ] (723) Target claim steps reduction (33.50→33.45): gamma_v172_v1:v1 qualifying - bidirectional claim validity tuning (-0.15%, stacks with 087-722)
