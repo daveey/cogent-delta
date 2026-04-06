@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 761,
+      "attempts": 762,
       "improvements": 7,
-      "last_used": "20260406-827-testing"
+      "last_used": "20260406-828-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "827",
-    "focus": "Threat bonus weight increase",
-    "description": "Increased threat bonus weight from 10.62 to 10.63 (+0.09%)",
-    "rationale": "Threat bonus weight prioritizes enemy junctions near friendly network for defensive scrambling. Higher weight increases defensive priority to protect friendly junctions. Conservative +0.09% increase for bidirectional defensive priority tuning. Stacks with 087-826.",
-    "upload": "gamma_v276_v1:v1",
+    "version": "828",
+    "focus": "Blocked neutrals weight increase",
+    "description": "Increased blocked neutrals weight from 8.82 to 8.83 (+0.11%)",
+    "rationale": "Blocked neutrals weight prioritizes enemy junctions that block access to neutral junctions. Higher weight increases focus on expansion-blocking targets. Conservative +0.11% increase for bidirectional expansion-blocking tuning. Stacks with 087-827.",
+    "upload": "gamma_v277_v1:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 827. Increased threat bonus weight for bidirectional defensive priority tuning. Awaiting tournament validation."
+    "note": "Attempt 828. Increased blocked neutrals weight for bidirectional expansion-blocking tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",

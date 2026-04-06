@@ -800,3 +800,4 @@
 - [ ] (825) Teammate penalty increase (9.52→9.53): gamma_v274_v1 qualifying - bidirectional coordination tuning (+0.11%, stacks with 087-824)
 - [ ] (826) Corner pressure divisor increase (7.50→7.51): gamma_v275_v1 qualifying - bidirectional corner pressure divisor tuning (+0.13%, stacks with 087-825)
 - [ ] (827) Threat bonus weight increase (10.62→10.63): gamma_v276_v1 qualifying - bidirectional defensive priority tuning (+0.09%, stacks with 087-826)
+- [ ] (828) Blocked neutrals weight increase (8.82→8.83): gamma_v277_v1 qualifying - bidirectional expansion-blocking tuning (+0.11%, stacks with 087-827)
