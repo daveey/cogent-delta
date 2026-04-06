@@ -787,3 +787,4 @@
 - [ ] (812) Hub penalty far-range multiplier increase (7.79→7.80): gamma_v261_v1 qualifying - bidirectional far-range multiplier tuning (+0.13%, stacks with 087-811)
 - [ ] (813) Hub penalty 15-25 range multiplier increase (2.78→2.79): gamma_v262_v1 qualifying - bidirectional 15-25 range multiplier tuning (+0.36%, stacks with 087-812)
 - [ ] (814) Hub penalty 10-15 range multiplier increase (1.31→1.32): gamma_v263_v1 qualifying - bidirectional 10-15 range multiplier tuning (+0.76%, stacks with 087-813)
+- [ ] (815) Hub penalty very-close range multiplier increase (0.261→0.262): gamma_v264_v1 qualifying - bidirectional hub clustering tuning (+0.38%, stacks with 087-814)
