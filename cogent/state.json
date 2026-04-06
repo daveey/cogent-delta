@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 625,
+      "attempts": 626,
       "improvements": 7,
-      "last_used": "20260406-691-testing"
+      "last_used": "20260406-692-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "691",
-    "focus": "Target claim steps increase",
-    "description": "Increased _TARGET_CLAIM_STEPS from 33.45 to 33.50 (+0.15%)",
-    "rationale": "Target claim steps controls how long junction claims remain valid before expiring. Longer validity gives agents more time to reach claimed targets. Conservative +0.15% increase for continued longer claim validity tuning. Stacks with 087-690.",
-    "upload": "gamma_v140:v1",
+    "version": "692",
+    "focus": "Extractor memory steps increase",
+    "description": "Increased _EXTRACTOR_MEMORY_STEPS from 856 to 858 (+0.23%)",
+    "rationale": "Extractor memory steps controls how long agents remember extractor locations after last observation. Longer memory improves mining efficiency by reducing rediscovery overhead. Conservative +0.23% increase for continued longer extractor memory tuning. Stacks with 087-691.",
+    "upload": "gamma_v141:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 691. Increased target claim steps for continued longer claim validity. Awaiting tournament validation."
+    "note": "Attempt 692. Increased extractor memory steps for continued longer extractor memory. Awaiting tournament validation."
   },
   },
   "last_improvement": {
