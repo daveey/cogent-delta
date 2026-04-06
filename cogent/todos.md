@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (741) Teammate penalty increase (9.49→9.51): gamma_v190_v1:v1 qualifying - bidirectional coordination tuning (+0.21%, stacks with 087-740)
 - [ ] (740) Enemy AOE penalty increase (10.74→10.76): gamma_v189_v1:v1 qualifying - bidirectional enemy avoidance tuning (+0.19%, stacks with 087-739) [MILESTONE: 740 attempts!]
 - [ ] (739) Expansion bonus cap increase (37.70→37.75): gamma_v188_v1:v1 qualifying - bidirectional expansion bonus ceiling tuning (+0.13%, stacks with 087-738)
 - [ ] (738) Expansion bonus weight increase (6.60→6.62): gamma_v187_v1:v1 qualifying - bidirectional expansion emphasis tuning (+0.30%, stacks with 087-737)
