@@ -62,7 +62,7 @@ _HUB_ALIGN_DISTANCE = 26.68  # Increased from 26.66 to 26.68 (+0.08%) for contin
 _JUNCTION_ALIGN_DISTANCE = 16.48  # Increased from 16.46 to 16.48 (+0.12%) for continued chain-building reach tuning
 _JUNCTION_AOE_RANGE = 15.0  # Increased from 10.66 to 15.0 (+41%) for wider enemy AOE detection, matching alpha.0's approach
 _CLAIMED_TARGET_PENALTY = 10.99  # Reduced from 11.01 to 10.99 (-0.18%) for continued flexible claim override tuning
-_TARGET_CLAIM_STEPS = 33.45  # Increased from 33.40 to 33.45 (+0.15%) for continued longer claim validity tuning
+_TARGET_CLAIM_STEPS = 33.50  # Increased from 33.45 to 33.50 (+0.15%) for continued longer claim validity tuning
 _EXTRACTOR_MEMORY_STEPS = 856  # Increased from 854 to 856 (+0.23%) for continued longer extractor memory tuning
 _STATION_TARGETS_BY_AGENT = {
     "aligner": {
