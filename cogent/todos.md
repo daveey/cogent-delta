@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (586) Aligner heart batch target increase (3.54→3.56): gamma:v35 qualifying - continued aligner persistence tuning (+0.56%, stacks with 087-585)
 - [ ] (585) Emergency resource low threshold increase (2.54→2.56): gamma:v34 qualifying - continued earlier emergency mining trigger tuning (+0.79%, stacks with 087-584)
 - [ ] (584) Scrambler HP threshold increase (34.27→34.29): gamma:v33 qualifying - continued aggressive disruption (+0.058%, stacks with 087-583)
 - [ ] (583) Miner HP threshold increase (18.64→18.66): gamma:v32 qualifying - continued aggressive resource gathering (+0.11%, stacks with 087-582)

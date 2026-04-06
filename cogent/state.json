@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 519,
+      "attempts": 520,
       "improvements": 7,
-      "last_used": "20260406-585-testing"
+      "last_used": "20260406-586-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "585",
-    "focus": "Emergency resource low threshold increase",
-    "description": "Increased emergency resource low from 2.54 to 2.56 (+0.79%)",
-    "rationale": "Emergency resource low threshold triggers emergency mining when resources dip below this level. Higher threshold triggers emergency mining earlier. Conservative +0.79% increase builds on validated improvements. Stacks with 087-584.",
-    "upload": "gamma:v34",
+    "version": "586",
+    "focus": "Aligner heart batch target increase",
+    "description": "Increased aligner heart batch target from 3.54 to 3.56 (+0.56%)",
+    "rationale": "Aligner heart batch target controls how many hearts aligners collect before returning to work. Higher target increases aligner persistence. Conservative +0.56% increase builds on validated improvements. Stacks with 087-585.",
+    "upload": "gamma:v35",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Scissors attempt 585. Clean baseline increased emergency resource low threshold. Awaiting tournament validation."
+    "note": "Scissors attempt 586. Clean baseline increased aligner heart batch target. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
