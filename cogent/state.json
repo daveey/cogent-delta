@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 759,
+      "attempts": 760,
       "improvements": 7,
-      "last_used": "20260406-825-testing"
+      "last_used": "20260406-826-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "825",
-    "focus": "Teammate penalty increase",
-    "description": "Increased teammate penalty from 9.52 to 9.53 (+0.11%)",
-    "rationale": "Teammate penalty reduces duplication when another aligner is closer to a junction. Higher penalty improves coordination by more strongly discouraging redundant targeting. Conservative +0.11% increase for bidirectional coordination tuning. Stacks with 087-824.",
-    "upload": "gamma_v274_v1:v1",
+    "version": "826",
+    "focus": "Corner pressure divisor increase",
+    "description": "Increased corner pressure divisor from 7.50 to 7.51 (+0.13%)",
+    "rationale": "Corner pressure divisor scales how distance from hub translates to scrambler target priority. Higher divisor reduces corner pressure slightly, making scramblers range slightly farther. Conservative +0.13% increase for bidirectional corner pressure divisor tuning. Stacks with 087-825.",
+    "upload": "gamma_v275_v1:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 825. Increased teammate penalty for bidirectional coordination tuning. Awaiting tournament validation."
+    "note": "Attempt 826. Increased corner pressure divisor for bidirectional corner pressure divisor tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
