@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 639,
+      "attempts": 640,
       "improvements": 7,
-      "last_used": "20260406-705-testing"
+      "last_used": "20260406-706-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "705",
-    "focus": "Network bonus weight reduction",
-    "description": "Reduced network bonus weight from 0.93 to 0.92 (-1.08%)",
-    "rationale": "Network bonus weight controls the per-junction bonus for chain-building near friendly junctions. Lower weight reduces network consolidation incentive, encouraging more balanced expansion. Conservative -1.08% reduction for continued network consolidation tuning. Stacks with 087-704.",
-    "upload": "gamma_v154:v1",
+    "version": "706",
+    "focus": "Expansion bonus weight reduction",
+    "description": "Reduced expansion bonus weight from 6.62 to 6.60 (-0.30%)",
+    "rationale": "Expansion bonus weight controls the per-junction bonus for unlocking access to unreachable junctions. Lower weight slightly reduces expansion incentive for more balanced targeting. Conservative -0.30% reduction for continued expansion emphasis tuning. Stacks with 087-705.",
+    "upload": "gamma_v155:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 705. Reduced network bonus weight for continued network consolidation tuning. Awaiting tournament validation."
+    "note": "Attempt 706. Reduced expansion bonus weight for continued expansion emphasis tuning. Awaiting tournament validation."
   },
   },
   "last_improvement": {
