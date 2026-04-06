@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 760,
+      "attempts": 761,
       "improvements": 7,
-      "last_used": "20260406-826-testing"
+      "last_used": "20260406-827-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "826",
-    "focus": "Corner pressure divisor increase",
-    "description": "Increased corner pressure divisor from 7.50 to 7.51 (+0.13%)",
-    "rationale": "Corner pressure divisor scales how distance from hub translates to scrambler target priority. Higher divisor reduces corner pressure slightly, making scramblers range slightly farther. Conservative +0.13% increase for bidirectional corner pressure divisor tuning. Stacks with 087-825.",
-    "upload": "gamma_v275_v1:v1",
+    "version": "827",
+    "focus": "Threat bonus weight increase",
+    "description": "Increased threat bonus weight from 10.62 to 10.63 (+0.09%)",
+    "rationale": "Threat bonus weight prioritizes enemy junctions near friendly network for defensive scrambling. Higher weight increases defensive priority to protect friendly junctions. Conservative +0.09% increase for bidirectional defensive priority tuning. Stacks with 087-826.",
+    "upload": "gamma_v276_v1:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 826. Increased corner pressure divisor for bidirectional corner pressure divisor tuning. Awaiting tournament validation."
+    "note": "Attempt 827. Increased threat bonus weight for bidirectional defensive priority tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
