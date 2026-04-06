@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 830,
+      "attempts": 831,
       "improvements": 7,
-      "last_used": "20260406-896-testing"
+      "last_used": "20260406-897-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "896",
-    "focus": "Blocked neutrals weight increase",
-    "description": "Increased blocked neutrals weight from 8.84 to 8.85 (+0.11%)",
-    "rationale": "Blocked neutrals weight controls priority for scramblers to target enemies that block neutral junction expansion. Higher value increases incentive to clear expansion-blocking enemies. Conservative +0.11% increase for bidirectional expansion-blocking tuning. Stacks with 087-895.",
-    "upload": "gamma_v345_v1:v1",
+    "version": "897",
+    "focus": "Extractor memory steps increase",
+    "description": "Increased extractor memory steps from 862 to 863 (+0.12%)",
+    "rationale": "Extractor memory steps controls how long agents remember extractor positions. Higher value extends memory duration, allowing agents to use stale extractor data for longer before discarding. Conservative +0.12% increase for bidirectional extractor memory tuning. Stacks with 087-896.",
+    "upload": "gamma_v346_v1:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 896. Increased blocked neutrals weight for bidirectional expansion-blocking tuning. Awaiting tournament validation."
+    "note": "Attempt 897. Increased extractor memory steps for bidirectional extractor memory tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
