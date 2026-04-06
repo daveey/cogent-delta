@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 651,
+      "attempts": 652,
       "improvements": 7,
-      "last_used": "20260406-717-testing"
+      "last_used": "20260406-718-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "717",
-    "focus": "Emergency resource threshold reduction",
-    "description": "Reduced emergency resource threshold from 2.58 to 2.56 (-0.78%)",
-    "rationale": "Emergency resource threshold triggers emergency mining when resource levels are critically low. Lower threshold delays emergency mining, allowing more aggressive role allocation. Conservative -0.78% reduction for bidirectional emergency mining trigger tuning. Stacks with 087-716.",
-    "upload": "gamma_v166_v1:v1",
+    "version": "718",
+    "focus": "Aligner heart batch target reduction",
+    "description": "Reduced aligner heart batch target from 3.58 to 3.56 (-0.56%)",
+    "rationale": "Aligner heart batch target controls how many hearts aligners consume at once. Lower target means more frequent smaller heart batches for smoother resource management. Conservative -0.56% reduction for bidirectional aligner persistence tuning. Stacks with 087-717.",
+    "upload": "gamma_v167_v1:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 717. Reduced emergency resource threshold for bidirectional emergency mining trigger tuning. Awaiting tournament validation."
+    "note": "Attempt 718. Reduced aligner heart batch target for bidirectional aligner persistence tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
