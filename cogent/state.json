@@ -6,9 +6,9 @@
       "last_used": null
     },
     "design": {
-      "attempts": 2,
-      "improvements": 1,
-      "last_used": "20260406-stall-14-reverted"
+      "attempts": 3,
+      "improvements": 2,
+      "last_used": "20260406-oscillation-3"
     }
   },
   "failed_attempts": [
@@ -39,5 +39,32 @@
       "status": "reverted",
       "notes": "Delta Cycle 80 - Testing after codebase reset. Stall threshold 14 regressed in new context (previous testing showed 14 optimal, but other parameters have changed)."
     }
-  ]
+  ],
+  "last_improvement": {
+    "date": "20260406",
+    "version": "oscillation-3",
+    "focus": "Oscillation unstick threshold reduction",
+    "description": "Reduced _OSCILLATION_UNSTICK_STEPS from 4 to 3 (-25%) for faster oscillation loop detection",
+    "result": "IMPROVEMENT: avg 15.27 vs baseline 13.65 (+11.9%)",
+    "local_scores": {
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "scores": [
+        17.52,
+        17.22,
+        16.9,
+        16.97,
+        7.74
+      ],
+      "avg": 15.27,
+      "baseline": 13.65
+    },
+    "status": "local-only",
+    "notes": "Delta Cycle 81 - Major improvement. Faster oscillation detection significantly improved performance on most seeds. Reproduces Cycle 72 success from previous optimization run. New baseline: 15.27."
+  }
 }
