@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 622,
+      "attempts": 623,
       "improvements": 7,
-      "last_used": "20260406-688-testing"
+      "last_used": "20260406-689-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "688",
-    "focus": "Hub align distance increase",
-    "description": "Increased _HUB_ALIGN_DISTANCE from 26.66 to 26.68 (+0.08%)",
-    "rationale": "Hub align distance controls maximum distance from hub for junction alignment network connectivity. Higher value extends hub reach for broader initial territory control. Conservative +0.08% increase for continued extended hub reach tuning. Stacks with 087-687.",
-    "upload": "gamma_v137:v1",
+    "version": "689",
+    "focus": "Junction align distance increase",
+    "description": "Increased _JUNCTION_ALIGN_DISTANCE from 16.46 to 16.48 (+0.12%)",
+    "rationale": "Junction align distance controls maximum distance for junction-to-junction chain building in alignment network. Higher value extends chain-building reach for better territory expansion. Conservative +0.12% increase for continued chain-building reach tuning. Stacks with 087-688.",
+    "upload": "gamma_v138:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 688. Increased hub align distance for continued extended hub reach. Awaiting tournament validation."
+    "note": "Attempt 689. Increased junction align distance for continued chain-building reach. Awaiting tournament validation."
   },
   },
   "last_improvement": {

@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (689) Junction align distance increase (16.46→16.48): gamma_v138:v1 qualifying - continued chain-building reach (+0.12%, stacks with 087-688)
 - [ ] (688) Hub align distance increase (26.66→26.68): gamma_v137:v1 qualifying - continued extended hub reach (+0.08%, stacks with 087-687)
 - [ ] (687) Scrambler heart batch target increase (3.56→3.58): gamma_v136:v1 qualifying - continued scrambler persistence (+0.56%, stacks with 087-686)
 - [ ] (686) Aligner heart batch target increase (3.56→3.58): gamma_v135:v1 qualifying - continued aligner persistence (+0.56%, stacks with 087-685)
