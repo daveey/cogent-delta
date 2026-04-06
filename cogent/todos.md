@@ -1,6 +1,7 @@
 # scissors — Improvement TODOs
 
 ## In Progress
+- [ ] (714) Aligner HP threshold reduction (45.68→45.66): gamma_v163_v1:v1 qualifying - bidirectional aligner retreat tuning (-0.044%, stacks with 087-713)
 - [ ] (713) Scrambler threat bonus increase (10.60→10.62): gamma_v162_v1:v1 qualifying - continued defensive priority tuning (+0.19%, stacks with 087-712)
 - [ ] (712) Scrambler corner pressure cap increase (10.90→10.92): gamma_v161_v1:v1 qualifying - continued corner pressure tuning (+0.18%, stacks with 087-711)
 - [ ] (711) Scrambler corner pressure divisor increase (7.50→7.52): gamma_v160_v1:v1 qualifying - continued faster pressure growth tuning (+0.27%, stacks with 087-710)
