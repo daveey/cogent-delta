@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 703,
+      "attempts": 704,
       "improvements": 7,
-      "last_used": "20260406-769-testing"
+      "last_used": "20260406-770-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260406",
-    "version": "769",
-    "focus": "Scrambler corner pressure divisor reduction",
-    "description": "Reduced corner pressure divisor from 7.50 to 7.49 (-0.13%)",
-    "rationale": "Corner pressure divisor controls rate at which scrambler priority increases for distant enemies. Lower divisor increases pressure growth rate, encouraging scramblers to disrupt farther enemies more aggressively. Conservative -0.13% reduction for bidirectional corner pressure divisor tuning. Stacks with 087-768.",
-    "upload": "gamma_v218_v1:v1",
+    "version": "770",
+    "focus": "Scrambler corner pressure cap increase",
+    "description": "Increased corner pressure cap from 10.90 to 10.91 (+0.09%)",
+    "rationale": "Corner pressure cap limits maximum scrambler priority for very distant enemies. Higher cap allows stronger disruption at extreme distances. Conservative +0.09% increase for bidirectional corner pressure cap tuning. Stacks with 087-769.",
+    "upload": "gamma_v219_v1:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260406",
-    "note": "Attempt 769. Reduced scrambler corner pressure divisor for bidirectional corner pressure divisor tuning. Awaiting tournament validation."
+    "note": "Attempt 770. Increased scrambler corner pressure cap for bidirectional corner pressure cap tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
