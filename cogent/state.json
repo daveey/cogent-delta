@@ -6,12 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 196,
+      "attempts": 197,
       "improvements": 15,
-      "last_used": "20260405-oscillation-2"
+      "last_used": "20260406-llm-stagnation"
     }
   },
-  "testing_in_progress": null,
+  "testing_in_progress": {
+    "date": "20260406",
+    "version": "llm-stagnation-1",
+    "focus": "LLM stagnation detection",
+    "description": "Enhanced LLM analyze prompt to detect and respond to agent stagnation. Added 'role' field to JSON response and explicit guidance to suggest role changes when Stalled=True or Oscillating=True. First step toward alpha.0-style cyborg architecture.",
+    "upload": "scissors_v2:v1",
+    "season": "beta-cvc",
+    "uploaded_at": "20260406 00:06 UTC",
+    "notes": "Architectural improvement. Skipped local testing (50+ min blocker). Using tournament validation. LLM already receives stagnation signals and parser supports role field - this adds the missing prompt guidance."
+  },
   "testing_blocker": {
     "date": "20260405",
     "issue": "Local testing infrastructure blocked - four_score takes 10+ minutes per seed (50+ min for 5-seed validation). Arena mission hits observation token budget errors. Cannot complete improve.md Step 5 (testing) with current infrastructure.",

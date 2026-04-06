@@ -3,17 +3,18 @@
 ## In Progress
 - **Testing infrastructure blocked**: Local four_score tests take 10+ min per seed (50+ min for 5-seed validation). Arena hits observation budget errors. Improve.md 30-min loop incompatible with test duration.
 
-## Current Status (20260405 UTC)
+## Current Status (20260406 UTC)
 **Tournament Rankings (beta-cvc):**
-- 🏆 gamma_v6:v1: rank #5, 17.16 avg (51 matches) - **TOP 5!**
-  - Stack: 014 + 015 + 016 + 018 (network_bonus 0.5→0.75, cap 4)
-- scissors_v1:v13: rank #64, 9.75 avg (20 matches) - FAILED (-37.2%)
+- scissors_v1:v5: rank #35, 12.00 avg (22 matches) - BEST SCISSORS
+- scissors_v2:v1: QUALIFYING (just uploaded) - LLM stagnation detection
 
-**Latest Actions:** Fixed 2 critical bugs in codebase
-- network_bonus cap reverted from 5→4, weight from 0.98→0.75
-- RETREAT_MARGIN reverted from 20→15
-- Both were failed tournament changes accidentally left in codebase
-- Restores proven gamma_v6:v1 + stable retreat parameters
+**Latest Action (20260406 00:06 UTC):** LLM Stagnation Detection (Architectural)
+- Enhanced LLM analyze prompt to detect and respond to stagnation
+- Added "role" field to JSON response with explicit guidance
+- When Stalled=True or Oscillating=True, LLM suggests role changes to break out
+- When target hotspot >0 (contested), LLM suggests switching roles
+- First step toward alpha.0-style cyborg architecture
+- Uploaded as scissors_v2:v1 to beta-cvc (tournament validation)
 
 **Critical Learning:** Local testing on arena mission is UNRELIABLE
 - scissors_v1:v13 showed +84.5% locally but -37.2% in tournament
@@ -21,7 +22,7 @@
 - All future changes MUST be tournament-validated
 
 **Active Testing:**
-- None - local testing infrastructure blocked
+- scissors_v2:v1 qualifying in beta-cvc (LLM stagnation detection)
 
 ## Completed (Design Approach: 13 validated improvements from 156 attempts, 8.3% hit rate)
 - [x] (004) Hotspot penalty increase: 8→12 base - avoid contested far junctions
