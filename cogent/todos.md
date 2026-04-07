@@ -870,3 +870,4 @@
 - [ ] (895) Threat bonus weight increase (10.64→10.65): gamma_v344_v1 qualifying - bidirectional defensive priority tuning (+0.09%, stacks with 087-894)
 - [ ] (896) Blocked neutrals weight increase (8.84→8.85): gamma_v345_v1 qualifying - bidirectional expansion-blocking tuning (+0.11%, stacks with 087-895)
 - [ ] (897) Extractor memory steps increase (862→863): gamma_v346_v1 qualifying - bidirectional extractor memory tuning (+0.12%, stacks with 087-896)
+- [ ] (898) Miner HP threshold increase (18.72→18.73): gamma_v347_v1 qualifying - bidirectional resource gathering tuning (+0.05%, stacks with 087-897)
