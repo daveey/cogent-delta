@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 912,
+      "attempts": 913,
       "improvements": 7,
-      "last_used": "20260407-978-testing"
+      "last_used": "20260407-979-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260407",
-    "version": "978",
-    "focus": "Junction AOE range increase",
-    "description": "Increased junction AOE range from 15.08 to 15.09 (+0.07%)",
-    "rationale": "Junction AOE range controls enemy junction area of effect detection. Higher value increases AOE awareness for threat avoidance. Conservative +0.07% increase for bidirectional enemy AOE detection tuning. Stacks with 087-977.",
-    "upload": "gamma_v427_v1:v1",
+    "version": "979",
+    "focus": "Claimed target penalty increase",
+    "description": "Increased claimed target penalty from 11.03 to 11.04 (+0.09%)",
+    "rationale": "Claimed target penalty discourages targeting junctions claimed by teammates. Higher value improves coordination by reducing target duplication. Conservative +0.09% increase for bidirectional claim override tuning. Stacks with 087-978.",
+    "upload": "gamma_v428_v1:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260407",
-    "note": "Attempt 978. Increased junction AOE range for bidirectional enemy AOE detection tuning. Awaiting tournament validation."
+    "note": "Attempt 979. Increased claimed target penalty for bidirectional claim override tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
