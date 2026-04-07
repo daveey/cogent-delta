@@ -938,3 +938,4 @@
 - [ ] (963) Expansion bonus cap increase (37.81→37.82): gamma_v412_v1 qualifying - bidirectional expansion bonus cap tuning (+0.03%, stacks with 087-962)
 - [ ] (964) Enemy AOE penalty increase (10.82→10.83): gamma_v413_v1 qualifying - bidirectional enemy avoidance tuning (+0.09%, stacks with 087-963)
 - [ ] (965) Teammate penalty increase (9.57→9.58): gamma_v414_v1 qualifying - bidirectional coordination tuning (+0.10%, stacks with 087-964)
+- [ ] (966) Corner pressure divisor increase (7.52→7.53): gamma_v415_v1 qualifying - bidirectional corner pressure scaling tuning (+0.13%, stacks with 087-965)
