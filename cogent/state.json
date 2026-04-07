@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 835,
+      "attempts": 836,
       "improvements": 7,
-      "last_used": "20260407-901-testing"
+      "last_used": "20260407-902-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260407",
-    "version": "901",
-    "focus": "Emergency resource low threshold increase",
-    "description": "Increased emergency resource low threshold from 2.62 to 2.63 (+0.38%)",
-    "rationale": "Emergency resource low threshold controls when emergency mining triggers. Higher value triggers emergency mining earlier, ensuring better resource availability. Conservative +0.38% increase for bidirectional emergency mining trigger tuning. Stacks with 087-900.",
-    "upload": "gamma_v350_v1:v1",
+    "version": "902",
+    "focus": "Aligner heart batch target increase",
+    "description": "Increased aligner heart batch target from 3.62 to 3.63 (+0.28%)",
+    "rationale": "Aligner heart batch target controls heart spawning behavior for aligners. Higher value increases heart production rate for aligners, improving persistence. Conservative +0.28% increase for bidirectional aligner persistence tuning. Stacks with 087-901.",
+    "upload": "gamma_v351_v1:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260407",
-    "note": "Attempt 901. Increased emergency resource low threshold for bidirectional emergency mining trigger tuning. Awaiting tournament validation."
+    "note": "Attempt 902. Increased aligner heart batch target for bidirectional aligner persistence tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
