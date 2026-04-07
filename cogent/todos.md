@@ -883,3 +883,4 @@
 - [ ] (908) Target claim steps increase (33.54→33.55): gamma_v357_v1 qualifying - bidirectional claim validity tuning (+0.03%, stacks with 087-907)
 - [ ] (909) Extractor memory steps increase (863→864): gamma_v358_v1 qualifying - bidirectional extractor memory tuning (+0.12%, stacks with 087-908)
 - [ ] (910) Expansion bonus weight increase (6.66→6.67): gamma_v359_v1 qualifying - bidirectional expansion bonus weight tuning (+0.15%, stacks with 087-909)
+- [ ] (911) Expansion bonus cap increase (37.79→37.80): gamma_v360_v1 qualifying - bidirectional expansion bonus cap tuning (+0.03%, stacks with 087-910)
