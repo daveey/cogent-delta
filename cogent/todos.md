@@ -956,3 +956,4 @@
 - [ ] (981) Extractor memory steps increase (865→866): gamma_v430_v1 qualifying - bidirectional extractor memory tuning (+0.12%, stacks with 087-980)
 - [ ] (982) Hub penalty far-range multiplier increase (7.85→7.86): gamma_v431_v1 qualifying - bidirectional far-range multiplier tuning (+0.13%, stacks with 087-981)
 - [ ] (983) Hub penalty far-range base increase (48.88→48.89): gamma_v432_v1 qualifying - bidirectional far-range base tuning (+0.02%, stacks with 087-982)
+- [ ] (984) Hub penalty 15-25 range multiplier increase (2.85→2.86): gamma_v433_v1 qualifying - bidirectional 15-25 range multiplier tuning (+0.35%, stacks with 087-983)
