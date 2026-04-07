@@ -6,21 +6,21 @@
       "last_used": null
     },
     "design": {
-      "attempts": 868,
+      "attempts": 869,
       "improvements": 7,
-      "last_used": "20260407-934-testing"
+      "last_used": "20260407-935-testing"
     }
   },
   "testing_in_progress": {
     "date": "20260407",
-    "version": "934",
-    "focus": "Scrambler corner pressure divisor increase",
-    "description": "Increased scrambler corner pressure divisor from 7.51 to 7.52 (+0.13%)",
-    "rationale": "Scrambler corner pressure divisor controls how quickly pressure bonus grows with distance from hub. Higher divisor = slower growth = lower pressure for distant targets. Conservative +0.13% increase for bidirectional pressure growth tuning. Stacks with 087-933.",
-    "upload": "gamma_v383_v1:v1",
+    "version": "935",
+    "focus": "Scrambler corner pressure cap increase",
+    "description": "Increased scrambler corner pressure cap from 10.94 to 10.95 (+0.09%)",
+    "rationale": "Scrambler corner pressure cap controls maximum pressure bonus value. Higher cap allows pressure to scale with very distant targets. Conservative +0.09% increase for bidirectional corner pressure cap tuning. Stacks with 087-934.",
+    "upload": "gamma_v384_v1:v1",
     "season": "beta-four-score",
     "uploaded_at": "20260407",
-    "note": "Attempt 934. Increased scrambler corner pressure divisor for bidirectional pressure growth tuning. Awaiting tournament validation."
+    "note": "Attempt 935. Increased scrambler corner pressure cap for bidirectional corner pressure cap tuning. Awaiting tournament validation."
   },
   "last_improvement": {
     "date": "20260404",
