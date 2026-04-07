@@ -941,3 +941,4 @@
 - [ ] (966) Corner pressure divisor increase (7.52→7.53): gamma_v415_v1 qualifying - bidirectional corner pressure scaling tuning (+0.13%, stacks with 087-965)
 - [ ] (967) Corner pressure cap increase (10.95→10.96): gamma_v416_v1 qualifying - bidirectional corner pressure cap tuning (+0.09%, stacks with 087-966)
 - [ ] (968) Threat bonus increase (10.66→10.67): gamma_v417_v1 qualifying - bidirectional defensive priority tuning (+0.09%, stacks with 087-967)
+- [ ] (969) Blocked neutrals multiplier increase (8.86→8.87): gamma_v418_v1 qualifying - bidirectional expansion-blocking tuning (+0.11%, stacks with 087-968)

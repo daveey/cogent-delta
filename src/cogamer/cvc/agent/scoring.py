@@ -151,7 +151,7 @@ def scramble_target_score(
         )
         threat_bonus = threatened * 10.67  # Increased from 10.66 to 10.67 (+0.09%) for bidirectional defensive priority tuning
     return (
-        distance - blocked_neutrals * 8.86 - corner_pressure - threat_bonus,  # Increased from 8.85 to 8.86 (+0.11%) for bidirectional expansion-blocking tuning
+        distance - blocked_neutrals * 8.87 - corner_pressure - threat_bonus,  # Increased from 8.86 to 8.87 (+0.11%) for bidirectional expansion-blocking tuning
         -float(blocked_neutrals),
     )
 
